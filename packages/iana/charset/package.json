@@ -1061,7 +1061,10 @@
     "node"
   ],
   "license": "MIT",
-  "name": "@produck/node-meta-iana-charset",
+  "name": "@produck/meta-iana-charset",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "directory": "packages/iana/charset",
     "type": "git",
