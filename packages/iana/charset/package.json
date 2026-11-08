@@ -5,8 +5,6 @@
   },
   "description": "IANA Character Sets registry as static metadata for Node.js.",
   "devDependencies": {
-    "@produck/argot": "^0.4.0",
-    "@produck/deep-freeze-enumerable": "^1.0.0",
     "fast-xml-parser": "^5.2.5"
   },
   "exports": {
@@ -16,9 +14,9 @@
     }
   },
   "files": [
-    "src/**/*.mjs",
-    "src/**/*.d.mts",
-    "src/Registry.json"
+    "data",
+    "src/index.mjs",
+    "src/index.d.mts"
   ],
   "homepage": "https://github.com/produck/node-meta/tree/main/packages/iana/charset#readme",
   "keywords": [
@@ -30,10 +28,6 @@
   ],
   "license": "MIT",
   "name": "@produck/node-meta-iana-charset",
-  "peerDependencies": {
-    "@produck/argot": "^0.4.0",
-    "@produck/deep-freeze-enumerable": "^1.0.0"
-  },
   "repository": {
     "directory": "packages/iana/charset",
     "type": "git",
@@ -44,6 +38,7 @@
     "sync": "node scripts/sync.mjs",
     "test": "node test/index.mjs"
   },
+  "sideEffects": false,
   "type": "module",
   "version": "0.0.0"
 }

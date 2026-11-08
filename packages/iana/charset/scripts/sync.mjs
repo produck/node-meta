@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 import { XMLParser } from 'fast-xml-parser';
@@ -10,7 +9,8 @@ const SOURCE_URL =
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = path.resolve(HERE, '..');
-const TARGET = path.join(PACKAGE_ROOT, 'src', 'Registry.json');
+const TARGET = path.join(PACKAGE_ROOT, 'src', 'index.mjs');
+const DATA_DIR = path.join(PACKAGE_ROOT, 'data');
 const CACHE = path.join(PACKAGE_ROOT, 'tmp', 'character-sets.xml');
 
 function toArray(value) {
@@ -85,55 +85,62 @@ function readRecord(record) {
   };
 }
 
-function compareText(left, right) {
-  if (left < right) {
-    return -1;
-  }
-
-  return left > right ? 1 : 0;
-}
-
 function build(xml) {
   const document = readDocument(xml);
   const registry = findRegistry(document);
   const recordList = toArray(registry.record).map(readRecord);
   recordList.sort((left, right) => left.mibEnum - right.mibEnum);
 
-  const aliasIndex = {};
+  return recordList;
+}
 
-  for (const record of recordList) {
-    const aliasSet = new Set(record.aliasList);
+function literal(value) {
+  return JSON.stringify(value);
+}
 
-    aliasSet.add(record.name);
+function readXrefLiteral(xrefList) {
+  const itemList = xrefList.map(
+    (xref) => `{ type: ${literal(xref.type)}, data: ${literal(xref.data)} }`,
+  );
 
-    if (record.preferredAlias !== null) {
-      aliasSet.add(record.preferredAlias);
-    }
+  return itemList.length === 0 ? '[]' : `[${itemList.join(', ')}]`;
+}
 
-    for (const alias of aliasSet) {
-      const key = alias.toLowerCase();
+function readRecordLiteral(record) {
+  const fieldList = [
+    `name: ${literal(record.name)}`,
+    `mibEnum: ${record.mibEnum}`,
+    `preferredAlias: ${literal(record.preferredAlias)}`,
+    `aliasList: ${literal(record.aliasList)}`,
+    `date: ${literal(record.date)}`,
+  ];
 
-      if (aliasIndex[key] !== undefined) {
-        throw new Error(`Duplicate charset alias "${alias}".`);
-      }
+  return `  { ${fieldList.join(', ')} },`;
+}
 
-      aliasIndex[key] = record.mibEnum;
-    }
-  }
+function renderRecord(record) {
+  return (
+    `export const description = ${literal(record.description)};\n\n` +
+    `export const xrefList = ${readXrefLiteral(record.xrefList)};\n\n` +
+    `export default ${readRecordLiteral(record).trim().replace(/,$/, '')};\n`
+  );
+}
 
-  return {
-    source: {
-      url: SOURCE_URL,
-      updated: readText(document.registry?.updated),
-      digest: createHash('sha256').update(xml).digest('hex'),
-    },
-    recordList,
-    aliasIndex: Object.fromEntries(
-      Object.entries(aliasIndex).sort(([left], [right]) =>
-        compareText(left, right),
-      ),
-    ),
-  };
+function renderIndex(recordList) {
+  const importList = recordList.map(
+    (record) =>
+      `import record${record.mibEnum} from '../data/${record.mibEnum}.mjs';`,
+  );
+  const itemList = recordList.map((record) => `  record${record.mibEnum},`);
+
+  return [
+    ...importList,
+    '',
+    'export const RECORD_LIST = [',
+    ...itemList,
+    '];',
+    '',
+  ].join('\n');
 }
 
 function readCache() {
@@ -156,13 +163,16 @@ async function download() {
 }
 
 const xml = readCache() ?? (await download());
-const registry = build(xml);
+const recordList = build(xml);
 
-fs.mkdirSync(path.dirname(TARGET), { recursive: true });
-fs.writeFileSync(TARGET, `${JSON.stringify(registry, null, 2)}\n`);
+fs.mkdirSync(DATA_DIR, { recursive: true });
 
-console.log(
-  `records ${registry.recordList.length}, ` +
-    `aliases ${Object.keys(registry.aliasIndex).length}, ` +
-    `updated ${registry.source.updated}`,
-);
+for (const record of recordList) {
+  const file = path.join(DATA_DIR, `${record.mibEnum}.mjs`);
+
+  fs.writeFileSync(file, renderRecord(record));
+}
+
+fs.writeFileSync(TARGET, renderIndex(recordList));
+
+console.log(`records ${recordList.length}`);

@@ -11,18 +11,11 @@ npm install @produck/node-meta-iana-charset
 ## Usage
 
 ```js
-import {
-  SOURCE,
-  findByAlias,
-  findByMibEnum,
-  findAll,
-  isAlias,
-} from '@produck/node-meta-iana-charset';
+import { RECORD_LIST } from '@produck/node-meta-iana-charset';
 
-isAlias('utf-8'); // true，大小写不敏感
-findByAlias('latin1'); // → ISO_8859-1:1987 记录
-findByMibEnum(106); // → UTF-8 记录
-findAll(); // 全部记录，按 mibEnum 升序
+const record = RECORD_LIST.find((item) => item.mibEnum === 106);
+
+record.name; // UTF-8
 ```
 
 ## Data shape
@@ -33,8 +26,6 @@ interface Record {
   mibEnum: number; // 唯一 MIBenum
   preferredAlias: string | null; // IANA 声明的首选别名
   aliasList: string[]; // 含注册名与首选别名的全部别名
-  description: string; // 注册表里的简述
-  xrefList: Xref[]; // IANA 记录的交叉引用
   date: string | null; // 仅 1995 年后新增的记录才有
 }
 
@@ -44,17 +35,12 @@ interface Xref {
 }
 ```
 
-所有查询都返回**深拷贝**：修改返回值不会影响内部数据。
+每个 `data/<mibEnum>.mjs` 导出三项：默认导出上面的 `Record`，以及两个
+具名导出 `description`（注册表里的简述）与 `xrefList`（`Xref[]`）。
 
-## Provenance
-
-`SOURCE` 记录快照的来源：
-
-```js
-SOURCE.url; // 抓取地址
-SOURCE.updated; // 注册表 Last Updated
-SOURCE.digest; // 下载内容的 SHA-256
-```
+本包只导出静态数据表，不提供查询方法；`RECORD_LIST` 按 `mibEnum` 升序。
+每条记录单独存放于 `data/<mibEnum>.mjs`（默认导出），`src/index.mjs` 只是
+把这些模块聚合起来，`sideEffects: false` 下可被下游充分 tree-shake。
 
 ## Update
 
@@ -62,10 +48,9 @@ SOURCE.digest; // 下载内容的 SHA-256
 npm run sync
 ```
 
-脚本抓取 `character-sets.xml`，解析后写入 `src/Registry.json`。它有缓存：
+脚本抓取 `character-sets.xml`，解析后重写 `data/<mibEnum>.mjs` 与
+`src/index.mjs`。它有缓存：
 已存在的 `tmp/character-sets.xml` 会被复用，删除该文件即重新下载。
-
-差异审查时**只看 `src/Registry.json`**：新增/删除/改名的记录会直接体现。
 
 ## Notes
 
@@ -74,7 +59,6 @@ npm run sync
   由 RFC 决定，属于消费方的知识。
 - 别名覆盖范围以 IANA 注册表为准。WHATWG Encoding Standard 的标签集
   （如 `x-user-defined`）不在其中，两者不可互换。
-- 数据变化不视为 breaking change，只有 API 变化才升 major。
 
 ## License
 

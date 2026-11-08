@@ -1,0 +1,19 @@
+export const description = 'ISO See';
+
+export const xrefList = [];
+
+export default {
+  name: 'ISO-8859-14',
+  mibEnum: 110,
+  preferredAlias: null,
+  aliasList: [
+    'iso-ir-199',
+    'ISO_8859-14:1998',
+    'ISO_8859-14',
+    'latin8',
+    'iso-celtic',
+    'l8',
+    'csISO885914',
+  ],
+  date: '2000-08',
+};
