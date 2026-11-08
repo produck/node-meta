@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 import { XMLParser } from 'fast-xml-parser';
@@ -10,7 +11,8 @@ const SOURCE_URL =
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = path.resolve(HERE, '..');
 const TARGET = path.join(PACKAGE_ROOT, 'src', 'index.mjs');
-const DATA_DIR = path.join(PACKAGE_ROOT, 'data');
+const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
+const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
 const CACHE = path.join(PACKAGE_ROOT, 'tmp', 'character-sets.xml');
 
 function toArray(value) {
@@ -85,17 +87,29 @@ function readRecord(record) {
   };
 }
 
+function readSource(xml) {
+  return {
+    url: SOURCE_URL,
+    updated: new Date().toISOString(),
+    digest: createHash('sha256').update(xml).digest('hex'),
+  };
+}
+
 function build(xml) {
   const document = readDocument(xml);
   const registry = findRegistry(document);
   const recordList = toArray(registry.record).map(readRecord);
   recordList.sort((left, right) => left.mibEnum - right.mibEnum);
 
-  return recordList;
+  return { source: readSource(xml), recordList };
 }
 
 function literal(value) {
   return JSON.stringify(value);
+}
+
+function readFileName(record) {
+  return `${String(record.mibEnum).padStart(4, '0')}.mjs`;
 }
 
 function readXrefLiteral(xrefList) {
@@ -106,41 +120,41 @@ function readXrefLiteral(xrefList) {
   return itemList.length === 0 ? '[]' : `[${itemList.join(', ')}]`;
 }
 
-function readRecordLiteral(record) {
+function renderRecord(record) {
   const fieldList = [
-    `name: ${literal(record.name)}`,
-    `mibEnum: ${record.mibEnum}`,
-    `preferredAlias: ${literal(record.preferredAlias)}`,
-    `aliasList: ${literal(record.aliasList)}`,
-    `date: ${literal(record.date)}`,
+    ['description', literal(record.description)],
+    ['xrefList', readXrefLiteral(record.xrefList)],
+    ['name', literal(record.name)],
+    ['mibEnum', record.mibEnum],
+    ['preferredAlias', literal(record.preferredAlias)],
+    ['aliasList', literal(record.aliasList)],
+    ['date', literal(record.date)],
   ];
 
-  return `  { ${fieldList.join(', ')} },`;
-}
-
-function renderRecord(record) {
   return (
-    `export const description = ${literal(record.description)};\n\n` +
-    `export const xrefList = ${readXrefLiteral(record.xrefList)};\n\n` +
-    `export default ${readRecordLiteral(record).trim().replace(/,$/, '')};\n`
+    fieldList
+      .map(([key, value]) => `export const ${key} = ${value};\n`)
+      .join('\n') + '\n'
   );
 }
 
-function renderIndex(recordList) {
-  const importList = recordList.map(
+function renderDataIndex(recordList) {
+  const exportList = recordList.map(
     (record) =>
-      `import record${record.mibEnum} from '../data/${record.mibEnum}.mjs';`,
+      `export * as mib${record.mibEnum} from './record/${readFileName(record)}';`,
   );
-  const itemList = recordList.map((record) => `  record${record.mibEnum},`);
 
-  return [
-    ...importList,
-    '',
-    'export const RECORD_LIST = [',
-    ...itemList,
-    '];',
-    '',
-  ].join('\n');
+  return [...exportList, ''].join('\n');
+}
+
+function renderSource(source) {
+  const fieldList = [
+    `  url: ${literal(source.url)},`,
+    `  updated: ${literal(source.updated)},`,
+    `  digest: ${literal(source.digest)},`,
+  ];
+
+  return `export const source = {\n${fieldList.join('\n')}\n};\n\nexport * as data from './data/index.mjs';\n`;
 }
 
 function readCache() {
@@ -163,16 +177,17 @@ async function download() {
 }
 
 const xml = readCache() ?? (await download());
-const recordList = build(xml);
+const { source, recordList } = build(xml);
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
 for (const record of recordList) {
-  const file = path.join(DATA_DIR, `${record.mibEnum}.mjs`);
+  const file = path.join(DATA_DIR, readFileName(record));
 
   fs.writeFileSync(file, renderRecord(record));
 }
 
-fs.writeFileSync(TARGET, renderIndex(recordList));
+fs.writeFileSync(DATA_INDEX, renderDataIndex(recordList));
+fs.writeFileSync(TARGET, renderSource(source));
 
 console.log(`records ${recordList.length}`);

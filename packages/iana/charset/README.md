@@ -10,23 +10,42 @@ npm install @produck/node-meta-iana-charset
 
 ## Usage
 
+The package root exports the snapshot provenance and the `data` namespace:
+
 ```js
-import { RECORD_LIST } from '@produck/node-meta-iana-charset';
+import { source, data } from '@produck/node-meta-iana-charset';
 
-const record = RECORD_LIST.find((item) => item.mibEnum === 106);
+source.url; // registry URL the snapshot was collected from
+source.updated; // exact collection time, ISO 8601
+source.digest; // SHA-256 of the downloaded document
+```
 
-record.name; // UTF-8
+Every entry of `data` is a namespace named after its `mibEnum`, without zero
+padding:
+
+```js
+data.mib106.name; // UTF-8
+data.mib106.aliasList; // ['csUTF8']
+data.mib106.description; // short description from the registry
+data.mib106.xrefList; // [{ type: 'rfc', data: 'rfc3629' }]
+```
+
+The package ships no aggregated list; build one yourself when needed:
+
+```js
+const recordList = Object.entries(data)
+  .filter(([name]) => /^mib\d+$/.test(name))
+  .map(([, namespace]) => namespace)
+  .sort((left, right) => left.mibEnum - right.mibEnum);
 ```
 
 ## Data shape
 
 ```ts
-interface Record {
-  name: string; // IANA 注册名
-  mibEnum: number; // 唯一 MIBenum
-  preferredAlias: string | null; // IANA 声明的首选别名
-  aliasList: string[]; // 含注册名与首选别名的全部别名
-  date: string | null; // 仅 1995 年后新增的记录才有
+interface Source {
+  url: string;
+  updated: string;
+  digest: string;
 }
 
 interface Xref {
@@ -35,12 +54,29 @@ interface Xref {
 }
 ```
 
-每个 `data/<mibEnum>.mjs` 导出三项：默认导出上面的 `Record`，以及两个
-具名导出 `description`（注册表里的简述）与 `xrefList`（`Xref[]`）。
+Every namespace exports each field by name, with no aggregate object:
 
-本包只导出静态数据表，不提供查询方法；`RECORD_LIST` 按 `mibEnum` 升序。
-每条记录单独存放于 `data/<mibEnum>.mjs`（默认导出），`src/index.mjs` 只是
-把这些模块聚合起来，`sideEffects: false` 下可被下游充分 tree-shake。
+| Export           | Type             |
+| ---------------- | ---------------- |
+| `name`           | `string`         |
+| `mibEnum`        | `number`         |
+| `preferredAlias` | `string \| null` |
+| `aliasList`      | `string[]`       |
+| `date`           | `string \| null` |
+| `description`    | `string`         |
+| `xrefList`       | `Xref[]`         |
+
+Downstream code may enumerate the namespaces directly, no wrapping needed.
+
+### Files
+
+- `src/index.mjs` — the `source` snapshot provenance.
+- `src/data/index.mjs` — the `export * as mibN from './record/NNNN.mjs'` list.
+- `src/data/record/NNNN.mjs` — one record each; the file name is zero padded
+  to four digits while the export name is not.
+
+With `sideEffects: false`, downstream builds can import only the namespaces
+they use.
 
 ## Update
 
@@ -48,17 +84,19 @@ interface Xref {
 npm run sync
 ```
 
-脚本抓取 `character-sets.xml`，解析后重写 `data/<mibEnum>.mjs` 与
-`src/index.mjs`。它有缓存：
-已存在的 `tmp/character-sets.xml` 会被复用，删除该文件即重新下载。
+The script fetches `character-sets.xml` and rewrites every record under
+`src/data/record/`, together with `src/data/index.mjs` and `src/index.mjs`.
+It caches: an existing `tmp/character-sets.xml` is reused, delete that file to
+force a fresh download.
 
 ## Notes
 
-- 本包只提供**注册表事实**，不判断某媒体类型是否允许 `charset` 参数。
-  `application/json` 不应带 `charset`、`application/xml` 可以带，这类约束
-  由 RFC 决定，属于消费方的知识。
-- 别名覆盖范围以 IANA 注册表为准。WHATWG Encoding Standard 的标签集
-  （如 `x-user-defined`）不在其中，两者不可互换。
+- This package only provides **registry facts**. It does not decide whether a
+  media type accepts a `charset` parameter: `application/json` must not carry
+  one while `application/xml` may, and that rule belongs to the RFCs, not here.
+- Alias coverage follows the IANA registry. Labels from the WHATWG Encoding
+  Standard (for example `x-user-defined`) are not included and the two sets
+  are not interchangeable.
 
 ## License
 

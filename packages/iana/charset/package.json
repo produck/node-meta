@@ -5,18 +5,20 @@
   },
   "description": "IANA Character Sets registry as static metadata for Node.js.",
   "devDependencies": {
-    "fast-xml-parser": "^5.2.5"
+    "fast-xml-parser": "^5.2.0"
   },
   "exports": {
     ".": {
       "import": "./src/index.mjs",
       "types": "./src/index.d.mts"
+    },
+    "./data": {
+      "import": "./src/data/index.mjs",
+      "types": "./src/data/index.d.mts"
     }
   },
   "files": [
-    "data",
-    "src/index.mjs",
-    "src/index.d.mts"
+    "src"
   ],
   "homepage": "https://github.com/produck/node-meta/tree/main/packages/iana/charset#readme",
   "keywords": [

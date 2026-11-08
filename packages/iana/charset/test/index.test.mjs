@@ -4,90 +4,88 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, it } from 'node:test';
 
-import { RECORD_LIST } from '../src/index.mjs';
+import { source } from '../src/index.mjs';
+import * as data from '../src/data/index.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(HERE, '..', 'data');
+const RECORD_DIR = path.resolve(HERE, '..', 'src', 'data', 'record');
 
-describe('::RECORD_LIST', () => {
-  it('should be sorted by ascending mibEnum', () => {
-    for (let index = 1; index < RECORD_LIST.length; index += 1) {
-      assert.ok(RECORD_LIST[index - 1].mibEnum < RECORD_LIST[index].mibEnum);
-    }
+function readFileName(mibEnum) {
+  return `${String(mibEnum).padStart(4, '0')}.mjs`;
+}
+
+const namespaceList = Object.entries(data).filter(([name]) =>
+  /^mib\d+$/.test(name),
+);
+
+describe('source', () => {
+  it('should point at the IANA registry', () => {
+    assert.equal(
+      source.url,
+      'https://www.iana.org/assignments/character-sets/character-sets.xml',
+    );
   });
 
-  it('should hold one record per mibEnum', () => {
-    const mibEnumSet = new Set(RECORD_LIST.map((record) => record.mibEnum));
-
-    assert.equal(mibEnumSet.size, RECORD_LIST.length);
-  });
-
-  it('should hold one record per name', () => {
-    const nameSet = new Set(RECORD_LIST.map((record) => record.name));
-
-    assert.equal(nameSet.size, RECORD_LIST.length);
-  });
-
-  it('should hold the expected shape on every record', () => {
-    for (const record of RECORD_LIST) {
-      assert.equal(typeof record.name, 'string');
-      assert.equal(typeof record.mibEnum, 'number');
-      assert.ok(
-        record.preferredAlias === null ||
-          typeof record.preferredAlias === 'string',
-      );
-      assert.ok(Array.isArray(record.aliasList));
-      assert.ok(record.date === null || typeof record.date === 'string');
-    }
-  });
-
-  it('should keep UTF-8 at mibEnum 106', () => {
-    const record = RECORD_LIST.find((item) => item.mibEnum === 106);
-
-    assert.equal(record.name, 'UTF-8');
+  it('should carry a date and a digest', () => {
+    assert.equal(new Date(source.updated).toISOString(), source.updated);
+    assert.match(source.digest, /^[0-9a-f]{64}$/);
   });
 });
 
 describe('data', () => {
-  it('should hold exactly one file per record', () => {
-    const fileList = fs
-      .readdirSync(DATA_DIR)
-      .filter((name) => name.endsWith('.mjs'));
-
-    assert.equal(fileList.length, RECORD_LIST.length);
+  it('should export one namespace per record file', () => {
+    assert.equal(namespaceList.length, fs.readdirSync(RECORD_DIR).length);
   });
 
-  it('should name every file after its mibEnum', () => {
-    for (const record of RECORD_LIST) {
-      const file = path.join(DATA_DIR, `${record.mibEnum}.mjs`);
-
-      assert.equal(fs.existsSync(file), true, file);
+  it('should name every namespace after its mibEnum without padding', () => {
+    for (const [name] of namespaceList) {
+      assert.equal(name.startsWith('mib0'), false, name);
     }
   });
 
-  it('should export description separately on every file', async () => {
-    for (const record of RECORD_LIST) {
-      const file = path.join(DATA_DIR, `${record.mibEnum}.mjs`);
-      const { default: data, description } = await import(
-        `file://${file.replaceAll('\\', '/')}`
-      );
-
-      assert.equal(data.mibEnum, record.mibEnum);
-      assert.equal(data.description, undefined);
-      assert.equal(typeof description, 'string');
+  it('should expose every field on every namespace', () => {
+    for (const [name, namespace] of namespaceList) {
+      assert.equal(typeof namespace.name, 'string', name);
+      assert.equal(typeof namespace.description, 'string', name);
+      assert.ok(Array.isArray(namespace.xrefList), name);
+      assert.ok('preferredAlias' in namespace, name);
+      assert.ok(Array.isArray(namespace.aliasList), name);
+      assert.ok('date' in namespace, name);
     }
   });
 
-  it('should export xrefList separately on every file', async () => {
-    for (const record of RECORD_LIST) {
-      const file = path.join(DATA_DIR, `${record.mibEnum}.mjs`);
-      const { default: data, xrefList } = await import(
-        `file://${file.replaceAll('\\', '/')}`
-      );
+  it('should match the file of every namespace', () => {
+    for (const [name, namespace] of namespaceList) {
+      const mibEnum = Number(name.slice(3));
 
-      assert.equal(data.mibEnum, record.mibEnum);
-      assert.equal(data.xrefList, undefined);
-      assert.ok(Array.isArray(xrefList));
+      assert.equal(namespace.mibEnum, mibEnum, name);
+      assert.equal(
+        fs.existsSync(path.join(RECORD_DIR, readFileName(mibEnum))),
+        true,
+        name,
+      );
+    }
+  });
+
+  it('should hold unique mibEnum values', () => {
+    const mibEnumList = namespaceList.map(([, namespace]) => namespace.mibEnum);
+
+    assert.equal(new Set(mibEnumList).size, mibEnumList.length);
+  });
+
+  it('should hold unique names', () => {
+    const nameList = namespaceList.map(([, namespace]) => namespace.name);
+
+    assert.equal(new Set(nameList).size, nameList.length);
+  });
+
+  it('should keep UTF-8 at mibEnum 106', () => {
+    assert.equal(data.mib106.name, 'UTF-8');
+  });
+
+  it('should pad every record file name to four digits', () => {
+    for (const name of fs.readdirSync(RECORD_DIR)) {
+      assert.match(name, /^\d{4}\.mjs$/);
     }
   });
 });
