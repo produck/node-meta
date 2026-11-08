@@ -1,8 +1,49 @@
 {
+  "author": "ChaosLee",
+  "bugs": {
+    "url": "https://github.com/produck/node-meta/issues"
+  },
+  "description": "IANA Character Sets registry as static metadata for Node.js.",
+  "devDependencies": {
+    "@produck/argot": "^0.4.0",
+    "@produck/deep-freeze-enumerable": "^1.0.0",
+    "fast-xml-parser": "^5.2.5"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "types": "./src/index.d.mts"
+    }
+  },
+  "files": [
+    "src/**/*.mjs",
+    "src/**/*.d.mts",
+    "src/Registry.json"
+  ],
+  "homepage": "https://github.com/produck/node-meta/tree/main/packages/iana/charset#readme",
+  "keywords": [
+    "charset",
+    "iana",
+    "metadata",
+    "mime",
+    "node"
+  ],
+  "license": "MIT",
   "name": "@produck/node-meta-iana-charset",
+  "peerDependencies": {
+    "@produck/argot": "^0.4.0",
+    "@produck/deep-freeze-enumerable": "^1.0.0"
+  },
+  "repository": {
+    "directory": "packages/iana/charset",
+    "type": "git",
+    "url": "git+https://github.com/produck/node-meta.git"
+  },
   "scripts": {
     "produck:coverage": "c8 --reporter=lcov --reporter=html --reporter=text-summary npm test",
-    "test": "node -e \"console.log('No tests configured')\""
+    "sync": "node scripts/sync.mjs",
+    "test": "node test/index.mjs"
   },
+  "type": "module",
   "version": "0.0.0"
 }
