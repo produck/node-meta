@@ -15,6 +15,1038 @@
     "./data": {
       "import": "./src/data/index.mjs",
       "types": "./src/data/index.d.mts"
+    },
+    "./mib/10": {
+      "import": "./src/data/record/0010.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/100": {
+      "import": "./src/data/record/0100.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1000": {
+      "import": "./src/data/record/1000.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1001": {
+      "import": "./src/data/record/1001.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1002": {
+      "import": "./src/data/record/1002.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1003": {
+      "import": "./src/data/record/1003.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1004": {
+      "import": "./src/data/record/1004.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1005": {
+      "import": "./src/data/record/1005.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1006": {
+      "import": "./src/data/record/1006.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1007": {
+      "import": "./src/data/record/1007.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1008": {
+      "import": "./src/data/record/1008.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1009": {
+      "import": "./src/data/record/1009.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/101": {
+      "import": "./src/data/record/0101.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1010": {
+      "import": "./src/data/record/1010.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1011": {
+      "import": "./src/data/record/1011.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1012": {
+      "import": "./src/data/record/1012.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1013": {
+      "import": "./src/data/record/1013.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1014": {
+      "import": "./src/data/record/1014.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1015": {
+      "import": "./src/data/record/1015.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1016": {
+      "import": "./src/data/record/1016.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1017": {
+      "import": "./src/data/record/1017.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1018": {
+      "import": "./src/data/record/1018.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1019": {
+      "import": "./src/data/record/1019.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/102": {
+      "import": "./src/data/record/0102.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1020": {
+      "import": "./src/data/record/1020.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/1021": {
+      "import": "./src/data/record/1021.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/103": {
+      "import": "./src/data/record/0103.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/104": {
+      "import": "./src/data/record/0104.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/105": {
+      "import": "./src/data/record/0105.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/106": {
+      "import": "./src/data/record/0106.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/109": {
+      "import": "./src/data/record/0109.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/11": {
+      "import": "./src/data/record/0011.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/110": {
+      "import": "./src/data/record/0110.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/111": {
+      "import": "./src/data/record/0111.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/112": {
+      "import": "./src/data/record/0112.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/113": {
+      "import": "./src/data/record/0113.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/114": {
+      "import": "./src/data/record/0114.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/115": {
+      "import": "./src/data/record/0115.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/116": {
+      "import": "./src/data/record/0116.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/117": {
+      "import": "./src/data/record/0117.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/118": {
+      "import": "./src/data/record/0118.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/119": {
+      "import": "./src/data/record/0119.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/12": {
+      "import": "./src/data/record/0012.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/13": {
+      "import": "./src/data/record/0013.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/14": {
+      "import": "./src/data/record/0014.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/15": {
+      "import": "./src/data/record/0015.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/16": {
+      "import": "./src/data/record/0016.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/17": {
+      "import": "./src/data/record/0017.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/18": {
+      "import": "./src/data/record/0018.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/19": {
+      "import": "./src/data/record/0019.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/20": {
+      "import": "./src/data/record/0020.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2000": {
+      "import": "./src/data/record/2000.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2001": {
+      "import": "./src/data/record/2001.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2002": {
+      "import": "./src/data/record/2002.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2003": {
+      "import": "./src/data/record/2003.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2004": {
+      "import": "./src/data/record/2004.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2005": {
+      "import": "./src/data/record/2005.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2006": {
+      "import": "./src/data/record/2006.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2007": {
+      "import": "./src/data/record/2007.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2008": {
+      "import": "./src/data/record/2008.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2009": {
+      "import": "./src/data/record/2009.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2010": {
+      "import": "./src/data/record/2010.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2011": {
+      "import": "./src/data/record/2011.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2012": {
+      "import": "./src/data/record/2012.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2013": {
+      "import": "./src/data/record/2013.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2014": {
+      "import": "./src/data/record/2014.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2015": {
+      "import": "./src/data/record/2015.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2016": {
+      "import": "./src/data/record/2016.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2017": {
+      "import": "./src/data/record/2017.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2018": {
+      "import": "./src/data/record/2018.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2019": {
+      "import": "./src/data/record/2019.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2020": {
+      "import": "./src/data/record/2020.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2021": {
+      "import": "./src/data/record/2021.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2022": {
+      "import": "./src/data/record/2022.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2023": {
+      "import": "./src/data/record/2023.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2024": {
+      "import": "./src/data/record/2024.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2025": {
+      "import": "./src/data/record/2025.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2026": {
+      "import": "./src/data/record/2026.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2027": {
+      "import": "./src/data/record/2027.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2028": {
+      "import": "./src/data/record/2028.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2029": {
+      "import": "./src/data/record/2029.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2030": {
+      "import": "./src/data/record/2030.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2031": {
+      "import": "./src/data/record/2031.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2032": {
+      "import": "./src/data/record/2032.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2033": {
+      "import": "./src/data/record/2033.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2034": {
+      "import": "./src/data/record/2034.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2035": {
+      "import": "./src/data/record/2035.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2036": {
+      "import": "./src/data/record/2036.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2037": {
+      "import": "./src/data/record/2037.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2038": {
+      "import": "./src/data/record/2038.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2039": {
+      "import": "./src/data/record/2039.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2040": {
+      "import": "./src/data/record/2040.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2041": {
+      "import": "./src/data/record/2041.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2042": {
+      "import": "./src/data/record/2042.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2043": {
+      "import": "./src/data/record/2043.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2044": {
+      "import": "./src/data/record/2044.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2045": {
+      "import": "./src/data/record/2045.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2046": {
+      "import": "./src/data/record/2046.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2047": {
+      "import": "./src/data/record/2047.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2048": {
+      "import": "./src/data/record/2048.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2049": {
+      "import": "./src/data/record/2049.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2050": {
+      "import": "./src/data/record/2050.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2051": {
+      "import": "./src/data/record/2051.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2052": {
+      "import": "./src/data/record/2052.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2053": {
+      "import": "./src/data/record/2053.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2054": {
+      "import": "./src/data/record/2054.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2055": {
+      "import": "./src/data/record/2055.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2056": {
+      "import": "./src/data/record/2056.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2057": {
+      "import": "./src/data/record/2057.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2058": {
+      "import": "./src/data/record/2058.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2059": {
+      "import": "./src/data/record/2059.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2060": {
+      "import": "./src/data/record/2060.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2061": {
+      "import": "./src/data/record/2061.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2062": {
+      "import": "./src/data/record/2062.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2063": {
+      "import": "./src/data/record/2063.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2064": {
+      "import": "./src/data/record/2064.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2065": {
+      "import": "./src/data/record/2065.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2066": {
+      "import": "./src/data/record/2066.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2067": {
+      "import": "./src/data/record/2067.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2068": {
+      "import": "./src/data/record/2068.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2069": {
+      "import": "./src/data/record/2069.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2070": {
+      "import": "./src/data/record/2070.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2071": {
+      "import": "./src/data/record/2071.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2072": {
+      "import": "./src/data/record/2072.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2073": {
+      "import": "./src/data/record/2073.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2074": {
+      "import": "./src/data/record/2074.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2075": {
+      "import": "./src/data/record/2075.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2076": {
+      "import": "./src/data/record/2076.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2077": {
+      "import": "./src/data/record/2077.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2078": {
+      "import": "./src/data/record/2078.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2079": {
+      "import": "./src/data/record/2079.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2080": {
+      "import": "./src/data/record/2080.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2081": {
+      "import": "./src/data/record/2081.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2082": {
+      "import": "./src/data/record/2082.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2083": {
+      "import": "./src/data/record/2083.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2084": {
+      "import": "./src/data/record/2084.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2085": {
+      "import": "./src/data/record/2085.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2086": {
+      "import": "./src/data/record/2086.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2087": {
+      "import": "./src/data/record/2087.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2088": {
+      "import": "./src/data/record/2088.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2089": {
+      "import": "./src/data/record/2089.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2090": {
+      "import": "./src/data/record/2090.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2091": {
+      "import": "./src/data/record/2091.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2092": {
+      "import": "./src/data/record/2092.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2093": {
+      "import": "./src/data/record/2093.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2094": {
+      "import": "./src/data/record/2094.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2095": {
+      "import": "./src/data/record/2095.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2096": {
+      "import": "./src/data/record/2096.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2097": {
+      "import": "./src/data/record/2097.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2098": {
+      "import": "./src/data/record/2098.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2099": {
+      "import": "./src/data/record/2099.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/21": {
+      "import": "./src/data/record/0021.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2100": {
+      "import": "./src/data/record/2100.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2101": {
+      "import": "./src/data/record/2101.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2102": {
+      "import": "./src/data/record/2102.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2103": {
+      "import": "./src/data/record/2103.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2104": {
+      "import": "./src/data/record/2104.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2105": {
+      "import": "./src/data/record/2105.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2106": {
+      "import": "./src/data/record/2106.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2107": {
+      "import": "./src/data/record/2107.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2108": {
+      "import": "./src/data/record/2108.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2109": {
+      "import": "./src/data/record/2109.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/22": {
+      "import": "./src/data/record/0022.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2250": {
+      "import": "./src/data/record/2250.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2251": {
+      "import": "./src/data/record/2251.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2252": {
+      "import": "./src/data/record/2252.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2253": {
+      "import": "./src/data/record/2253.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2254": {
+      "import": "./src/data/record/2254.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2255": {
+      "import": "./src/data/record/2255.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2256": {
+      "import": "./src/data/record/2256.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2257": {
+      "import": "./src/data/record/2257.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2258": {
+      "import": "./src/data/record/2258.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2259": {
+      "import": "./src/data/record/2259.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/2260": {
+      "import": "./src/data/record/2260.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/23": {
+      "import": "./src/data/record/0023.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/24": {
+      "import": "./src/data/record/0024.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/25": {
+      "import": "./src/data/record/0025.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/26": {
+      "import": "./src/data/record/0026.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/27": {
+      "import": "./src/data/record/0027.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/28": {
+      "import": "./src/data/record/0028.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/29": {
+      "import": "./src/data/record/0029.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/3": {
+      "import": "./src/data/record/0003.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/30": {
+      "import": "./src/data/record/0030.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/31": {
+      "import": "./src/data/record/0031.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/32": {
+      "import": "./src/data/record/0032.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/33": {
+      "import": "./src/data/record/0033.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/34": {
+      "import": "./src/data/record/0034.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/35": {
+      "import": "./src/data/record/0035.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/36": {
+      "import": "./src/data/record/0036.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/37": {
+      "import": "./src/data/record/0037.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/38": {
+      "import": "./src/data/record/0038.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/39": {
+      "import": "./src/data/record/0039.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/4": {
+      "import": "./src/data/record/0004.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/40": {
+      "import": "./src/data/record/0040.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/41": {
+      "import": "./src/data/record/0041.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/42": {
+      "import": "./src/data/record/0042.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/43": {
+      "import": "./src/data/record/0043.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/44": {
+      "import": "./src/data/record/0044.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/45": {
+      "import": "./src/data/record/0045.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/46": {
+      "import": "./src/data/record/0046.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/47": {
+      "import": "./src/data/record/0047.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/48": {
+      "import": "./src/data/record/0048.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/49": {
+      "import": "./src/data/record/0049.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/5": {
+      "import": "./src/data/record/0005.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/50": {
+      "import": "./src/data/record/0050.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/51": {
+      "import": "./src/data/record/0051.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/52": {
+      "import": "./src/data/record/0052.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/53": {
+      "import": "./src/data/record/0053.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/54": {
+      "import": "./src/data/record/0054.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/55": {
+      "import": "./src/data/record/0055.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/56": {
+      "import": "./src/data/record/0056.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/57": {
+      "import": "./src/data/record/0057.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/58": {
+      "import": "./src/data/record/0058.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/59": {
+      "import": "./src/data/record/0059.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/6": {
+      "import": "./src/data/record/0006.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/60": {
+      "import": "./src/data/record/0060.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/61": {
+      "import": "./src/data/record/0061.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/62": {
+      "import": "./src/data/record/0062.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/63": {
+      "import": "./src/data/record/0063.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/64": {
+      "import": "./src/data/record/0064.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/65": {
+      "import": "./src/data/record/0065.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/66": {
+      "import": "./src/data/record/0066.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/67": {
+      "import": "./src/data/record/0067.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/68": {
+      "import": "./src/data/record/0068.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/69": {
+      "import": "./src/data/record/0069.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/7": {
+      "import": "./src/data/record/0007.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/70": {
+      "import": "./src/data/record/0070.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/71": {
+      "import": "./src/data/record/0071.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/72": {
+      "import": "./src/data/record/0072.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/73": {
+      "import": "./src/data/record/0073.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/74": {
+      "import": "./src/data/record/0074.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/75": {
+      "import": "./src/data/record/0075.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/76": {
+      "import": "./src/data/record/0076.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/77": {
+      "import": "./src/data/record/0077.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/78": {
+      "import": "./src/data/record/0078.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/79": {
+      "import": "./src/data/record/0079.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/8": {
+      "import": "./src/data/record/0008.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/80": {
+      "import": "./src/data/record/0080.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/81": {
+      "import": "./src/data/record/0081.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/82": {
+      "import": "./src/data/record/0082.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/83": {
+      "import": "./src/data/record/0083.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/84": {
+      "import": "./src/data/record/0084.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/85": {
+      "import": "./src/data/record/0085.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/86": {
+      "import": "./src/data/record/0086.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/87": {
+      "import": "./src/data/record/0087.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/88": {
+      "import": "./src/data/record/0088.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/89": {
+      "import": "./src/data/record/0089.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/9": {
+      "import": "./src/data/record/0009.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/90": {
+      "import": "./src/data/record/0090.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/91": {
+      "import": "./src/data/record/0091.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/92": {
+      "import": "./src/data/record/0092.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/93": {
+      "import": "./src/data/record/0093.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/94": {
+      "import": "./src/data/record/0094.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/95": {
+      "import": "./src/data/record/0095.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/96": {
+      "import": "./src/data/record/0096.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/97": {
+      "import": "./src/data/record/0097.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/98": {
+      "import": "./src/data/record/0098.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./mib/99": {
+      "import": "./src/data/record/0099.mjs",
+      "types": "./src/data/record.d.mts"
     }
   },
   "files": [
@@ -38,7 +1070,8 @@
   "scripts": {
     "produck:coverage": "c8 --reporter=lcov --reporter=html --reporter=text-summary npm test",
     "sync": "node scripts/sync.mjs",
-    "test": "node test/index.mjs"
+    "test": "node test/index.mjs",
+    "type-check": "tsc --noEmit"
   },
   "sideEffects": false,
   "type": "module",

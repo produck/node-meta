@@ -30,14 +30,49 @@ data.mib106.description; // short description from the registry
 data.mib106.xrefList; // [{ type: 'rfc', data: 'rfc3629' }]
 ```
 
-The package ships no aggregated list; build one yourself when needed:
+The package ships **no aggregated list, no index and no lookup API**. It only
+exposes the records as written in the IANA registry. Building a list, an index,
+or a query on top of them is the consumer's job.
+
+Enumerating `data` gives every record module. Pick the fields you need while
+building your own table:
 
 ```js
-const recordList = Object.entries(data)
-  .filter(([name]) => /^mib\d+$/.test(name))
-  .map(([, namespace]) => namespace)
-  .sort((left, right) => left.mibEnum - right.mibEnum);
+import { data } from '@produck/node-meta-iana-charset';
+
+const byName = new Map();
+
+for (const [key, record] of Object.entries(data)) {
+  if (!/^mib\d+$/.test(key)) continue;
+
+  byName.set(record.name, {
+    mibEnum: record.mibEnum,
+    preferredAlias: record.preferredAlias,
+    aliasList: record.aliasList,
+  });
+}
+
+byName.get('UTF-8').mibEnum; // 106
 ```
+
+Lookups follow the same rule. For example, resolving a charset label through
+the registry needs an index you build and own:
+
+```js
+const byAlias = new Map();
+
+for (const record of byName.values()) {
+  for (const alias of record.aliasList) {
+    byAlias.set(alias.toLowerCase(), record);
+  }
+}
+
+byAlias.get('latin1').mibEnum; // 4
+byAlias.get('csutf8').mibEnum; // 106
+```
+
+Note that this index lives in your code, not in the package: keeping it out of
+the shipped data is what lets the per-record entries stay tree-shakable.
 
 ## Data shape
 
@@ -78,22 +113,82 @@ Downstream code may enumerate the namespaces directly, no wrapping needed.
 With `sideEffects: false`, downstream builds can import only the namespaces
 they use.
 
-## Update
+## Tree shaking
 
-```bash
-npm run sync
+There are three ways to read the data, and they shake differently.
+
+**Field level.** Each record has its own `/mib/<mibEnum>` entry, exporting the
+fields separately. Only the fields you import end up in the bundle:
+
+```js
+import { name, mibEnum } from '@produck/node-meta-iana-charset/mib/106';
 ```
 
-The script fetches `character-sets.xml` and rewrites every record under
-`src/data/record/`, together with `src/data/index.mjs` and `src/index.mjs`.
-It caches: an existing `tmp/character-sets.xml` is reused, delete that file to
-force a fresh download.
+**Record level.** The `/data` entry exports every record as a namespace named
+`mib<mibEnum>`. Importing a namespace keeps that record whole but lets the
+bundler drop the other 257:
+
+```js
+import { mib106, mib13 } from '@produck/node-meta-iana-charset/data';
+
+mib106.name; // UTF-8
+mib13.name; // ISO-8859-10
+```
+
+**Whole registry.** The root entry also re-exports `data`. That object is built
+at runtime, so a bundler cannot tell which entries you read: importing it pulls
+every record into the bundle.
+
+```js
+import { data } from '@produck/node-meta-iana-charset';
+```
+
+Prefer `/mib/<mibEnum>` when the records are known at build time. Use `/data`
+when you need a handful of complete records, and the root `data` namespace only
+when you genuinely have to enumerate every registration at runtime.
+
+## Common charsets
+
+Registration names and MIBenum values for the charsets most code deals with.
+`/mib/<mibEnum>` is the import path for a single record.
+
+| MIBenum | Name                                            | Preferred alias |
+| ------- | ----------------------------------------------- | --------------- |
+| 3       | `US-ASCII`                                      | `US-ASCII`      |
+| 4       | `ISO_8859-1:1987`                               | `ISO-8859-1`    |
+| 5       | `ISO_8859-2:1987`                               | `ISO-8859-2`    |
+| 6       | `ISO_8859-3:1988`                               | `ISO-8859-3`    |
+| 7       | `ISO_8859-4:1988`                               | `ISO-8859-4`    |
+| 8       | `ISO_8859-5:1988`                               | `ISO-8859-5`    |
+| 9       | `ISO_8859-6:1987`                               | `ISO-8859-6`    |
+| 10      | `ISO_8859-7:1987`                               | `ISO-8859-7`    |
+| 11      | `ISO_8859-8:1988`                               | `ISO-8859-8`    |
+| 12      | `ISO_8859-9:1989`                               | `ISO-8859-9`    |
+| 13      | `ISO-8859-10`                                   | `ISO-8859-10`   |
+| 17      | `Shift_JIS`                                     | `Shift_JIS`     |
+| 18      | `Extended_UNIX_Code_Packed_Format_for_Japanese` | `EUC-JP`        |
+| 38      | `EUC-KR`                                        | `EUC-KR`        |
+| 39      | `ISO-2022-JP`                                   | `ISO-2022-JP`   |
+| 106     | `UTF-8`                                         | none            |
+| 113     | `GBK`                                           | none            |
+| 114     | `GB18030`                                       | none            |
+| 1013    | `UTF-16BE`                                      | none            |
+| 1014    | `UTF-16LE`                                      | none            |
+| 1015    | `UTF-16`                                        | none            |
+| 1017    | `UTF-32`                                        | none            |
+| 2025    | `GB2312`                                        | `GB2312`        |
+| 2026    | `Big5`                                          | `Big5`          |
+| 2084    | `KOI8-R`                                        | `KOI8-R`        |
+| 2250    | `windows-1250`                                  | none            |
+| 2251    | `windows-1251`                                  | none            |
+| 2252    | `windows-1252`                                  | none            |
+| 2259    | `TIS-620`                                       | none            |
+
+`UTF-8`, `UTF-16`, `UTF-16BE`, `UTF-16LE`, `UTF-32` and the `windows-*` entries
+register no preferred alias, so use the registration name to look them up.
 
 ## Notes
 
-- This package only provides **registry facts**. It does not decide whether a
-  media type accepts a `charset` parameter: `application/json` must not carry
-  one while `application/xml` may, and that rule belongs to the RFCs, not here.
 - Alias coverage follows the IANA registry. Labels from the WHATWG Encoding
   Standard (for example `x-user-defined`) are not included and the two sets
   are not interchangeable.

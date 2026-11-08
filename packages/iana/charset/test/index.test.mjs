@@ -9,6 +9,11 @@ import * as data from '../src/data/index.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const RECORD_DIR = path.resolve(HERE, '..', 'src', 'data', 'record');
+const MANIFEST = path.resolve(HERE, '..', 'package.json');
+
+function readRecordFileList() {
+  return fs.readdirSync(RECORD_DIR).filter((name) => name.endsWith('.mjs'));
+}
 
 function readFileName(mibEnum) {
   return `${String(mibEnum).padStart(4, '0')}.mjs`;
@@ -34,7 +39,7 @@ describe('source', () => {
 
 describe('data', () => {
   it('should export one namespace per record file', () => {
-    assert.equal(namespaceList.length, fs.readdirSync(RECORD_DIR).length);
+    assert.equal(namespaceList.length, readRecordFileList().length);
   });
 
   it('should name every namespace after its mibEnum without padding', () => {
@@ -84,8 +89,51 @@ describe('data', () => {
   });
 
   it('should pad every record file name to four digits', () => {
-    for (const name of fs.readdirSync(RECORD_DIR)) {
+    for (const name of readRecordFileList()) {
       assert.match(name, /^\d{4}\.mjs$/);
     }
+  });
+});
+
+describe('exports', () => {
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
+
+  it('should declare the root and data entries', () => {
+    assert.ok(manifest.exports['.']);
+    assert.ok(manifest.exports['./data']);
+  });
+
+  it('should declare one mib entry per record', () => {
+    for (const [, namespace] of namespaceList) {
+      const key = `./mib/${namespace.mibEnum}`;
+
+      assert.ok(manifest.exports[key], key);
+    }
+  });
+
+  it('should point every mib entry at its record file', () => {
+    for (const [, namespace] of namespaceList) {
+      const entry = manifest.exports[`./mib/${namespace.mibEnum}`];
+
+      assert.equal(
+        entry.import,
+        `./src/data/record/${readFileName(namespace.mibEnum)}`,
+      );
+    }
+  });
+
+  it('should share one type declaration across every mib entry', () => {
+    for (const [, namespace] of namespaceList) {
+      const entry = manifest.exports[`./mib/${namespace.mibEnum}`];
+
+      assert.equal(entry.types, './src/data/record.d.mts');
+    }
+  });
+
+  it('should ship the shared type declaration', () => {
+    assert.equal(
+      fs.existsSync(path.resolve(HERE, '..', 'src', 'data', 'record.d.mts')),
+      true,
+    );
   });
 });
