@@ -13,6 +13,8 @@ const PACKAGE_ROOT = path.resolve(HERE, '..');
 const TARGET = path.join(PACKAGE_ROOT, 'src', 'index.mjs');
 const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
 const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
+const XREF_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'xref', 'index.mjs');
+const XREF_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'xref');
 const CACHE = path.join(PACKAGE_ROOT, 'tmp', 'character-sets.xml');
 
 function toArray(value) {
@@ -44,6 +46,26 @@ function readXrefList(value) {
     type: String(xref['@_type'] ?? ''),
     data: String(xref['@_data'] ?? ''),
   }));
+}
+
+function readDescription(value) {
+  if (value === undefined || value === null) {
+    return '';
+  }
+
+  if (typeof value === 'string' || typeof value === 'number') {
+    return String(value).trim();
+  }
+
+  if (typeof value !== 'object') {
+    return '';
+  }
+
+  const text = readText(value['#text'] ?? '');
+  const targetList = readXrefList(value.xref).map((xref) => xref.data);
+  const suffix = targetList.filter((data) => data.length > 0).join(' ');
+
+  return suffix === '' ? text : `${text} ${suffix}`.trim();
 }
 
 function readDocument(xml) {
@@ -81,7 +103,7 @@ function readRecord(record) {
     mibEnum: Number(readText(record.value)),
     preferredAlias: preferredAlias === '' ? null : preferredAlias,
     aliasList: aliasList.filter((alias) => alias.length > 0),
-    description: readText(record.description),
+    description: readDescription(record.description),
     xrefList: readXrefList(record.xref),
     date: record['@_date'] === undefined ? null : String(record['@_date']),
   };
@@ -95,13 +117,57 @@ function readSource(xml) {
   };
 }
 
+function buildXrefTable(recordList) {
+  const table = new Map();
+
+  for (const record of recordList) {
+    for (const xref of record.xrefList) {
+      const key = `${xref.type}|${xref.data}`;
+
+      if (table.has(key)) {
+        continue;
+      }
+
+      table.set(key, { type: xref.type, data: xref.data, name: null });
+    }
+  }
+
+  const usedName = new Set();
+
+  for (const entry of table.values()) {
+    const base = entry.data === '' ? 'EMPTY' : toIdentifier(entry.data);
+    let name = base;
+    let index = 2;
+
+    while (usedName.has(`${entry.type}.${name}`)) {
+      name = `${base}_${index}`;
+      index++;
+    }
+
+    usedName.add(`${entry.type}.${name}`);
+    entry.name = name;
+  }
+
+  return table;
+}
+
+function toIdentifier(value) {
+  const base = value.replace(/[^A-Za-z0-9]+/g, '_').toUpperCase();
+
+  return /^[A-Z_]/.test(base) ? base : `_${base}`;
+}
+
 function build(xml) {
   const document = readDocument(xml);
   const registry = findRegistry(document);
   const recordList = toArray(registry.record).map(readRecord);
   recordList.sort((left, right) => left.mibEnum - right.mibEnum);
 
-  return { source: readSource(xml), recordList };
+  return {
+    source: readSource(xml),
+    recordList,
+    xrefTable: buildXrefTable(recordList),
+  };
 }
 
 function literal(value) {
@@ -112,18 +178,35 @@ function readFileName(record) {
   return `${String(record.mibEnum).padStart(4, '0')}.mjs`;
 }
 
-function readXrefLiteral(xrefList) {
-  const itemList = xrefList.map(
-    (xref) => `{ type: ${literal(xref.type)}, data: ${literal(xref.data)} }`,
-  );
+function renderXrefName(type, data, xrefTable) {
+  const entry = xrefTable.get(`${type}|${data}`);
 
-  return itemList.length === 0 ? '[]' : `[${itemList.join(', ')}]`;
+  if (entry === undefined) {
+    throw new Error(`Unknown xref ${type}|${data}.`);
+  }
+
+  return entry.name;
 }
 
-function renderRecord(record) {
+function renderRecord(record, xrefTable) {
+  const referenceList = record.xrefList.map(
+    (xref) =>
+      `${xref.type.toUpperCase()}.${renderXrefName(
+        xref.type,
+        xref.data,
+        xrefTable,
+      )}`,
+  );
+  const typeList = [...new Set(record.xrefList.map((xref) => xref.type))].sort(
+    (left, right) => left.localeCompare(right),
+  );
+  const importList = typeList.map(
+    (type) => `import * as ${type.toUpperCase()} from '../xref/${type}.mjs';\n`,
+  );
+  const header = importList.length === 0 ? '' : `${importList.join('')}\n`;
   const fieldList = [
     ['description', literal(record.description)],
-    ['xrefList', readXrefLiteral(record.xrefList)],
+    ['xrefList', `[${referenceList.join(', ')}]`],
     ['name', literal(record.name)],
     ['mibEnum', record.mibEnum],
     ['preferredAlias', literal(record.preferredAlias)],
@@ -132,10 +215,37 @@ function renderRecord(record) {
   ];
 
   return (
+    header +
     fieldList
       .map(([key, value]) => `export const ${key} = ${value};\n`)
+      .join('\n') +
+    '\n'
+  );
+}
+
+function renderXrefModule(type, xrefTable) {
+  const entryList = [...xrefTable.values()]
+    .filter((entry) => entry.type === type)
+    .sort((left, right) => left.name.localeCompare(right.name));
+
+  return (
+    entryList
+      .map(
+        (entry) =>
+          `export const ${entry.name} = Object.freeze({ type: ${literal(
+            entry.type,
+          )}, data: ${literal(entry.data)} });\n`,
+      )
       .join('\n') + '\n'
   );
+}
+
+function renderXrefIndex(xrefTable) {
+  const typeList = [...new Set([...xrefTable.values()].map((e) => e.type))]
+    .sort((left, right) => left.localeCompare(right))
+    .map((type) => `export * as ${type} from './${type}.mjs';`);
+
+  return [...typeList, ''].join('\n');
 }
 
 function renderDataIndex(recordList) {
@@ -177,16 +287,25 @@ async function download() {
 }
 
 const xml = readCache() ?? (await download());
-const { source, recordList } = build(xml);
+const { source, recordList, xrefTable } = build(xml);
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
+fs.mkdirSync(XREF_DIR, { recursive: true });
 
 for (const record of recordList) {
   const file = path.join(DATA_DIR, readFileName(record));
 
-  fs.writeFileSync(file, renderRecord(record));
+  fs.writeFileSync(file, renderRecord(record, xrefTable));
 }
 
+for (const type of new Set([...xrefTable.values()].map((e) => e.type))) {
+  fs.writeFileSync(
+    path.join(XREF_DIR, `${type}.mjs`),
+    renderXrefModule(type, xrefTable),
+  );
+}
+
+fs.writeFileSync(XREF_INDEX, renderXrefIndex(xrefTable));
 fs.writeFileSync(DATA_INDEX, renderDataIndex(recordList));
 fs.writeFileSync(TARGET, renderSource(source));
 

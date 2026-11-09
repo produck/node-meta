@@ -1,4 +1,4 @@
-export const description = 'ISO 10646 Japanese, see.';
+export const description = 'ISO 10646 Japanese, see. rfc1815';
 
 export const xrefList = [];
 

@@ -1,4 +1,4 @@
-export const description = ',';
+export const description = ', rfc1842 rfc1843 rfc1843 rfc1842';
 
 export const xrefList = [];
 

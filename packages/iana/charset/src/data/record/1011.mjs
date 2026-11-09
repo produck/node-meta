@@ -1,4 +1,5 @@
-export const description = 'SCSU See';
+export const description =
+  'SCSU See https://www.iana.org/assignments/charset-reg/SCSU Markus_Scherer';
 
 export const xrefList = [];
 

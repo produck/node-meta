@@ -1,9 +1,9 @@
-export const description = ', also known as "mnemonic+ascii+8200"';
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1345' },
-  { type: 'person', data: 'Keld_Simonsen' },
-];
+export const description = ', also known as "mnemonic+ascii+8200" rfc1345';
+
+export const xrefList = [RFC.RFC1345, PERSON.KELD_SIMONSEN];
 
 export const name = 'MNEM';
 

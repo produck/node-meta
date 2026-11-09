@@ -1,11 +1,11 @@
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
+import * as TEXT from '../xref/text.mjs';
+
 export const description =
   'LaserJet IIP Printer User\'s Manual,\nHP part no 33471-90901, Hewlet-Packard, June 1989.';
 
-export const xrefList = [
-  { type: 'text', data: '' },
-  { type: 'rfc', data: 'rfc1345' },
-  { type: 'person', data: 'Keld_Simonsen' },
-];
+export const xrefList = [TEXT.EMPTY, RFC.RFC1345, PERSON.KELD_SIMONSEN];
 
 export const name = 'hp-roman8';
 

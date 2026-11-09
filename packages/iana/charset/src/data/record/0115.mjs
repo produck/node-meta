@@ -1,5 +1,5 @@
 export const description =
-  'Fujitsu-Siemens standard mainframe EBCDIC encoding\nPlease see:';
+  'Fujitsu-Siemens standard mainframe EBCDIC encoding\nPlease see: https://www.iana.org/assignments/charset-reg/OSD-EBCDIC-DF04-15';
 
 export const xrefList = [];
 

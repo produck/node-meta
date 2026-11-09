@@ -103,6 +103,12 @@ Every namespace exports each field by name, with no aggregate object:
 
 Downstream code may enumerate the namespaces directly, no wrapping needed.
 
+Some registrations write their description as a link to an external document,
+for example `<description>See <xref type="uri" data="…"/></description>`.
+`description` keeps that sentence with the link target inlined as plain text
+(`'See https://…'`); the same target also appears in `xrefList`, which stays
+the structured form.
+
 ### Files
 
 - `src/index.mjs` — the `source` snapshot provenance.

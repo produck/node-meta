@@ -1,7 +1,9 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description =
   'PC Danish Norwegian\n8-bit PC set for Danish Norwegian\nPCL Symbol Set id: 11U';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'PC8-Danish-Norwegian';
 

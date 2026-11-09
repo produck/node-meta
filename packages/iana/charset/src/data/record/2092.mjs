@@ -1,4 +1,5 @@
-export const description = 'IBM See';
+export const description =
+  'IBM See https://www.iana.org/assignments/charset-reg/IBM01141 Tamer_Mahdi';
 
 export const xrefList = [];
 

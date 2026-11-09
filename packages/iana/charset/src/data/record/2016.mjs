@@ -1,6 +1,8 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description = 'Presentation Set, CPGID: 838';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'IBM-Thai';
 

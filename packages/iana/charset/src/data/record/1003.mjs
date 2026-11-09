@@ -1,5 +1,5 @@
 export const description =
-  'ISO Latin-1 subset of Unicode. Basic Latin and Latin-1\nSupplement  = collections 1 and 2.  See ISO 10646,\nAppendix A.  See.';
+  'ISO Latin-1 subset of Unicode. Basic Latin and Latin-1\nSupplement  = collections 1 and 2.  See ISO 10646,\nAppendix A.  See. rfc1815';
 
 export const xrefList = [];
 

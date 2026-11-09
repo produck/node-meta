@@ -1,6 +1,8 @@
-export const description = '';
+import * as PERSON from '../xref/person.mjs';
 
-export const xrefList = [{ type: 'person', data: 'Toby_Phipps' }];
+export const description = 'http://www.unicode.org/unicode/reports/tr26';
+
+export const xrefList = [PERSON.TOBY_PHIPPS];
 
 export const name = 'CESU-8';
 

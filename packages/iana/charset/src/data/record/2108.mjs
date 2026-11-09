@@ -1,4 +1,5 @@
-export const description = 'See';
+export const description =
+  'See https://www.iana.org/assignments/charset-reg/CP51932 Yui_Naruse';
 
 export const xrefList = [];
 

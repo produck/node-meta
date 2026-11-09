@@ -1,6 +1,8 @@
+import * as RFC from '../xref/rfc.mjs';
+
 export const description = 'ANSI X3.4-1986';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc2046' }];
+export const xrefList = [RFC.RFC2046];
 
 export const name = 'US-ASCII';
 

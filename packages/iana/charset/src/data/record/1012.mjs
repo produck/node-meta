@@ -1,6 +1,8 @@
-export const description = '';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc2152' }];
+export const description = 'rfc2152';
+
+export const xrefList = [RFC.RFC2152];
 
 export const name = 'UTF-7';
 

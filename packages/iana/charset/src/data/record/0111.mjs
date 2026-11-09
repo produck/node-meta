@@ -1,4 +1,5 @@
-export const description = 'ISO\nPlease see:';
+export const description =
+  'ISO\nPlease see: https://www.iana.org/assignments/charset-reg/ISO-8859-15';
 
 export const xrefList = [];
 

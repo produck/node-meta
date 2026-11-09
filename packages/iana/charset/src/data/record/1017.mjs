@@ -1,6 +1,8 @@
-export const description = '';
+import * as PERSON from '../xref/person.mjs';
 
-export const xrefList = [{ type: 'person', data: 'Mark_Davis' }];
+export const description = 'http://www.unicode.org/unicode/reports/tr19/';
+
+export const xrefList = [PERSON.MARK_DAVIS];
 
 export const name = 'UTF-32';
 

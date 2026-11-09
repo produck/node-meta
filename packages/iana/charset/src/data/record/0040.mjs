@@ -1,9 +1,9 @@
-export const description = '';
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1554' },
-  { type: 'person', data: 'Masataka_Ohta' },
-];
+export const description = 'rfc1554';
+
+export const xrefList = [RFC.RFC1554, PERSON.MASATAKA_OHTA];
 
 export const name = 'ISO-2022-JP-2';
 

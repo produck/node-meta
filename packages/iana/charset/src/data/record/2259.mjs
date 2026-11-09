@@ -1,4 +1,5 @@
-export const description = 'Thai Industrial Standards Institute (TISI)';
+export const description =
+  'Thai Industrial Standards Institute (TISI) Trin_Tantsetthi';
 
 export const xrefList = [];
 

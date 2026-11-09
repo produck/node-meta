@@ -1,5 +1,5 @@
 export const description =
-  'Chinese IT Standardization Technical Committee\nPlease see:';
+  'Chinese IT Standardization Technical Committee\nPlease see: https://www.iana.org/assignments/charset-reg/GBK';
 
 export const xrefList = [];
 

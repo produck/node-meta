@@ -1,7 +1,9 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description =
   'Extended ISO 8859-2.  Latin-2 for Windows 3.1.\nPCL Symbol Set id: 9E';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'ISO-8859-2-Windows-Latin-2';
 

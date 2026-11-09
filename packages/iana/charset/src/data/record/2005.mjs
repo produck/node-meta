@@ -1,7 +1,9 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description =
   'PostScript Language Reference Manual\nPCL Symbol Set id: 10J';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'Adobe-Standard-Encoding';
 

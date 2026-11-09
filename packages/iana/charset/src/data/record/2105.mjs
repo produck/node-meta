@@ -1,4 +1,5 @@
-export const description = 'See';
+export const description =
+  'See https://www.iana.org/assignments/charset-reg/KOI7-switched';
 
 export const xrefList = [];
 

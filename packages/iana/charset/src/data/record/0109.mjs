@@ -1,4 +1,5 @@
-export const description = 'ISO See';
+export const description =
+  'ISO See https://www.iana.org/assignments/charset-reg/ISO-8859-13 Vladas_Tumasonis';
 
 export const xrefList = [];
 

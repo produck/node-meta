@@ -1,6 +1,8 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description = 'PC Latin Turkish.  PCL Symbol Set id: 9T';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'PC8-Turkish';
 

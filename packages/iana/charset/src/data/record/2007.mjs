@@ -1,7 +1,9 @@
+import * as TEXT from '../xref/text.mjs';
+
 export const description =
   'Ventura International.  ASCII plus coded characters similar\nto Roman8.\nPCL Symbol Set id: 13J';
 
-export const xrefList = [{ type: 'text', data: '' }];
+export const xrefList = [TEXT.EMPTY];
 
 export const name = 'Ventura-International';
 

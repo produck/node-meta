@@ -1,9 +1,9 @@
-export const description = '(see also KS_C_5601-1987)';
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1557' },
-  { type: 'person', data: 'Woohyong_Choi' },
-];
+export const description = '(see also KS_C_5601-1987) rfc1557';
+
+export const xrefList = [RFC.RFC1557, PERSON.WOOHYONG_CHOI];
 
 export const name = 'ISO-2022-KR';
 

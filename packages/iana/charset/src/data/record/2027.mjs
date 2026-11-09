@@ -1,10 +1,10 @@
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
+
 export const description =
   'The Unicode Standard ver1.0, ISBN 0-201-56788-1, Oct 1991';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1345' },
-  { type: 'person', data: 'Keld_Simonsen' },
-];
+export const xrefList = [RFC.RFC1345, PERSON.KELD_SIMONSEN];
 
 export const name = 'macintosh';
 

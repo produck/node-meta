@@ -1,9 +1,9 @@
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
+
 export const description = 'IBM DOS 3.3 Ref (Abridged), 94X9575 (Feb 1987)';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1345' },
-  { type: 'person', data: 'Keld_Simonsen' },
-];
+export const xrefList = [RFC.RFC1345, PERSON.KELD_SIMONSEN];
 
 export const name = 'IBM865';
 

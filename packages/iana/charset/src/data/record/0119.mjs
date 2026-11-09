@@ -1,4 +1,5 @@
-export const description = 'See';
+export const description =
+  'See https://www.iana.org/assignments/charset-reg/KZ-1048 Sairan_M_Kikkarin Alexei_Veremeev';
 
 export const xrefList = [];
 

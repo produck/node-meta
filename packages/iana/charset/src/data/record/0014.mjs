@@ -1,10 +1,10 @@
-export const description =
-  'and ISO 6937-2:1983Note: The current registration authority is IPSJ/ITSCJ, Japan.';
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1345' },
-  { type: 'person', data: 'Keld_Simonsen' },
-];
+export const description =
+  'and ISO 6937-2:1983Note: The current registration authority is IPSJ/ITSCJ, Japan. https://itscj.ipsj.or.jp/english/vbcqpr00000004qn-att/ISO-IR.pdf';
+
+export const xrefList = [RFC.RFC1345, PERSON.KELD_SIMONSEN];
 
 export const name = 'ISO_6937-2-add';
 

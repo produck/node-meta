@@ -1,6 +1,8 @@
-export const description = '';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc1922' }];
+export const description = 'rfc1922';
+
+export const xrefList = [RFC.RFC1922];
 
 export const name = 'ISO-2022-CN-EXT';
 

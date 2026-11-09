@@ -1,4 +1,5 @@
-export const description = 'Microsoft';
+export const description =
+  'Microsoft https://www.iana.org/assignments/charset-reg/windows-1252 Chris_Wendt';
 
 export const xrefList = [];
 

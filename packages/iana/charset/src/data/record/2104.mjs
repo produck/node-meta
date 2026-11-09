@@ -1,4 +1,4 @@
-export const description = 'See';
+export const description = 'See http://www.amiga.ultranet.ru/Amiga-1251.html';
 
 export const xrefList = [];
 

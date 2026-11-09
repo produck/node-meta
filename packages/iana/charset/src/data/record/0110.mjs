@@ -1,4 +1,5 @@
-export const description = 'ISO See';
+export const description =
+  'ISO See https://www.iana.org/assignments/charset-reg/ISO-8859-14 Keld_Simonsen_2';
 
 export const xrefList = [];
 

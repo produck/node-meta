@@ -1,6 +1,9 @@
-export const description = 'See';
+import * as PERSON from '../xref/person.mjs';
 
-export const xrefList = [{ type: 'person', data: 'Alexander_Uskov' }];
+export const description =
+  'See https://www.iana.org/assignments/charset-reg/PTCP154';
+
+export const xrefList = [PERSON.ALEXANDER_USKOV];
 
 export const name = 'PTCP154';
 

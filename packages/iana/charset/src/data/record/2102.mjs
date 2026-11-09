@@ -1,6 +1,9 @@
-export const description = 'IBM1047 (EBCDIC Latin 1/Open Systems)';
+import * as PERSON from '../xref/person.mjs';
 
-export const xrefList = [{ type: 'person', data: 'Reuel_Robrigado' }];
+export const description =
+  'IBM1047 (EBCDIC Latin 1/Open Systems) http://www-1.ibm.com/servers/eserver/iseries/software/globalization/pdf/cp01047z.pdf';
+
+export const xrefList = [PERSON.REUEL_ROBRIGADO];
 
 export const name = 'IBM1047';
 

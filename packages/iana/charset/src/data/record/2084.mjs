@@ -1,7 +1,9 @@
-export const description =
-  ', based on GOST-19768-74, ISO-6937/8,\nINIS-Cyrillic, ISO-5427.';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc1489' }];
+export const description =
+  ', based on GOST-19768-74, ISO-6937/8,\nINIS-Cyrillic, ISO-5427. rfc1489';
+
+export const xrefList = [RFC.RFC1489];
 
 export const name = 'KOI8-R';
 

@@ -1,6 +1,8 @@
+import * as RFC from '../xref/rfc.mjs';
+
 export const description = '';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc1428' }];
+export const xrefList = [RFC.RFC1428];
 
 export const name = 'UNKNOWN-8BIT';
 

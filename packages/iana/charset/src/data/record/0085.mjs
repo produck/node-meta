@@ -1,9 +1,9 @@
-export const description = '';
+import * as PERSON from '../xref/person.mjs';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [
-  { type: 'rfc', data: 'rfc1556' },
-  { type: 'person', data: 'Hank_Nussbacher' },
-];
+export const description = 'rfc1556';
+
+export const xrefList = [RFC.RFC1556, PERSON.HANK_NUSSBACHER];
 
 export const name = 'ISO_8859-8-I';
 

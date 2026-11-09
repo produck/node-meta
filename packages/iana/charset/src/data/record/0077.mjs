@@ -1,4 +1,5 @@
-export const description = '';
+export const description =
+  'https://itscj.ipsj.or.jp/english/vbcqpr00000004qn-att/ISO-IR.pdf';
 
 export const xrefList = [];
 

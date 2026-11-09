@@ -1,6 +1,8 @@
-export const description = '';
+import * as RFC from '../xref/rfc.mjs';
 
-export const xrefList = [{ type: 'rfc', data: 'rfc2319' }];
+export const description = 'rfc2319';
+
+export const xrefList = [RFC.RFC2319];
 
 export const name = 'KOI8-U';
 

@@ -1,6 +1,8 @@
+import * as PERSON from '../xref/person.mjs';
+
 export const description = 'IBM NLDG Volume 2 (SE09-8002-03) August 1994';
 
-export const xrefList = [{ type: 'person', data: 'Rick_Pond' }];
+export const xrefList = [PERSON.RICK_POND];
 
 export const name = 'IBM866';
 
