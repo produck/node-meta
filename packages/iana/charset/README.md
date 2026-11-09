@@ -124,28 +124,109 @@ fields separately. Only the fields you import end up in the bundle:
 import { name, mibEnum } from '@produck/node-meta-iana-charset/mib/106';
 ```
 
-**Record level.** The `/data` entry exports every record as a namespace named
-`mib<mibEnum>`. Importing a namespace keeps that record whole but lets the
-bundler drop the other 257:
+**Record level, statically.** Import the record namespaces you need by path.
+Each import is a separate module, so the bundler keeps exactly the records you
+named and drops the other 257:
 
 ```js
-import { mib106, mib13 } from '@produck/node-meta-iana-charset/data';
+import * as MIB_106 from '@produck/node-meta-iana-charset/mib/106';
+import * as MIB_13 from '@produck/node-meta-iana-charset/mib/13';
 
-mib106.name; // UTF-8
-mib13.name; // ISO-8859-10
+MIB_106.name; // UTF-8
+MIB_13.name; // ISO-8859-10
 ```
 
-**Whole registry.** The root entry also re-exports `data`. That object is built
-at runtime, so a bundler cannot tell which entries you read: importing it pulls
-every record into the bundle.
+**Whole registry.** The root entry re-exports `data`, and `/data` exports every
+record as a namespace named `mib<mibEnum>`. Both are read at runtime, so a
+bundler cannot tell which entries you use: any enumeration pulls every record
+into the bundle.
 
 ```js
 import { data } from '@produck/node-meta-iana-charset';
+
+Object.keys(data); // every mib entry
 ```
 
-Prefer `/mib/<mibEnum>` when the records are known at build time. Use `/data`
-when you need a handful of complete records, and the root `data` namespace only
-when you genuinely have to enumerate every registration at runtime.
+This holds even when the enumeration happens to read only a few records:
+
+```js
+import { mib106 } from '@produck/node-meta-iana-charset/data';
+```
+
+`/data` resolves to a single module that re-exports all 258 records, so
+importing one name from it still loads all of them. Importing a name from
+`/data` is not a tree-shaking boundary; importing a `/mib/<mibEnum>` path is.
+
+Prefer `/mib/<mibEnum>` when the records are known at build time. Use the root
+`data` namespace only when you genuinely have to enumerate every registration
+at runtime.
+
+### Building a table
+
+A lookup table over the whole registry is a consumer concern. Building one is
+the obvious thing to do, and the obvious way is to enumerate the default entry:
+
+```js
+import { data } from '@produck/node-meta-iana-charset';
+
+const table = Object.values(data).map((record) => ({
+  name: record.name,
+  mibEnum: record.mibEnum,
+}));
+```
+
+This works and stays readable. The cost is a build-size one, not a runtime
+one: the dropped fields stay in the bundle, and the module level `data` object
+keeps holding them at runtime too. Enumeration is a runtime read, so no bundler
+can prove a field unused and no garbage collector can reclaim it. Reach for the
+static import list below only when that difference matters to you.
+
+Built the right way, a table costs a fraction of the full registry, because the
+bundler can fold every picked field into a literal.
+
+```js
+import * as MIB_3 from '@produck/node-meta-iana-charset/mib/3';
+import * as MIB_4 from '@produck/node-meta-iana-charset/mib/4';
+// ... one static import per record
+
+const RAW = Object.freeze([
+  { name: MIB_3.name, mibEnum: MIB_3.mibEnum, aliasList: MIB_3.aliasList },
+  { name: MIB_4.name, mibEnum: MIB_4.mibEnum, aliasList: MIB_4.aliasList },
+  // ... one entry per record
+]);
+
+function normalize(raw) {
+  const { name, aliasList } = raw;
+
+  return {
+    name,
+    mibEnum: raw.mibEnum,
+    aliasList: aliasList.includes(name) ? [...aliasList] : [name, ...aliasList],
+  };
+}
+
+const TABLE = Object.freeze(RAW.map(normalize));
+```
+
+Three properties make this foldable:
+
+- **Static member access only.** `MIB_3.name` is foldable. Destructuring,
+  `MIB_3['name']` and any call in between are not.
+- **Pick first, normalize once.** Choosing fields stays a flat literal list;
+  every edge-case rule (defaulting an alias, merging lists) lives in a single
+  pass over the whole table instead of being repeated per record.
+- **Symbol keys for the table.** Defining the field keys as `Symbol` once and
+  using them as computed keys keeps the key name out of all 258 entries.
+
+> **Measured with `rollup@4` plus `@rollup/plugin-terser`:** the table above
+> lands around 22 KB (≈6 KB gzipped), while the same registry read through the
+> root `data` namespace cannot be shaken at all. Numbers move with bundler
+> versions and options; treat them as an order of magnitude, not a guarantee.
+
+Picking fields is a one-way operation. If your table keeps four of the seven
+fields, `description`, `date` and `xrefList` are gone from the build and cannot
+be recovered at runtime. That is the intended trade-off, so decide the field
+set before you generate the table.
 
 ## Common charsets
 
