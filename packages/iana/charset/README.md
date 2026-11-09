@@ -115,6 +115,11 @@ the structured form.
 - `src/data/index.mjs` — the `export * as mibN from './record/NNNN.mjs'` list.
 - `src/data/record/NNNN.mjs` — one record each; the file name is zero padded
   to four digits while the export name is not.
+- `docs/reference.xml` — the exact IANA document the data was generated from.
+
+`docs/reference.xml` is not part of the published package. `source.digest` is
+the SHA-256 of that file, so a release can be traced back to the exact upstream
+document it was built from.
 
 With `sideEffects: false`, downstream builds can import only the namespaces
 they use.

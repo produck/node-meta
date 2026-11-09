@@ -15,7 +15,7 @@ const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
 const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
 const XREF_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'xref', 'index.mjs');
 const XREF_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'xref');
-const CACHE = path.join(PACKAGE_ROOT, 'tmp', 'character-sets.xml');
+const REFERENCE = path.join(PACKAGE_ROOT, 'docs', 'reference.xml');
 
 function toArray(value) {
   if (value === undefined || value === null) {
@@ -268,7 +268,7 @@ function renderSource(source) {
 }
 
 function readCache() {
-  return fs.existsSync(CACHE) ? fs.readFileSync(CACHE, 'utf8') : null;
+  return fs.existsSync(REFERENCE) ? fs.readFileSync(REFERENCE, 'utf8') : null;
 }
 
 async function download() {
@@ -280,8 +280,8 @@ async function download() {
 
   const xml = await response.text();
 
-  fs.mkdirSync(path.dirname(CACHE), { recursive: true });
-  fs.writeFileSync(CACHE, xml);
+  fs.mkdirSync(path.dirname(REFERENCE), { recursive: true });
+  fs.writeFileSync(REFERENCE, xml);
 
   return xml;
 }
