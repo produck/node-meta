@@ -140,8 +140,8 @@ Each import is a separate module, so the bundler keeps exactly the records you
 named and drops the other 257:
 
 ```js
-import * as MIB_106 from '@produck/node-meta-iana-charset/mib/106';
-import * as MIB_13 from '@produck/node-meta-iana-charset/mib/13';
+import * as MIB_106 from '@produck/node-meta-iana-charset/mib/0106';
+import * as MIB_13 from '@produck/node-meta-iana-charset/mib/0013';
 
 MIB_106.name; // UTF-8
 MIB_13.name; // ISO-8859-10
@@ -196,8 +196,8 @@ Built the right way, a table costs a fraction of the full registry, because the
 bundler can fold every picked field into a literal.
 
 ```js
-import * as MIB_3 from '@produck/node-meta-iana-charset/mib/3';
-import * as MIB_4 from '@produck/node-meta-iana-charset/mib/4';
+import * as MIB_3 from '@produck/node-meta-iana-charset/mib/0003';
+import * as MIB_4 from '@produck/node-meta-iana-charset/mib/0004';
 // ... one static import per record
 
 const RAW = Object.freeze([
@@ -284,8 +284,8 @@ register no preferred alias, so use the registration name to look them up.
 - Alias coverage follows the IANA registry. Labels from the WHATWG Encoding
   Standard (for example `x-user-defined`) are not included and the two sets
   are not interchangeable.
-- Subpath names use the numeric MIBenum as is, so `/mib/106` is the only valid
-  import path for UTF-8. Do not zero pad or reformat the value.
+- Subpath names use the numeric MIBenum padded to four digits, matching the
+  record file names: `/mib/0106` is the only valid import path for UTF-8.
 
 ## License
 

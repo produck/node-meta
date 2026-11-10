@@ -15,6 +15,7 @@ const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
 const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
 const XREF_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'xref');
 const REFERENCE = path.join(PACKAGE_ROOT, 'docs', 'reference.xml');
+const MANIFEST = path.join(PACKAGE_ROOT, 'package.json');
 
 function toArray(value) {
   if (value === undefined || value === null) {
@@ -258,6 +259,42 @@ function renderSource(source) {
   return `export const source = {\n${fieldList.join('\n')}\n};\n\nexport * as data from './data/index.mjs';\n`;
 }
 
+function renderManifest(manifest, recordList) {
+  const exportMap = {
+    '.': {
+      types: './src/index.d.mts',
+      import: './src/index.mjs',
+    },
+    './data': {
+      types: './src/data/index.d.mts',
+      import: './src/data/index.mjs',
+    },
+  };
+
+  for (const record of recordList) {
+    exportMap[`./mib/${String(record.mibEnum).padStart(4, '0')}`] = {
+      types: './src/data/record.d.mts',
+      import: `./src/data/record/${readFileName(record)}`,
+    };
+  }
+
+  return `${JSON.stringify(
+    { ...manifest, exports: sortKeys(exportMap) },
+    null,
+    2,
+  )}\n`;
+}
+
+function sortKeys(value) {
+  const sorted = {};
+
+  for (const key of Object.keys(value).sort()) {
+    sorted[key] = value[key];
+  }
+
+  return sorted;
+}
+
 function readCache() {
   return fs.existsSync(REFERENCE) ? fs.readFileSync(REFERENCE, 'utf8') : null;
 }
@@ -298,5 +335,9 @@ for (const type of new Set([...xrefTable.values()].map((e) => e.type))) {
 
 fs.writeFileSync(DATA_INDEX, renderDataIndex(recordList));
 fs.writeFileSync(TARGET, renderSource(source));
+fs.writeFileSync(
+  MANIFEST,
+  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')), recordList),
+);
 
 console.log(`records ${recordList.length}`);

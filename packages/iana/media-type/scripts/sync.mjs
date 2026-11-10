@@ -349,7 +349,7 @@ function renderRecordTypes() {
   ].join('\n');
 }
 
-function renderManifest(manifest) {
+function renderManifest(manifest, recordList) {
   const exportMap = {
     '.': {
       types: './src/index.d.mts',
@@ -359,13 +359,32 @@ function renderManifest(manifest) {
       types: './src/data/index.d.mts',
       import: './src/data/index.mjs',
     },
-    './*': {
-      types: './src/data/record.d.mts',
-      import: './src/data/record/*.mjs',
-    },
   };
 
-  return `${JSON.stringify({ ...manifest, exports: exportMap }, null, 2)}\n`;
+  for (const record of recordList) {
+    const { type, subtype } = splitMediaType(record.file.mediaType);
+
+    exportMap[`./${type}/${subtype}`] = {
+      types: './src/data/record.d.mts',
+      import: `./src/data/record/${type}/${readFileName(subtype)}`,
+    };
+  }
+
+  return `${JSON.stringify(
+    { ...manifest, exports: sortKeys(exportMap) },
+    null,
+    2,
+  )}\n`;
+}
+
+function sortKeys(value) {
+  const sorted = {};
+
+  for (const key of Object.keys(value).sort()) {
+    sorted[key] = value[key];
+  }
+
+  return sorted;
 }
 
 function renderDataTypes(recordList) {
@@ -480,7 +499,7 @@ fs.writeFileSync(RECORD_TYPES, renderRecordTypes());
 fs.writeFileSync(DATA_TYPES, renderDataTypes(recordList));
 fs.writeFileSync(
   MANIFEST,
-  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8'))),
+  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')), recordList),
 );
 
 console.log(

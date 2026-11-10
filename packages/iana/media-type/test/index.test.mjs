@@ -78,22 +78,32 @@ describe('exports', () => {
     assert.equal(manifest.exports['./data'].import, './src/data/index.mjs');
   });
 
-  it('should map every record through one wildcard subpath', () => {
-    const wildcard = manifest.exports['./*'];
-
-    assert.deepEqual(wildcard, {
-      types: './src/data/record.d.mts',
-      import: './src/data/record/*.mjs',
-    });
-
+  it('should map every record through its own subpath', () => {
     const subpathList = Object.keys(manifest.exports).filter(
-      (key) => key !== '.' && key !== './data' && key !== './*',
+      (key) => key !== '.' && key !== './data',
     );
 
-    assert.deepEqual(subpathList, []);
+    assert.equal(subpathList.length, 2383);
+    assert.deepEqual(manifest.exports['./text/html'], {
+      types: './src/data/record.d.mts',
+      import: './src/data/record/text/html.mjs',
+    });
   });
 
-  it('should resolve a record module through the wildcard', async () => {
+  it('should keep every subpath resolvable on disk', () => {
+    for (const [subpath, entry] of Object.entries(manifest.exports)) {
+      if (subpath === '.' || subpath === './data') {
+        continue;
+      }
+
+      assert.ok(
+        fs.existsSync(path.join(PACKAGE_ROOT, entry.import)),
+        `${subpath} -> ${entry.import}`,
+      );
+    }
+  });
+
+  it('should resolve a record module through its subpath', async () => {
     const record = await import('../src/data/record/application/json.mjs');
 
     assert.equal(record.name, 'json');

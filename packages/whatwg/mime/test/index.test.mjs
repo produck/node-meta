@@ -99,11 +99,29 @@ describe('exports', () => {
     assert.equal(manifest.exports['./data'].import, './src/data/index.mjs');
   });
 
-  it('should map every record through one wildcard subpath', () => {
-    assert.deepEqual(manifest.exports['./*'], {
+  it('should map every record through its own subpath', () => {
+    const subpathList = Object.keys(manifest.exports).filter(
+      (key) => key !== '.' && key !== './data',
+    );
+
+    assert.equal(subpathList.length, 59);
+    assert.deepEqual(manifest.exports['./text/html'], {
       types: './src/data/record.d.mts',
-      import: './src/data/record/*.mjs',
+      import: './src/data/record/text/html.mjs',
     });
+  });
+
+  it('should keep every subpath resolvable on disk', () => {
+    for (const [subpath, entry] of Object.entries(manifest.exports)) {
+      if (subpath === '.' || subpath === './data') {
+        continue;
+      }
+
+      assert.ok(
+        fs.existsSync(path.join(PACKAGE_ROOT, entry.import)),
+        `${subpath} -> ${entry.import}`,
+      );
+    }
   });
 
   it('should ship the shared record declaration', () => {

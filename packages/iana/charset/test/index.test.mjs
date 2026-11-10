@@ -103,17 +103,33 @@ describe('exports', () => {
     assert.ok(manifest.exports['./data']);
   });
 
-  it('should map every mib entry through one wildcard subpath', () => {
-    assert.deepEqual(manifest.exports['./mib/*'], {
-      types: './src/data/record.d.mts',
-      import: './src/data/record/*.mjs',
-    });
-
+  it('should map every mib entry through its own subpath', () => {
     const subpathList = Object.keys(manifest.exports).filter(
-      (key) => key !== '.' && key !== './data' && key !== './mib/*',
+      (key) => key !== '.' && key !== './data',
     );
 
-    assert.deepEqual(subpathList, []);
+    assert.equal(subpathList.length, 258);
+    assert.deepEqual(manifest.exports['./mib/0003'], {
+      types: './src/data/record.d.mts',
+      import: './src/data/record/0003.mjs',
+    });
+
+    for (const subpath of subpathList) {
+      assert.match(subpath, /^\.\/mib\/\d{4}$/);
+    }
+  });
+
+  it('should keep every subpath resolvable on disk', () => {
+    for (const [subpath, entry] of Object.entries(manifest.exports)) {
+      if (subpath === '.' || subpath === './data') {
+        continue;
+      }
+
+      assert.ok(
+        fs.existsSync(path.resolve(HERE, '..', entry.import)),
+        `${subpath} -> ${entry.import}`,
+      );
+    }
   });
 
   it('should ship the shared type declaration', () => {

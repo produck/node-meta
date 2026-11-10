@@ -9,13 +9,245 @@
       "import": "./src/index.mjs",
       "types": "./src/index.d.mts"
     },
-    "./*": {
-      "import": "./src/data/record/*.mjs",
+    "./application/ecmascript": {
+      "import": "./src/data/record/application/ecmascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-cff": {
+      "import": "./src/data/record/application/font-cff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-otf": {
+      "import": "./src/data/record/application/font-otf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-sfnt": {
+      "import": "./src/data/record/application/font-sfnt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-ttf": {
+      "import": "./src/data/record/application/font-ttf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-woff": {
+      "import": "./src/data/record/application/font-woff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/javascript": {
+      "import": "./src/data/record/application/javascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/json": {
+      "import": "./src/data/record/application/json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/octet-stream": {
+      "import": "./src/data/record/application/octet-stream.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ogg": {
+      "import": "./src/data/record/application/ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pdf": {
+      "import": "./src/data/record/application/pdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/postscript": {
+      "import": "./src/data/record/application/postscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/unknown": {
+      "import": "./src/data/record/application/unknown.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-fontobject": {
+      "import": "./src/data/record/application/vnd.ms-fontobject.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-opentype": {
+      "import": "./src/data/record/application/vnd.ms-opentype.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ecmascript": {
+      "import": "./src/data/record/application/x-ecmascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gzip": {
+      "import": "./src/data/record/application/x-gzip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-javascript": {
+      "import": "./src/data/record/application/x-javascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-rar-compressed": {
+      "import": "./src/data/record/application/x-rar-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xml": {
+      "import": "./src/data/record/application/xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/zip": {
+      "import": "./src/data/record/application/zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/aiff": {
+      "import": "./src/data/record/audio/aiff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/midi": {
+      "import": "./src/data/record/audio/midi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/mpeg": {
+      "import": "./src/data/record/audio/mpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/wave": {
+      "import": "./src/data/record/audio/wave.mjs",
       "types": "./src/data/record.d.mts"
     },
     "./data": {
       "import": "./src/data/index.mjs",
       "types": "./src/data/index.d.mts"
+    },
+    "./font/collection": {
+      "import": "./src/data/record/font/collection.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/otf": {
+      "import": "./src/data/record/font/otf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/ttf": {
+      "import": "./src/data/record/font/ttf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/woff": {
+      "import": "./src/data/record/font/woff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/woff2": {
+      "import": "./src/data/record/font/woff2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/bmp": {
+      "import": "./src/data/record/image/bmp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/gif": {
+      "import": "./src/data/record/image/gif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jpeg": {
+      "import": "./src/data/record/image/jpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/png": {
+      "import": "./src/data/record/image/png.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/svg+xml": {
+      "import": "./src/data/record/image/svg+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/webp": {
+      "import": "./src/data/record/image/webp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-icon": {
+      "import": "./src/data/record/image/x-icon.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/cache-manifest": {
+      "import": "./src/data/record/text/cache-manifest.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/ecmascript": {
+      "import": "./src/data/record/text/ecmascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/html": {
+      "import": "./src/data/record/text/html.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript": {
+      "import": "./src/data/record/text/javascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.0": {
+      "import": "./src/data/record/text/javascript1.0.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.1": {
+      "import": "./src/data/record/text/javascript1.1.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.2": {
+      "import": "./src/data/record/text/javascript1.2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.3": {
+      "import": "./src/data/record/text/javascript1.3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.4": {
+      "import": "./src/data/record/text/javascript1.4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript1.5": {
+      "import": "./src/data/record/text/javascript1.5.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/jscript": {
+      "import": "./src/data/record/text/jscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/json": {
+      "import": "./src/data/record/text/json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/livescript": {
+      "import": "./src/data/record/text/livescript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/plain": {
+      "import": "./src/data/record/text/plain.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vtt": {
+      "import": "./src/data/record/text/vtt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ecmascript": {
+      "import": "./src/data/record/text/x-ecmascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-javascript": {
+      "import": "./src/data/record/text/x-javascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/xml": {
+      "import": "./src/data/record/text/xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./unknown/unknown": {
+      "import": "./src/data/record/unknown/unknown.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/avi": {
+      "import": "./src/data/record/video/avi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/mp4": {
+      "import": "./src/data/record/video/mp4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/webm": {
+      "import": "./src/data/record/video/webm.mjs",
+      "types": "./src/data/record.d.mts"
     }
   },
   "files": [

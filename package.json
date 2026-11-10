@@ -31,6 +31,7 @@
     "publish": "lerna publish"
   },
   "workspaces": [
+    "packages/apache/mime-extension",
     "packages/iana/charset",
     "packages/iana/media-type",
     "packages/whatwg/mime"
