@@ -13,6 +13,10 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   ProduckRule.config.ecma,
+  {
+    files: ['packages/iana/media-type/src/data/index.d.mts'],
+    rules: { 'max-len': 'off' },
+  },
   ProduckRule.config.json,
   ProduckRule.config.markdown,
   ProduckRule.excludeGitIgnore(import.meta.url),

@@ -4,22 +4,97 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, it } from 'node:test';
 
+import { source } from '../src/index.mjs';
+import * as data from '../src/data/index.mjs';
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = path.resolve(HERE, '..');
 const MANIFEST = path.join(PACKAGE_ROOT, 'package.json');
-const REFERENCE = path.join(PACKAGE_ROOT, 'docs', 'reference.xml');
+const RECORD_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
 
-describe('package', () => {
-  it('should be an ESM package without side effects', () => {
-    const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
+function readRecordPathList() {
+  const pathList = [];
 
-    assert.equal(manifest.type, 'module');
-    assert.equal(manifest.sideEffects, false);
+  for (const type of fs.readdirSync(RECORD_DIR)) {
+    const typeDir = path.join(RECORD_DIR, type);
+
+    if (!fs.statSync(typeDir).isDirectory()) {
+      continue;
+    }
+
+    for (const name of fs.readdirSync(typeDir)) {
+      if (name.endsWith('.mjs')) {
+        pathList.push(`${type}/${name.slice(0, -'.mjs'.length)}`);
+      }
+    }
+  }
+
+  return pathList.sort();
+}
+
+const recordPathList = readRecordPathList();
+const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
+const keyList = Object.keys(data);
+
+describe('source', () => {
+  it('should point at the IANA registry', () => {
+    assert.equal(
+      source.url,
+      'https://www.iana.org/assignments/media-types/media-types.xml',
+    );
+  });
+
+  it('should record an ISO timestamp and a digest', () => {
+    assert.equal(new Date(source.updated).toISOString(), source.updated);
+    assert.match(source.digest, /^[0-9a-f]{64}$/);
   });
 });
 
-describe('reference', () => {
-  it('should keep the IANA registry snapshot', () => {
-    assert.ok(fs.existsSync(REFERENCE));
+describe('data', () => {
+  it('should expose one key per record path', () => {
+    assert.deepEqual(keyList, recordPathList);
+  });
+
+  it('should tag every record with its media type', () => {
+    for (const key of keyList) {
+      assert.equal(data[key].type, key.slice(0, key.indexOf('/')));
+    }
+  });
+
+  it('should expose a structured suffix record', () => {
+    assert.equal(data['application/json'].type, 'application');
+    assert.equal(data['application/ld+json'].subtype, 'ld+json');
+    assert.equal(data['text/html'].type, 'text');
+  });
+
+  it('should share one record module between an alias and its owner', () => {
+    assert.deepEqual({ ...data['image/x-emf'] }, { ...data['image/emf'] });
+  });
+});
+
+describe('exports', () => {
+  it('should declare the root and data entries', () => {
+    assert.equal(manifest.exports['.'].import, './src/index.mjs');
+    assert.equal(manifest.exports['./data'].import, './src/data/index.mjs');
+  });
+
+  it('should declare one subpath per record', () => {
+    const subpathList = Object.keys(manifest.exports).filter(
+      (key) => key !== '.' && key !== './data',
+    );
+
+    assert.equal(subpathList.length, recordPathList.length);
+
+    for (const recordPath of recordPathList) {
+      const entry = manifest.exports[`./${recordPath}`];
+
+      assert.ok(entry, `missing export ${recordPath}`);
+      assert.equal(entry.import, `./src/data/record/${recordPath}.mjs`);
+      assert.equal(entry.types, './src/data/record.d.mts');
+    }
+  });
+
+  it('should ship the shared record declaration', () => {
+    assert.ok(fs.existsSync(path.join(PACKAGE_ROOT, 'src/data/record.d.mts')));
   });
 });

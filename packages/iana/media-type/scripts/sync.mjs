@@ -13,6 +13,9 @@ const PACKAGE_ROOT = path.resolve(HERE, '..');
 const TARGET = path.join(PACKAGE_ROOT, 'src', 'index.mjs');
 const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
 const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
+const RECORD_TYPES = path.join(PACKAGE_ROOT, 'src', 'data', 'record.d.mts');
+const DATA_TYPES = path.join(PACKAGE_ROOT, 'src', 'data', 'index.d.mts');
+const MANIFEST = path.join(PACKAGE_ROOT, 'package.json');
 const XREF_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'xref');
 const REFERENCE = path.join(PACKAGE_ROOT, 'docs', 'reference.xml');
 
@@ -314,27 +317,114 @@ function renderXrefModule(type, xrefTable) {
   );
 }
 
-function renderTypeIndex(subtypeList) {
-  return (
-    [...subtypeList]
-      .sort((left, right) => left.localeCompare(right))
-      .map(
-        (subtype) =>
-          `export * as ${toPropertyName(subtype)} from './${readFileName(
-            subtype,
-          )}';`,
-      )
-      .join('\n') + '\n'
-  );
+function renderRecordTypes() {
+  return [
+    '/** A cross reference recorded by IANA for a media type. */',
+    'export interface Xref {',
+    '  /** Reference kind, for example `rfc`, `person` or `uri`. */',
+    '  type: string;',
+    '',
+    '  /** Reference target, for example `rfc6838` or a URI. */',
+    '  data: string;',
+    '}',
+    '',
+    '/** Top-level media type, for example `application`. */',
+    'export declare const type: string;',
+    '',
+    '/** Subtype without the top-level prefix, for example `json`. */',
+    'export declare const subtype: string;',
+    '',
+    '/** Registration name as written in the registry. */',
+    'export declare const name: string;',
+    '',
+    '/** Cross references recorded by IANA. */',
+    'export declare const xrefList: Xref[];',
+    '',
+    '/** Registration date, only present on records that carry one. */',
+    'export declare const date: string | null;',
+    '',
+    '/** Last update date, only present on records that carry one. */',
+    'export declare const updated: string | null;',
+    '',
+  ].join('\n');
 }
 
-function renderDataIndex(typeMap) {
-  return (
-    [...typeMap.keys()]
-      .sort((left, right) => left.localeCompare(right))
-      .map((type) => `export * as ${type} from './record/${type}/index.mjs';`)
-      .join('\n') + '\n'
+function renderManifest(manifest, typeMap) {
+  const exportMap = {
+    '.': {
+      import: './src/index.mjs',
+      types: './src/index.d.mts',
+    },
+    './data': {
+      import: './src/data/index.mjs',
+      types: './src/data/index.d.mts',
+    },
+  };
+  const subpathList = [];
+
+  for (const [type, subtypeList] of typeMap) {
+    for (const subtype of subtypeList) {
+      subpathList.push(`${type}/${subtype}`);
+    }
+  }
+
+  for (const subpath of subpathList.sort()) {
+    exportMap[`./${subpath}`] = {
+      import: `./src/data/record/${subpath}.mjs`,
+      types: './src/data/record.d.mts',
+    };
+  }
+
+  return `${JSON.stringify({ ...manifest, exports: sortKeys(exportMap) }, null, 2)}\n`;
+}
+
+function sortKeys(value) {
+  const sorted = {};
+
+  for (const key of Object.keys(value).sort()) {
+    sorted[key] = value[key];
+  }
+
+  return sorted;
+}
+
+function renderDataTypes(recordList) {
+  const lineList = ['interface RecordMap {'];
+
+  for (const record of recordList) {
+    const { type, subtype } = splitMediaType(record.file.mediaType);
+
+    lineList.push(`  ${JSON.stringify(`${type}/${subtype}`)}: RecordModule;`);
+  }
+
+  lineList.push(
+    '}',
+    '',
+    'declare const recordMap: RecordMap;',
+    '',
+    'export = recordMap;',
+    '',
   );
+
+  return `${[
+    'import type { RecordModule } from \'../record.d.mts\';',
+    '',
+    ...lineList,
+  ].join('\n')}`;
+}
+
+function renderDataIndex(recordList) {
+  const lineList = recordList
+    .map((record) => {
+      const { type, subtype } = splitMediaType(record.file.mediaType);
+
+      return [
+        `export * as ${toPropertyName(`${type}/${subtype}`)} from './record/${type}/${readFileName(subtype)}';`,
+      ];
+    })
+    .flat();
+
+  return `${lineList.join('\n')}\n`;
 }
 
 function renderSource(source) {
@@ -397,13 +487,6 @@ for (const record of recordList) {
   );
 }
 
-for (const [type, subtypeList] of typeMap) {
-  fs.writeFileSync(
-    path.join(DATA_DIR, type, 'index.mjs'),
-    renderTypeIndex(subtypeList),
-  );
-}
-
 for (const type of new Set(
   [...xrefTable.values()].map((entry) => entry.type),
 )) {
@@ -413,8 +496,14 @@ for (const type of new Set(
   );
 }
 
-fs.writeFileSync(DATA_INDEX, renderDataIndex(typeMap));
+fs.writeFileSync(DATA_INDEX, renderDataIndex(recordList));
 fs.writeFileSync(TARGET, renderSource(source));
+fs.writeFileSync(RECORD_TYPES, renderRecordTypes());
+fs.writeFileSync(DATA_TYPES, renderDataTypes(recordList));
+fs.writeFileSync(
+  MANIFEST,
+  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')), typeMap),
+);
 
 console.log(
   `records ${recordList.length} types ${typeMap.size} xref ${xrefTable.size}`,
