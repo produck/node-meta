@@ -13,7 +13,6 @@ const PACKAGE_ROOT = path.resolve(HERE, '..');
 const TARGET = path.join(PACKAGE_ROOT, 'src', 'index.mjs');
 const DATA_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'index.mjs');
 const DATA_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'record');
-const XREF_INDEX = path.join(PACKAGE_ROOT, 'src', 'data', 'xref', 'index.mjs');
 const XREF_DIR = path.join(PACKAGE_ROOT, 'src', 'data', 'xref');
 const REFERENCE = path.join(PACKAGE_ROOT, 'docs', 'reference.xml');
 
@@ -240,14 +239,6 @@ function renderXrefModule(type, xrefTable) {
   );
 }
 
-function renderXrefIndex(xrefTable) {
-  const typeList = [...new Set([...xrefTable.values()].map((e) => e.type))]
-    .sort((left, right) => left.localeCompare(right))
-    .map((type) => `export * as ${type} from './${type}.mjs';`);
-
-  return [...typeList, ''].join('\n');
-}
-
 function renderDataIndex(recordList) {
   const exportList = recordList.map(
     (record) =>
@@ -305,7 +296,6 @@ for (const type of new Set([...xrefTable.values()].map((e) => e.type))) {
   );
 }
 
-fs.writeFileSync(XREF_INDEX, renderXrefIndex(xrefTable));
 fs.writeFileSync(DATA_INDEX, renderDataIndex(recordList));
 fs.writeFileSync(TARGET, renderSource(source));
 
