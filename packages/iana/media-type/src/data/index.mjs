@@ -1,0 +1,10 @@
+export * as application from './record/application/index.mjs';
+export * as audio from './record/audio/index.mjs';
+export * as font from './record/font/index.mjs';
+export * as haptics from './record/haptics/index.mjs';
+export * as image from './record/image/index.mjs';
+export * as message from './record/message/index.mjs';
+export * as model from './record/model/index.mjs';
+export * as multipart from './record/multipart/index.mjs';
+export * as text from './record/text/index.mjs';
+export * as video from './record/video/index.mjs';

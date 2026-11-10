@@ -1,0 +1,13 @@
+import * as RFC from '../../xref/rfc.mjs';
+
+export const type = 'video';
+
+export const subtype = 'mj2';
+
+export const name = 'mj2';
+
+export const xrefList = [RFC.RFC3745];
+
+export const date = null;
+
+export const updated = null;

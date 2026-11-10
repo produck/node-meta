@@ -1,0 +1,13 @@
+import * as RFC from '../../xref/rfc.mjs';
+
+export const type = 'application';
+
+export const subtype = 'scitt-statement+cose';
+
+export const name = 'scitt-statement+cose';
+
+export const xrefList = [RFC.RFC9943];
+
+export const date = '2025-10-09';
+
+export const updated = null;

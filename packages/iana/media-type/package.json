@@ -1,0 +1,40 @@
+{
+  "author": "ChaosLee",
+  "bugs": {
+    "url": "https://github.com/produck/node-meta/issues"
+  },
+  "description": "IANA Media Types registry as static metadata for Node.js.",
+  "devDependencies": {
+    "fast-xml-parser": "^5.2.0"
+  },
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/produck/node-meta/tree/main/packages/iana/media-type#readme",
+  "keywords": [
+    "iana",
+    "media-type",
+    "metadata",
+    "mime",
+    "node"
+  ],
+  "license": "MIT",
+  "name": "@produck/meta-iana-media-type",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/iana/media-type",
+    "type": "git",
+    "url": "git+https://github.com/produck/node-meta.git"
+  },
+  "scripts": {
+    "produck:coverage": "c8 --reporter=lcov --reporter=html --reporter=text-summary npm test",
+    "sync": "node scripts/sync.mjs",
+    "test": "node test/index.mjs",
+    "type-check": "tsc --noEmit"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.0.0"
+}

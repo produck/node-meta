@@ -1,0 +1,13 @@
+import * as PERSON from '../../xref/person.mjs';
+
+export const type = 'application';
+
+export const subtype = 'vnd.oasis.opendocument.text-master-template';
+
+export const name = 'vnd.oasis.opendocument.text-master-template';
+
+export const xrefList = [PERSON.OASIS_TC_ADMIN, PERSON.OASIS];
+
+export const date = null;
+
+export const updated = '2023-02-27';
