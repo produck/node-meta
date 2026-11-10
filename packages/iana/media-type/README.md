@@ -147,6 +147,11 @@ runtime.
 
 - The registry has no numeric primary key, so records are identified by their
   `type/subtype` pair.
+- Subpath names follow the registry casing exactly. 223 subtypes contain upper
+  case characters, for example `/application/A2L` or `/text/SGML`. Type and
+  subtype are case sensitive: build the import path from the registry value
+  instead of lowercasing it. On case insensitive file systems a wrongly cased
+  path silently resolves to the nearest existing record instead of failing.
 - `example` is an empty sub-registry: any subtype may be used, none is
   registered, so it produces no records.
 

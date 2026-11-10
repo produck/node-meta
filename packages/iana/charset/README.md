@@ -284,6 +284,8 @@ register no preferred alias, so use the registration name to look them up.
 - Alias coverage follows the IANA registry. Labels from the WHATWG Encoding
   Standard (for example `x-user-defined`) are not included and the two sets
   are not interchangeable.
+- Subpath names use the numeric MIBenum as is, so `/mib/106` is the only valid
+  import path for UTF-8. Do not zero pad or reformat the value.
 
 ## License
 

@@ -103,31 +103,17 @@ describe('exports', () => {
     assert.ok(manifest.exports['./data']);
   });
 
-  it('should declare one mib entry per record', () => {
-    for (const [, namespace] of namespaceList) {
-      const key = `./mib/${namespace.mibEnum}`;
+  it('should map every mib entry through one wildcard subpath', () => {
+    assert.deepEqual(manifest.exports['./mib/*'], {
+      types: './src/data/record.d.mts',
+      import: './src/data/record/*.mjs',
+    });
 
-      assert.ok(manifest.exports[key], key);
-    }
-  });
+    const subpathList = Object.keys(manifest.exports).filter(
+      (key) => key !== '.' && key !== './data' && key !== './mib/*',
+    );
 
-  it('should point every mib entry at its record file', () => {
-    for (const [, namespace] of namespaceList) {
-      const entry = manifest.exports[`./mib/${namespace.mibEnum}`];
-
-      assert.equal(
-        entry.import,
-        `./src/data/record/${readFileName(namespace.mibEnum)}`,
-      );
-    }
-  });
-
-  it('should share one type declaration across every mib entry', () => {
-    for (const [, namespace] of namespaceList) {
-      const entry = manifest.exports[`./mib/${namespace.mibEnum}`];
-
-      assert.equal(entry.types, './src/data/record.d.mts');
-    }
+    assert.deepEqual(subpathList, []);
   });
 
   it('should ship the shared type declaration', () => {

@@ -78,20 +78,26 @@ describe('exports', () => {
     assert.equal(manifest.exports['./data'].import, './src/data/index.mjs');
   });
 
-  it('should declare one subpath per record', () => {
+  it('should map every record through one wildcard subpath', () => {
+    const wildcard = manifest.exports['./*'];
+
+    assert.deepEqual(wildcard, {
+      types: './src/data/record.d.mts',
+      import: './src/data/record/*.mjs',
+    });
+
     const subpathList = Object.keys(manifest.exports).filter(
-      (key) => key !== '.' && key !== './data',
+      (key) => key !== '.' && key !== './data' && key !== './*',
     );
 
-    assert.equal(subpathList.length, recordPathList.length);
+    assert.deepEqual(subpathList, []);
+  });
 
-    for (const recordPath of recordPathList) {
-      const entry = manifest.exports[`./${recordPath}`];
+  it('should resolve a record module through the wildcard', async () => {
+    const record = await import('../src/data/record/application/json.mjs');
 
-      assert.ok(entry, `missing export ${recordPath}`);
-      assert.equal(entry.import, `./src/data/record/${recordPath}.mjs`);
-      assert.equal(entry.types, './src/data/record.d.mts');
-    }
+    assert.equal(record.name, 'json');
+    assert.equal(typeof record.subtype, 'string');
   });
 
   it('should ship the shared record declaration', () => {

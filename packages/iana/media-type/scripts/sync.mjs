@@ -349,43 +349,23 @@ function renderRecordTypes() {
   ].join('\n');
 }
 
-function renderManifest(manifest, typeMap) {
+function renderManifest(manifest) {
   const exportMap = {
     '.': {
-      import: './src/index.mjs',
       types: './src/index.d.mts',
+      import: './src/index.mjs',
     },
     './data': {
-      import: './src/data/index.mjs',
       types: './src/data/index.d.mts',
+      import: './src/data/index.mjs',
+    },
+    './*': {
+      types: './src/data/record.d.mts',
+      import: './src/data/record/*.mjs',
     },
   };
-  const subpathList = [];
 
-  for (const [type, subtypeList] of typeMap) {
-    for (const subtype of subtypeList) {
-      subpathList.push(`${type}/${subtype}`);
-    }
-  }
-
-  for (const subpath of subpathList.sort()) {
-    exportMap[`./${subpath}`] = {
-      import: `./src/data/record/${subpath}.mjs`,
-      types: './src/data/record.d.mts',
-    };
-  }
-
-  return `${JSON.stringify({ ...manifest, exports: sortKeys(exportMap) }, null, 2)}\n`;
-}
-
-function sortKeys(value) {
-  const sorted = {};
-
-  for (const key of Object.keys(value).sort()) {
-    sorted[key] = value[key];
-  }
-
-  return sorted;
+  return `${JSON.stringify({ ...manifest, exports: exportMap }, null, 2)}\n`;
 }
 
 function renderDataTypes(recordList) {
@@ -459,7 +439,7 @@ async function download() {
 const xml = readCache() ?? (await download());
 const { source, recordList } = build(xml);
 const xrefTable = buildXrefTable(recordList);
-const typeMap = new Map();
+const typeSet = new Set();
 
 fs.rmSync(DATA_DIR, { recursive: true, force: true });
 fs.rmSync(XREF_DIR, { recursive: true, force: true });
@@ -470,11 +450,9 @@ for (const record of recordList) {
   const { type, subtype } = splitMediaType(record.file.mediaType);
   const owner = record.file.ownerType;
 
-  if (!typeMap.has(type)) {
-    typeMap.set(type, []);
+  if (!typeSet.has(type)) {
+    typeSet.add(type);
   }
-
-  typeMap.get(type).push(subtype);
 
   const typeDir = path.join(DATA_DIR, type);
 
@@ -502,9 +480,9 @@ fs.writeFileSync(RECORD_TYPES, renderRecordTypes());
 fs.writeFileSync(DATA_TYPES, renderDataTypes(recordList));
 fs.writeFileSync(
   MANIFEST,
-  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8')), typeMap),
+  renderManifest(JSON.parse(fs.readFileSync(MANIFEST, 'utf8'))),
 );
 
 console.log(
-  `records ${recordList.length} types ${typeMap.size} xref ${xrefTable.size}`,
+  `records ${recordList.length} types ${typeSet.size} xref ${xrefTable.size}`,
 );
