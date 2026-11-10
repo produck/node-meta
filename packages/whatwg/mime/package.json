@@ -1,0 +1,52 @@
+{
+  "author": "ChaosLee",
+  "bugs": {
+    "url": "https://github.com/produck/node-meta/issues"
+  },
+  "description": "WHATWG MIME Sniffing media types as static metadata for Node.js.",
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "types": "./src/index.d.mts"
+    },
+    "./*": {
+      "import": "./src/data/record/*.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./data": {
+      "import": "./src/data/index.mjs",
+      "types": "./src/data/index.d.mts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/produck/node-meta/tree/main/packages/whatwg/mime#readme",
+  "keywords": [
+    "mime",
+    "media-type",
+    "metadata",
+    "node",
+    "whatwg"
+  ],
+  "license": "MIT",
+  "name": "@produck/meta-whatwg-mime",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/whatwg/mime",
+    "type": "git",
+    "url": "git+https://github.com/produck/node-meta.git"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch.mjs",
+    "produck:coverage": "c8 --reporter=lcov --reporter=html --reporter=text-summary npm test",
+    "sync": "node scripts/sync.mjs",
+    "test": "node test/index.mjs",
+    "type-check": "tsc --noEmit"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.0.0"
+}

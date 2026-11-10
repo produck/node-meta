@@ -1,0 +1,67 @@
+import type { RecordModule } from '../record.d.mts';
+
+interface RecordMap {
+  'application/ecmascript': RecordModule;
+  'application/font-cff': RecordModule;
+  'application/font-otf': RecordModule;
+  'application/font-sfnt': RecordModule;
+  'application/font-ttf': RecordModule;
+  'application/font-woff': RecordModule;
+  'application/javascript': RecordModule;
+  'application/json': RecordModule;
+  'application/octet-stream': RecordModule;
+  'application/ogg': RecordModule;
+  'application/pdf': RecordModule;
+  'application/postscript': RecordModule;
+  'application/unknown': RecordModule;
+  'application/vnd.ms-fontobject': RecordModule;
+  'application/vnd.ms-opentype': RecordModule;
+  'application/x-ecmascript': RecordModule;
+  'application/x-gzip': RecordModule;
+  'application/x-javascript': RecordModule;
+  'application/x-rar-compressed': RecordModule;
+  'application/xml': RecordModule;
+  'application/zip': RecordModule;
+  'audio/aiff': RecordModule;
+  'audio/midi': RecordModule;
+  'audio/mpeg': RecordModule;
+  'audio/wave': RecordModule;
+  'font/collection': RecordModule;
+  'font/otf': RecordModule;
+  'font/ttf': RecordModule;
+  'font/woff': RecordModule;
+  'font/woff2': RecordModule;
+  'image/bmp': RecordModule;
+  'image/gif': RecordModule;
+  'image/jpeg': RecordModule;
+  'image/png': RecordModule;
+  'image/svg+xml': RecordModule;
+  'image/webp': RecordModule;
+  'image/x-icon': RecordModule;
+  'text/cache-manifest': RecordModule;
+  'text/ecmascript': RecordModule;
+  'text/html': RecordModule;
+  'text/javascript': RecordModule;
+  'text/javascript1.0': RecordModule;
+  'text/javascript1.1': RecordModule;
+  'text/javascript1.2': RecordModule;
+  'text/javascript1.3': RecordModule;
+  'text/javascript1.4': RecordModule;
+  'text/javascript1.5': RecordModule;
+  'text/jscript': RecordModule;
+  'text/json': RecordModule;
+  'text/livescript': RecordModule;
+  'text/plain': RecordModule;
+  'text/vtt': RecordModule;
+  'text/x-ecmascript': RecordModule;
+  'text/x-javascript': RecordModule;
+  'text/xml': RecordModule;
+  'unknown/unknown': RecordModule;
+  'video/avi': RecordModule;
+  'video/mp4': RecordModule;
+  'video/webm': RecordModule;
+}
+
+declare const recordMap: RecordMap;
+
+export = recordMap;
