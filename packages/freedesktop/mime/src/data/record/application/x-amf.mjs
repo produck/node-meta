@@ -1,0 +1,19 @@
+/** The media type this record describes. */
+export const mediaType = 'application/x-amf';
+
+export const commentList = ['AMF 3D model'];
+export const acronym = 'AMF';
+export const expandedAcronym = 'Additive Manufacturing File';
+export const genericIconName = 'image-x-generic';
+export const aliasList = [];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.amf',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];

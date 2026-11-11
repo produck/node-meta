@@ -1,0 +1,4302 @@
+{
+  "author": "ChaosLee",
+  "bugs": {
+    "url": "https://github.com/produck/node-meta/issues"
+  },
+  "description": "freedesktop.org shared-mime-info database as static metadata for Node.js.",
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "types": "./src/index.d.mts"
+    },
+    "./application/andrew-inset": {
+      "import": "./src/data/record/application/andrew-inset.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/annodex": {
+      "import": "./src/data/record/application/annodex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/appinstaller": {
+      "import": "./src/data/record/application/appinstaller.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/appx": {
+      "import": "./src/data/record/application/appx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/appxbundle": {
+      "import": "./src/data/record/application/appxbundle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/atom+xml": {
+      "import": "./src/data/record/application/atom+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/buildstream+yaml": {
+      "import": "./src/data/record/application/buildstream+yaml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/cbor": {
+      "import": "./src/data/record/application/cbor.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/dicom": {
+      "import": "./src/data/record/application/dicom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/docbook+xml": {
+      "import": "./src/data/record/application/docbook+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ecmascript": {
+      "import": "./src/data/record/application/ecmascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/epub+zip": {
+      "import": "./src/data/record/application/epub+zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/fits": {
+      "import": "./src/data/record/application/fits.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/font-tdpfr": {
+      "import": "./src/data/record/application/font-tdpfr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/geo+json": {
+      "import": "./src/data/record/application/geo+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/gml+xml": {
+      "import": "./src/data/record/application/gml+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/gnunet-directory": {
+      "import": "./src/data/record/application/gnunet-directory.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/gpx+xml": {
+      "import": "./src/data/record/application/gpx+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/gzip": {
+      "import": "./src/data/record/application/gzip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/har+json": {
+      "import": "./src/data/record/application/har+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/hta": {
+      "import": "./src/data/record/application/hta.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/illustrator": {
+      "import": "./src/data/record/application/illustrator.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/its+xml": {
+      "import": "./src/data/record/application/its+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/java-archive": {
+      "import": "./src/data/record/application/java-archive.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/jrd+json": {
+      "import": "./src/data/record/application/jrd+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/json": {
+      "import": "./src/data/record/application/json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/json-patch+json": {
+      "import": "./src/data/record/application/json-patch+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/json5": {
+      "import": "./src/data/record/application/json5.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ld+json": {
+      "import": "./src/data/record/application/ld+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/mac-binhex40": {
+      "import": "./src/data/record/application/mac-binhex40.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/mathematica": {
+      "import": "./src/data/record/application/mathematica.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/mathml+xml": {
+      "import": "./src/data/record/application/mathml+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/mbox": {
+      "import": "./src/data/record/application/mbox.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/metalink+xml": {
+      "import": "./src/data/record/application/metalink+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/metalink4+xml": {
+      "import": "./src/data/record/application/metalink4+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/microsoftpatch": {
+      "import": "./src/data/record/application/microsoftpatch.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/microsoftupdate": {
+      "import": "./src/data/record/application/microsoftupdate.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/msix": {
+      "import": "./src/data/record/application/msix.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/msixbundle": {
+      "import": "./src/data/record/application/msixbundle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/msword": {
+      "import": "./src/data/record/application/msword.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/msword-template": {
+      "import": "./src/data/record/application/msword-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/mxf": {
+      "import": "./src/data/record/application/mxf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/octet-stream": {
+      "import": "./src/data/record/application/octet-stream.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/oda": {
+      "import": "./src/data/record/application/oda.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ogg": {
+      "import": "./src/data/record/application/ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ovf": {
+      "import": "./src/data/record/application/ovf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/owl+xml": {
+      "import": "./src/data/record/application/owl+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/oxps": {
+      "import": "./src/data/record/application/oxps.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pdf": {
+      "import": "./src/data/record/application/pdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pgp-encrypted": {
+      "import": "./src/data/record/application/pgp-encrypted.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pgp-keys": {
+      "import": "./src/data/record/application/pgp-keys.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pgp-signature": {
+      "import": "./src/data/record/application/pgp-signature.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs10": {
+      "import": "./src/data/record/application/pkcs10.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs12": {
+      "import": "./src/data/record/application/pkcs12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs7-mime": {
+      "import": "./src/data/record/application/pkcs7-mime.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs7-signature": {
+      "import": "./src/data/record/application/pkcs7-signature.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs8": {
+      "import": "./src/data/record/application/pkcs8.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkcs8-encrypted": {
+      "import": "./src/data/record/application/pkcs8-encrypted.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkix-cert": {
+      "import": "./src/data/record/application/pkix-cert.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkix-crl": {
+      "import": "./src/data/record/application/pkix-crl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/pkix-pkipath": {
+      "import": "./src/data/record/application/pkix-pkipath.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/postscript": {
+      "import": "./src/data/record/application/postscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/prs.plucker": {
+      "import": "./src/data/record/application/prs.plucker.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/ram": {
+      "import": "./src/data/record/application/ram.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/raml+yaml": {
+      "import": "./src/data/record/application/raml+yaml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/rdf+xml": {
+      "import": "./src/data/record/application/rdf+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/relax-ng-compact-syntax": {
+      "import": "./src/data/record/application/relax-ng-compact-syntax.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/rss+xml": {
+      "import": "./src/data/record/application/rss+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/rtf": {
+      "import": "./src/data/record/application/rtf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/schema+json": {
+      "import": "./src/data/record/application/schema+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/sdp": {
+      "import": "./src/data/record/application/sdp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/sieve": {
+      "import": "./src/data/record/application/sieve.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/smil+xml": {
+      "import": "./src/data/record/application/smil+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/sparql-query": {
+      "import": "./src/data/record/application/sparql-query.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/sparql-results+xml": {
+      "import": "./src/data/record/application/sparql-results+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/spdx+json": {
+      "import": "./src/data/record/application/spdx+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/sql": {
+      "import": "./src/data/record/application/sql.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/texinfo": {
+      "import": "./src/data/record/application/texinfo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/toml": {
+      "import": "./src/data/record/application/toml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/trig": {
+      "import": "./src/data/record/application/trig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/typescript": {
+      "import": "./src/data/record/application/typescript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.adobe.flash.movie": {
+      "import": "./src/data/record/application/vnd.adobe.flash.movie.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.amazon.mobi8-ebook": {
+      "import": "./src/data/record/application/vnd.amazon.mobi8-ebook.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.android.app-bundle": {
+      "import": "./src/data/record/application/vnd.android.app-bundle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.android.package-archive": {
+      "import": "./src/data/record/application/vnd.android.package-archive.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apache.parquet": {
+      "import": "./src/data/record/application/vnd.apache.parquet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.appimage": {
+      "import": "./src/data/record/application/vnd.appimage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.keynote": {
+      "import": "./src/data/record/application/vnd.apple.keynote.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.mpegurl": {
+      "import": "./src/data/record/application/vnd.apple.mpegurl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.numbers": {
+      "import": "./src/data/record/application/vnd.apple.numbers.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.pages": {
+      "import": "./src/data/record/application/vnd.apple.pages.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.pkpass": {
+      "import": "./src/data/record/application/vnd.apple.pkpass.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.apple.pkpasses": {
+      "import": "./src/data/record/application/vnd.apple.pkpasses.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.bzip3": {
+      "import": "./src/data/record/application/vnd.bzip3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.chess-pgn": {
+      "import": "./src/data/record/application/vnd.chess-pgn.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.coffeescript": {
+      "import": "./src/data/record/application/vnd.coffeescript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.comicbook+zip": {
+      "import": "./src/data/record/application/vnd.comicbook+zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.comicbook-rar": {
+      "import": "./src/data/record/application/vnd.comicbook-rar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.corel-draw": {
+      "import": "./src/data/record/application/vnd.corel-draw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.cups-ppd": {
+      "import": "./src/data/record/application/vnd.cups-ppd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.cyclonedx+json": {
+      "import": "./src/data/record/application/vnd.cyclonedx+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.cyclonedx+xml": {
+      "import": "./src/data/record/application/vnd.cyclonedx+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.dart": {
+      "import": "./src/data/record/application/vnd.dart.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.dbf": {
+      "import": "./src/data/record/application/vnd.dbf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.debian.binary-package": {
+      "import": "./src/data/record/application/vnd.debian.binary-package.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.drawoble.drawing+zip": {
+      "import": "./src/data/record/application/vnd.drawoble.drawing+zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.efi.img": {
+      "import": "./src/data/record/application/vnd.efi.img.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.efi.iso": {
+      "import": "./src/data/record/application/vnd.efi.iso.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.emusic-emusic_package": {
+      "import": "./src/data/record/application/vnd.emusic-emusic_package.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.flatpak": {
+      "import": "./src/data/record/application/vnd.flatpak.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.flatpak.ref": {
+      "import": "./src/data/record/application/vnd.flatpak.ref.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.flatpak.repo": {
+      "import": "./src/data/record/application/vnd.flatpak.repo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.framemaker": {
+      "import": "./src/data/record/application/vnd.framemaker.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.gerber": {
+      "import": "./src/data/record/application/vnd.gerber.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.google-earth.kml+xml": {
+      "import": "./src/data/record/application/vnd.google-earth.kml+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.google-earth.kmz": {
+      "import": "./src/data/record/application/vnd.google-earth.kmz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.hp-hpgl": {
+      "import": "./src/data/record/application/vnd.hp-hpgl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.hp-pcl": {
+      "import": "./src/data/record/application/vnd.hp-pcl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.iccprofile": {
+      "import": "./src/data/record/application/vnd.iccprofile.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ipld.car": {
+      "import": "./src/data/record/application/vnd.ipld.car.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.lotus-1-2-3": {
+      "import": "./src/data/record/application/vnd.lotus-1-2-3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.lotus-wordpro": {
+      "import": "./src/data/record/application/vnd.lotus-wordpro.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.microsoft.portable-executable": {
+      "import": "./src/data/record/application/vnd.microsoft.portable-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.microsoft.windows.thumbnail-cache": {
+      "import": "./src/data/record/application/vnd.microsoft.windows.thumbnail-cache.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.mozilla.xul+xml": {
+      "import": "./src/data/record/application/vnd.mozilla.xul+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-access": {
+      "import": "./src/data/record/application/vnd.ms-access.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-asf": {
+      "import": "./src/data/record/application/vnd.ms-asf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-cab-compressed": {
+      "import": "./src/data/record/application/vnd.ms-cab-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-excel": {
+      "import": "./src/data/record/application/vnd.ms-excel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-excel.addin.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-excel.addin.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-excel.sheet.binary.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-excel.sheet.binary.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-excel.sheet.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-excel.sheet.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-excel.template.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-excel.template.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-htmlhelp": {
+      "import": "./src/data/record/application/vnd.ms-htmlhelp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-officetheme": {
+      "import": "./src/data/record/application/vnd.ms-officetheme.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-pki.seccat": {
+      "import": "./src/data/record/application/vnd.ms-pki.seccat.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint.addin.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.addin.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint.presentation.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.presentation.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint.slide.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.slide.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint.slideshow.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.slideshow.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-powerpoint.template.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-powerpoint.template.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-publisher": {
+      "import": "./src/data/record/application/vnd.ms-publisher.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-tnef": {
+      "import": "./src/data/record/application/vnd.ms-tnef.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.drawing.macroEnabled.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.drawing.macroEnabled.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.drawing.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.drawing.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.stencil.macroEnabled.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.stencil.macroEnabled.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.stencil.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.stencil.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.template.macroEnabled.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.template.macroEnabled.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-visio.template.main+xml": {
+      "import": "./src/data/record/application/vnd.ms-visio.template.main+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-word.document.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-word.document.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-word.template.macroEnabled.12": {
+      "import": "./src/data/record/application/vnd.ms-word.template.macroEnabled.12.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-works": {
+      "import": "./src/data/record/application/vnd.ms-works.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-wpl": {
+      "import": "./src/data/record/application/vnd.ms-wpl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.ms-xpsdocument": {
+      "import": "./src/data/record/application/vnd.ms-xpsdocument.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.nintendo.nitro.rom": {
+      "import": "./src/data/record/application/vnd.nintendo.nitro.rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.nintendo.snes.rom": {
+      "import": "./src/data/record/application/vnd.nintendo.snes.rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.base": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.base.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.chart": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.chart.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.chart-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.chart-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.formula": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.formula.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.formula-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.formula-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.graphics": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.graphics.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.graphics-flat-xml": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.graphics-flat-xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.graphics-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.graphics-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.image": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.image.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.presentation": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.presentation.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.presentation-flat-xml": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.presentation-flat-xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.presentation-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.presentation-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.spreadsheet": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.spreadsheet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.spreadsheet-flat-xml": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.spreadsheet-flat-xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.spreadsheet-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.spreadsheet-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text-flat-xml": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text-flat-xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text-master": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text-master.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text-master-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text-master-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text-template": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.oasis.opendocument.text-web": {
+      "import": "./src/data/record/application/vnd.oasis.opendocument.text-web.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openofficeorg.extension": {
+      "import": "./src/data/record/application/vnd.openofficeorg.extension.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.presentationml.presentation": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.presentationml.presentation.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.presentationml.slide": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.presentationml.slide.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.presentationml.slideshow": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.presentationml.slideshow.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.presentationml.template": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.presentationml.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.spreadsheetml.template": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.spreadsheetml.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.wordprocessingml.document.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.openxmlformats-officedocument.wordprocessingml.template": {
+      "import": "./src/data/record/application/vnd.openxmlformats-officedocument.wordprocessingml.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.palm": {
+      "import": "./src/data/record/application/vnd.palm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.quark.quarkxpress": {
+      "import": "./src/data/record/application/vnd.quark.quarkxpress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.rar": {
+      "import": "./src/data/record/application/vnd.rar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.rn-realmedia": {
+      "import": "./src/data/record/application/vnd.rn-realmedia.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.smaf": {
+      "import": "./src/data/record/application/vnd.smaf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.snap": {
+      "import": "./src/data/record/application/vnd.snap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sqlite3": {
+      "import": "./src/data/record/application/vnd.sqlite3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.squashfs": {
+      "import": "./src/data/record/application/vnd.squashfs.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.calc": {
+      "import": "./src/data/record/application/vnd.stardivision.calc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.chart": {
+      "import": "./src/data/record/application/vnd.stardivision.chart.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.draw": {
+      "import": "./src/data/record/application/vnd.stardivision.draw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.impress": {
+      "import": "./src/data/record/application/vnd.stardivision.impress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.impress-packed": {
+      "import": "./src/data/record/application/vnd.stardivision.impress-packed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.mail": {
+      "import": "./src/data/record/application/vnd.stardivision.mail.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.math": {
+      "import": "./src/data/record/application/vnd.stardivision.math.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.writer": {
+      "import": "./src/data/record/application/vnd.stardivision.writer.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.stardivision.writer-global": {
+      "import": "./src/data/record/application/vnd.stardivision.writer-global.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.calc": {
+      "import": "./src/data/record/application/vnd.sun.xml.calc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.calc.template": {
+      "import": "./src/data/record/application/vnd.sun.xml.calc.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.draw": {
+      "import": "./src/data/record/application/vnd.sun.xml.draw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.draw.template": {
+      "import": "./src/data/record/application/vnd.sun.xml.draw.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.impress": {
+      "import": "./src/data/record/application/vnd.sun.xml.impress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.impress.template": {
+      "import": "./src/data/record/application/vnd.sun.xml.impress.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.math": {
+      "import": "./src/data/record/application/vnd.sun.xml.math.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.writer": {
+      "import": "./src/data/record/application/vnd.sun.xml.writer.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.writer.global": {
+      "import": "./src/data/record/application/vnd.sun.xml.writer.global.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.sun.xml.writer.template": {
+      "import": "./src/data/record/application/vnd.sun.xml.writer.template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.symbian.install": {
+      "import": "./src/data/record/application/vnd.symbian.install.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.tcpdump.pcap": {
+      "import": "./src/data/record/application/vnd.tcpdump.pcap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.visio": {
+      "import": "./src/data/record/application/vnd.visio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/vnd.wordperfect": {
+      "import": "./src/data/record/application/vnd.wordperfect.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/wasm": {
+      "import": "./src/data/record/application/wasm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/winhlp": {
+      "import": "./src/data/record/application/winhlp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-7z-compressed": {
+      "import": "./src/data/record/application/x-7z-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-abiword": {
+      "import": "./src/data/record/application/x-abiword.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ace": {
+      "import": "./src/data/record/application/x-ace.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-alpine-package-keeper-package": {
+      "import": "./src/data/record/application/x-alpine-package-keeper-package.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-alz": {
+      "import": "./src/data/record/application/x-alz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-amf": {
+      "import": "./src/data/record/application/x-amf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-amiga-disk-format": {
+      "import": "./src/data/record/application/x-amiga-disk-format.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-amipro": {
+      "import": "./src/data/record/application/x-amipro.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-aportisdoc": {
+      "import": "./src/data/record/application/x-aportisdoc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-apple-diskimage": {
+      "import": "./src/data/record/application/x-apple-diskimage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-apple-systemprofiler+xml": {
+      "import": "./src/data/record/application/x-apple-systemprofiler+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-appleworks-document": {
+      "import": "./src/data/record/application/x-appleworks-document.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-applix-spreadsheet": {
+      "import": "./src/data/record/application/x-applix-spreadsheet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-applix-word": {
+      "import": "./src/data/record/application/x-applix-word.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-arc": {
+      "import": "./src/data/record/application/x-arc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-archive": {
+      "import": "./src/data/record/application/x-archive.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-arj": {
+      "import": "./src/data/record/application/x-arj.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-asar": {
+      "import": "./src/data/record/application/x-asar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-asp": {
+      "import": "./src/data/record/application/x-asp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-atari-2600-rom": {
+      "import": "./src/data/record/application/x-atari-2600-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-atari-5200-rom": {
+      "import": "./src/data/record/application/x-atari-5200-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-atari-7800-rom": {
+      "import": "./src/data/record/application/x-atari-7800-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-atari-lynx-rom": {
+      "import": "./src/data/record/application/x-atari-lynx-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bat": {
+      "import": "./src/data/record/application/x-bat.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bcpio": {
+      "import": "./src/data/record/application/x-bcpio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bittorrent": {
+      "import": "./src/data/record/application/x-bittorrent.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-blender": {
+      "import": "./src/data/record/application/x-blender.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bps-patch": {
+      "import": "./src/data/record/application/x-bps-patch.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-brotli": {
+      "import": "./src/data/record/application/x-brotli.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-brotli-compressed-tar": {
+      "import": "./src/data/record/application/x-brotli-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bsdiff": {
+      "import": "./src/data/record/application/x-bsdiff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzdvi": {
+      "import": "./src/data/record/application/x-bzdvi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzip1": {
+      "import": "./src/data/record/application/x-bzip1.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzip1-compressed-tar": {
+      "import": "./src/data/record/application/x-bzip1-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzip2": {
+      "import": "./src/data/record/application/x-bzip2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzip2-compressed-tar": {
+      "import": "./src/data/record/application/x-bzip2-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzip3-compressed-tar": {
+      "import": "./src/data/record/application/x-bzip3-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzpdf": {
+      "import": "./src/data/record/application/x-bzpdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-bzpostscript": {
+      "import": "./src/data/record/application/x-bzpostscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cb7": {
+      "import": "./src/data/record/application/x-cb7.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cbt": {
+      "import": "./src/data/record/application/x-cbt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ccmx": {
+      "import": "./src/data/record/application/x-ccmx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cdf": {
+      "import": "./src/data/record/application/x-cdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cdrdao-toc": {
+      "import": "./src/data/record/application/x-cdrdao-toc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-chip8-octo-source": {
+      "import": "./src/data/record/application/x-chip8-octo-source.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-chip8-program": {
+      "import": "./src/data/record/application/x-chip8-program.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cisco-vpn-settings": {
+      "import": "./src/data/record/application/x-cisco-vpn-settings.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-class-file": {
+      "import": "./src/data/record/application/x-class-file.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-coff": {
+      "import": "./src/data/record/application/x-coff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-crt": {
+      "import": "./src/data/record/application/x-commodore-crt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d64-disk": {
+      "import": "./src/data/record/application/x-commodore-d64-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d71-disk": {
+      "import": "./src/data/record/application/x-commodore-d71-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d80-disk": {
+      "import": "./src/data/record/application/x-commodore-d80-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d81-disk": {
+      "import": "./src/data/record/application/x-commodore-d81-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d82-disk": {
+      "import": "./src/data/record/application/x-commodore-d82-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-d90-disk": {
+      "import": "./src/data/record/application/x-commodore-d90-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-g64-disk": {
+      "import": "./src/data/record/application/x-commodore-g64-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-g71-disk": {
+      "import": "./src/data/record/application/x-commodore-g71-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-tape": {
+      "import": "./src/data/record/application/x-commodore-tape.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-commodore-x64-disk": {
+      "import": "./src/data/record/application/x-commodore-x64-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-compress": {
+      "import": "./src/data/record/application/x-compress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-compressed-iso": {
+      "import": "./src/data/record/application/x-compressed-iso.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-compressed-tar": {
+      "import": "./src/data/record/application/x-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-core": {
+      "import": "./src/data/record/application/x-core.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cpio": {
+      "import": "./src/data/record/application/x-cpio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cpio-compressed": {
+      "import": "./src/data/record/application/x-cpio-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-cue": {
+      "import": "./src/data/record/application/x-cue.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dar": {
+      "import": "./src/data/record/application/x-dar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-designer": {
+      "import": "./src/data/record/application/x-designer.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-desktop": {
+      "import": "./src/data/record/application/x-desktop.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dia-diagram": {
+      "import": "./src/data/record/application/x-dia-diagram.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dia-shape": {
+      "import": "./src/data/record/application/x-dia-shape.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-discjuggler-cd-image": {
+      "import": "./src/data/record/application/x-discjuggler-cd-image.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-doom-wad": {
+      "import": "./src/data/record/application/x-doom-wad.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dosexec": {
+      "import": "./src/data/record/application/x-dosexec.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dreamcast-rom": {
+      "import": "./src/data/record/application/x-dreamcast-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-dvi": {
+      "import": "./src/data/record/application/x-dvi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-e-theme": {
+      "import": "./src/data/record/application/x-e-theme.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-efi-linux-kernel": {
+      "import": "./src/data/record/application/x-efi-linux-kernel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-egon": {
+      "import": "./src/data/record/application/x-egon.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-eris-link+cbor": {
+      "import": "./src/data/record/application/x-eris-link+cbor.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-excellon": {
+      "import": "./src/data/record/application/x-excellon.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-executable": {
+      "import": "./src/data/record/application/x-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-fds-disk": {
+      "import": "./src/data/record/application/x-fds-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-fictionbook+xml": {
+      "import": "./src/data/record/application/x-fictionbook+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-fishscript": {
+      "import": "./src/data/record/application/x-fishscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-fluid": {
+      "import": "./src/data/record/application/x-fluid.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-afm": {
+      "import": "./src/data/record/application/x-font-afm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-bdf": {
+      "import": "./src/data/record/application/x-font-bdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-dos": {
+      "import": "./src/data/record/application/x-font-dos.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-framemaker": {
+      "import": "./src/data/record/application/x-font-framemaker.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-libgrx": {
+      "import": "./src/data/record/application/x-font-libgrx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-linux-psf": {
+      "import": "./src/data/record/application/x-font-linux-psf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-pcf": {
+      "import": "./src/data/record/application/x-font-pcf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-speedo": {
+      "import": "./src/data/record/application/x-font-speedo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-sunos-news": {
+      "import": "./src/data/record/application/x-font-sunos-news.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-tex": {
+      "import": "./src/data/record/application/x-font-tex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-tex-tfm": {
+      "import": "./src/data/record/application/x-font-tex-tfm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-ttx": {
+      "import": "./src/data/record/application/x-font-ttx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-type1": {
+      "import": "./src/data/record/application/x-font-type1.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-font-vfont": {
+      "import": "./src/data/record/application/x-font-vfont.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-freedesktop-appstream-component": {
+      "import": "./src/data/record/application/x-freedesktop-appstream-component.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-freedesktop-appstream-releases": {
+      "import": "./src/data/record/application/x-freedesktop-appstream-releases.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gameboy-color-rom": {
+      "import": "./src/data/record/application/x-gameboy-color-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gameboy-rom": {
+      "import": "./src/data/record/application/x-gameboy-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gamecube-rom": {
+      "import": "./src/data/record/application/x-gamecube-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gamegear-rom": {
+      "import": "./src/data/record/application/x-gamegear-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gba-rom": {
+      "import": "./src/data/record/application/x-gba-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gd-rom-cue": {
+      "import": "./src/data/record/application/x-gd-rom-cue.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gdbm": {
+      "import": "./src/data/record/application/x-gdbm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gdscript": {
+      "import": "./src/data/record/application/x-gdscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-genesis-32x-rom": {
+      "import": "./src/data/record/application/x-genesis-32x-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-genesis-rom": {
+      "import": "./src/data/record/application/x-genesis-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-genesis-rom-smd": {
+      "import": "./src/data/record/application/x-genesis-rom-smd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gerber-job": {
+      "import": "./src/data/record/application/x-gerber-job.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gettext-translation": {
+      "import": "./src/data/record/application/x-gettext-translation.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-git-bundle": {
+      "import": "./src/data/record/application/x-git-bundle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-glade": {
+      "import": "./src/data/record/application/x-glade.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gnucash": {
+      "import": "./src/data/record/application/x-gnucash.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gnumeric": {
+      "import": "./src/data/record/application/x-gnumeric.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gnupg-private-key": {
+      "import": "./src/data/record/application/x-gnupg-private-key.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gnuplot": {
+      "import": "./src/data/record/application/x-gnuplot.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-go-sgf": {
+      "import": "./src/data/record/application/x-go-sgf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-godot-project": {
+      "import": "./src/data/record/application/x-godot-project.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-godot-resource": {
+      "import": "./src/data/record/application/x-godot-resource.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-godot-scene": {
+      "import": "./src/data/record/application/x-godot-scene.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-godot-shader": {
+      "import": "./src/data/record/application/x-godot-shader.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-graphite": {
+      "import": "./src/data/record/application/x-graphite.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gtk-builder": {
+      "import": "./src/data/record/application/x-gtk-builder.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gtktalog": {
+      "import": "./src/data/record/application/x-gtktalog.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gz-font-linux-psf": {
+      "import": "./src/data/record/application/x-gz-font-linux-psf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gzdvi": {
+      "import": "./src/data/record/application/x-gzdvi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gzpdf": {
+      "import": "./src/data/record/application/x-gzpdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-gzpostscript": {
+      "import": "./src/data/record/application/x-gzpostscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-hdf": {
+      "import": "./src/data/record/application/x-hdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-hfe-floppy-image": {
+      "import": "./src/data/record/application/x-hfe-floppy-image.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-hwp": {
+      "import": "./src/data/record/application/x-hwp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-hwpx": {
+      "import": "./src/data/record/application/x-hwpx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-hwt": {
+      "import": "./src/data/record/application/x-hwt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ica": {
+      "import": "./src/data/record/application/x-ica.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-iff": {
+      "import": "./src/data/record/application/x-iff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ipod-firmware": {
+      "import": "./src/data/record/application/x-ipod-firmware.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ips-patch": {
+      "import": "./src/data/record/application/x-ips-patch.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ipynb+json": {
+      "import": "./src/data/record/application/x-ipynb+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-iso9660-appimage": {
+      "import": "./src/data/record/application/x-iso9660-appimage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-it87": {
+      "import": "./src/data/record/application/x-it87.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-java": {
+      "import": "./src/data/record/application/x-java.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-java-jce-keystore": {
+      "import": "./src/data/record/application/x-java-jce-keystore.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-java-jnlp-file": {
+      "import": "./src/data/record/application/x-java-jnlp-file.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-java-keystore": {
+      "import": "./src/data/record/application/x-java-keystore.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-java-pack200": {
+      "import": "./src/data/record/application/x-java-pack200.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-jbuilder-project": {
+      "import": "./src/data/record/application/x-jbuilder-project.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-karbon": {
+      "import": "./src/data/record/application/x-karbon.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kchart": {
+      "import": "./src/data/record/application/x-kchart.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-keepass": {
+      "import": "./src/data/record/application/x-keepass.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-keepass2": {
+      "import": "./src/data/record/application/x-keepass2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kexi-connectiondata": {
+      "import": "./src/data/record/application/x-kexi-connectiondata.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kexiproject-shortcut": {
+      "import": "./src/data/record/application/x-kexiproject-shortcut.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kexiproject-sqlite2": {
+      "import": "./src/data/record/application/x-kexiproject-sqlite2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kexiproject-sqlite3": {
+      "import": "./src/data/record/application/x-kexiproject-sqlite3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kformula": {
+      "import": "./src/data/record/application/x-kformula.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-killustrator": {
+      "import": "./src/data/record/application/x-killustrator.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kivio": {
+      "import": "./src/data/record/application/x-kivio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kontour": {
+      "import": "./src/data/record/application/x-kontour.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kpovmodeler": {
+      "import": "./src/data/record/application/x-kpovmodeler.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kpresenter": {
+      "import": "./src/data/record/application/x-kpresenter.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-krita": {
+      "import": "./src/data/record/application/x-krita.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kspread": {
+      "import": "./src/data/record/application/x-kspread.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kspread-crypt": {
+      "import": "./src/data/record/application/x-kspread-crypt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ksysv-package": {
+      "import": "./src/data/record/application/x-ksysv-package.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kugar": {
+      "import": "./src/data/record/application/x-kugar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kword": {
+      "import": "./src/data/record/application/x-kword.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-kword-crypt": {
+      "import": "./src/data/record/application/x-kword-crypt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lha": {
+      "import": "./src/data/record/application/x-lha.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lhz": {
+      "import": "./src/data/record/application/x-lhz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-linux-kernel": {
+      "import": "./src/data/record/application/x-linux-kernel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-linux-swap": {
+      "import": "./src/data/record/application/x-linux-swap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lmdb": {
+      "import": "./src/data/record/application/x-lmdb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lowresnx-program": {
+      "import": "./src/data/record/application/x-lowresnx-program.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lrzip": {
+      "import": "./src/data/record/application/x-lrzip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lrzip-compressed-tar": {
+      "import": "./src/data/record/application/x-lrzip-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lx-executable": {
+      "import": "./src/data/record/application/x-lx-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lyx": {
+      "import": "./src/data/record/application/x-lyx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lz4": {
+      "import": "./src/data/record/application/x-lz4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lz4-compressed-tar": {
+      "import": "./src/data/record/application/x-lz4-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzip": {
+      "import": "./src/data/record/application/x-lzip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzip-compressed-tar": {
+      "import": "./src/data/record/application/x-lzip-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzma": {
+      "import": "./src/data/record/application/x-lzma.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzma-compressed-tar": {
+      "import": "./src/data/record/application/x-lzma-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzop": {
+      "import": "./src/data/record/application/x-lzop.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-lzpdf": {
+      "import": "./src/data/record/application/x-lzpdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-m4": {
+      "import": "./src/data/record/application/x-m4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-macbinary": {
+      "import": "./src/data/record/application/x-macbinary.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-magicpoint": {
+      "import": "./src/data/record/application/x-magicpoint.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mame-chd": {
+      "import": "./src/data/record/application/x-mame-chd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-markaby": {
+      "import": "./src/data/record/application/x-markaby.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-matroska": {
+      "import": "./src/data/record/application/x-matroska.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mif": {
+      "import": "./src/data/record/application/x-mif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mimearchive": {
+      "import": "./src/data/record/application/x-mimearchive.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mobipocket-ebook": {
+      "import": "./src/data/record/application/x-mobipocket-ebook.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-modrinth-modpack+zip": {
+      "import": "./src/data/record/application/x-modrinth-modpack+zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mozilla-bookmarks": {
+      "import": "./src/data/record/application/x-mozilla-bookmarks.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ms-ne-executable": {
+      "import": "./src/data/record/application/x-ms-ne-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ms-pdb": {
+      "import": "./src/data/record/application/x-ms-pdb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ms-shortcut": {
+      "import": "./src/data/record/application/x-ms-shortcut.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ms-wim": {
+      "import": "./src/data/record/application/x-ms-wim.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-msdownload": {
+      "import": "./src/data/record/application/x-msdownload.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-msi": {
+      "import": "./src/data/record/application/x-msi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mswinurl": {
+      "import": "./src/data/record/application/x-mswinurl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-mswrite": {
+      "import": "./src/data/record/application/x-mswrite.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-msx-rom": {
+      "import": "./src/data/record/application/x-msx-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-n64-rom": {
+      "import": "./src/data/record/application/x-n64-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nautilus-link": {
+      "import": "./src/data/record/application/x-nautilus-link.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-navi-animation": {
+      "import": "./src/data/record/application/x-navi-animation.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-neo-geo-pocket-color-rom": {
+      "import": "./src/data/record/application/x-neo-geo-pocket-color-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-neo-geo-pocket-rom": {
+      "import": "./src/data/record/application/x-neo-geo-pocket-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nes-rom": {
+      "import": "./src/data/record/application/x-nes-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-netcdf": {
+      "import": "./src/data/record/application/x-netcdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-netshow-channel": {
+      "import": "./src/data/record/application/x-netshow-channel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nintendo-3ds-executable": {
+      "import": "./src/data/record/application/x-nintendo-3ds-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nintendo-3ds-rom": {
+      "import": "./src/data/record/application/x-nintendo-3ds-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nintendo-switch-xci": {
+      "import": "./src/data/record/application/x-nintendo-switch-xci.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nrg": {
+      "import": "./src/data/record/application/x-nrg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ns-proxy-autoconfig": {
+      "import": "./src/data/record/application/x-ns-proxy-autoconfig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nuscript": {
+      "import": "./src/data/record/application/x-nuscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-nzb": {
+      "import": "./src/data/record/application/x-nzb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-object": {
+      "import": "./src/data/record/application/x-object.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ole-storage": {
+      "import": "./src/data/record/application/x-ole-storage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-oleo": {
+      "import": "./src/data/record/application/x-oleo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-openvpn-profile": {
+      "import": "./src/data/record/application/x-openvpn-profile.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-openzim": {
+      "import": "./src/data/record/application/x-openzim.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pagemaker": {
+      "import": "./src/data/record/application/x-pagemaker.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pak": {
+      "import": "./src/data/record/application/x-pak.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-par2": {
+      "import": "./src/data/record/application/x-par2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-partial-download": {
+      "import": "./src/data/record/application/x-partial-download.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pc-engine-rom": {
+      "import": "./src/data/record/application/x-pc-engine-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pcapng": {
+      "import": "./src/data/record/application/x-pcapng.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pef-executable": {
+      "import": "./src/data/record/application/x-pef-executable.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-perf-data": {
+      "import": "./src/data/record/application/x-perf-data.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-perl": {
+      "import": "./src/data/record/application/x-perl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-php": {
+      "import": "./src/data/record/application/x-php.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pico8-rom": {
+      "import": "./src/data/record/application/x-pico8-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pico8-source": {
+      "import": "./src/data/record/application/x-pico8-source.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pkcs7-certificates": {
+      "import": "./src/data/record/application/x-pkcs7-certificates.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-planperfect": {
+      "import": "./src/data/record/application/x-planperfect.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pocket-word": {
+      "import": "./src/data/record/application/x-pocket-word.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-powershell": {
+      "import": "./src/data/record/application/x-powershell.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-profile": {
+      "import": "./src/data/record/application/x-profile.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pw": {
+      "import": "./src/data/record/application/x-pw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pwsafe3": {
+      "import": "./src/data/record/application/x-pwsafe3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pwsafe4": {
+      "import": "./src/data/record/application/x-pwsafe4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pyspread-bz-spreadsheet": {
+      "import": "./src/data/record/application/x-pyspread-bz-spreadsheet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-pyspread-spreadsheet": {
+      "import": "./src/data/record/application/x-pyspread-spreadsheet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-python-bytecode": {
+      "import": "./src/data/record/application/x-python-bytecode.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qbrew": {
+      "import": "./src/data/record/application/x-qbrew.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qed-disk": {
+      "import": "./src/data/record/application/x-qed-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qemu-disk": {
+      "import": "./src/data/record/application/x-qemu-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qpress": {
+      "import": "./src/data/record/application/x-qpress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qtiplot": {
+      "import": "./src/data/record/application/x-qtiplot.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-quattropro": {
+      "import": "./src/data/record/application/x-quattropro.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-quicktime-media-link": {
+      "import": "./src/data/record/application/x-quicktime-media-link.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-qw": {
+      "import": "./src/data/record/application/x-qw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-raw-disk-image-xz-compressed": {
+      "import": "./src/data/record/application/x-raw-disk-image-xz-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-raw-floppy-disk-image": {
+      "import": "./src/data/record/application/x-raw-floppy-disk-image.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-riff": {
+      "import": "./src/data/record/application/x-riff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-rpm": {
+      "import": "./src/data/record/application/x-rpm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ruby": {
+      "import": "./src/data/record/application/x-ruby.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-rzip": {
+      "import": "./src/data/record/application/x-rzip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-rzip-compressed-tar": {
+      "import": "./src/data/record/application/x-rzip-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sami": {
+      "import": "./src/data/record/application/x-sami.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-saturn-rom": {
+      "import": "./src/data/record/application/x-saturn-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sc": {
+      "import": "./src/data/record/application/x-sc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sega-cd-rom": {
+      "import": "./src/data/record/application/x-sega-cd-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sega-pico-rom": {
+      "import": "./src/data/record/application/x-sega-pico-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sg1000-rom": {
+      "import": "./src/data/record/application/x-sg1000-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-shar": {
+      "import": "./src/data/record/application/x-shar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-shared-library-la": {
+      "import": "./src/data/record/application/x-shared-library-la.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sharedlib": {
+      "import": "./src/data/record/application/x-sharedlib.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-shorten": {
+      "import": "./src/data/record/application/x-shorten.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-siag": {
+      "import": "./src/data/record/application/x-siag.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-slp": {
+      "import": "./src/data/record/application/x-slp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sms-rom": {
+      "import": "./src/data/record/application/x-sms-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sony-bbeb": {
+      "import": "./src/data/record/application/x-sony-bbeb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-source-rpm": {
+      "import": "./src/data/record/application/x-source-rpm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-d80": {
+      "import": "./src/data/record/application/x-spectrum-d80.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-dsk": {
+      "import": "./src/data/record/application/x-spectrum-dsk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-hdf": {
+      "import": "./src/data/record/application/x-spectrum-hdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-mdr": {
+      "import": "./src/data/record/application/x-spectrum-mdr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-mgt": {
+      "import": "./src/data/record/application/x-spectrum-mgt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-pzx": {
+      "import": "./src/data/record/application/x-spectrum-pzx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-rzx": {
+      "import": "./src/data/record/application/x-spectrum-rzx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-slt": {
+      "import": "./src/data/record/application/x-spectrum-slt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-sna": {
+      "import": "./src/data/record/application/x-spectrum-sna.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-szx": {
+      "import": "./src/data/record/application/x-spectrum-szx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-tap": {
+      "import": "./src/data/record/application/x-spectrum-tap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-tzx": {
+      "import": "./src/data/record/application/x-spectrum-tzx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spectrum-z80": {
+      "import": "./src/data/record/application/x-spectrum-z80.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spss-por": {
+      "import": "./src/data/record/application/x-spss-por.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-spss-sav": {
+      "import": "./src/data/record/application/x-spss-sav.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sqlite2": {
+      "import": "./src/data/record/application/x-sqlite2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starcalc": {
+      "import": "./src/data/record/application/x-starcalc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starchart": {
+      "import": "./src/data/record/application/x-starchart.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-stardraw": {
+      "import": "./src/data/record/application/x-stardraw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starimpress": {
+      "import": "./src/data/record/application/x-starimpress.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starmail": {
+      "import": "./src/data/record/application/x-starmail.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starmath": {
+      "import": "./src/data/record/application/x-starmath.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starwriter": {
+      "import": "./src/data/record/application/x-starwriter.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-starwriter-global": {
+      "import": "./src/data/record/application/x-starwriter-global.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-stuffit": {
+      "import": "./src/data/record/application/x-stuffit.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-stuffitx": {
+      "import": "./src/data/record/application/x-stuffitx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-subrip": {
+      "import": "./src/data/record/application/x-subrip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sv4cpio": {
+      "import": "./src/data/record/application/x-sv4cpio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sv4crc": {
+      "import": "./src/data/record/application/x-sv4crc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-sylk": {
+      "import": "./src/data/record/application/x-sylk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-t602": {
+      "import": "./src/data/record/application/x-t602.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tar": {
+      "import": "./src/data/record/application/x-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tarz": {
+      "import": "./src/data/record/application/x-tarz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tex-gf": {
+      "import": "./src/data/record/application/x-tex-gf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tex-pk": {
+      "import": "./src/data/record/application/x-tex-pk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tgif": {
+      "import": "./src/data/record/application/x-tgif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-theme": {
+      "import": "./src/data/record/application/x-theme.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-thomson-cartridge-memo7": {
+      "import": "./src/data/record/application/x-thomson-cartridge-memo7.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-thomson-cassette": {
+      "import": "./src/data/record/application/x-thomson-cassette.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-thomson-sap-image": {
+      "import": "./src/data/record/application/x-thomson-sap-image.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tic80-item": {
+      "import": "./src/data/record/application/x-tic80-item.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tiled-tmx": {
+      "import": "./src/data/record/application/x-tiled-tmx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tiled-tsx": {
+      "import": "./src/data/record/application/x-tiled-tsx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-toutdoux": {
+      "import": "./src/data/record/application/x-toutdoux.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-trash": {
+      "import": "./src/data/record/application/x-trash.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-troff-man": {
+      "import": "./src/data/record/application/x-troff-man.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-troff-man-compressed": {
+      "import": "./src/data/record/application/x-troff-man-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-tzo": {
+      "import": "./src/data/record/application/x-tzo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ufraw": {
+      "import": "./src/data/record/application/x-ufraw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-ustar": {
+      "import": "./src/data/record/application/x-ustar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-vdi-disk": {
+      "import": "./src/data/record/application/x-vdi-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-vhd-disk": {
+      "import": "./src/data/record/application/x-vhd-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-vhdx-disk": {
+      "import": "./src/data/record/application/x-vhdx-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-virtual-boy-rom": {
+      "import": "./src/data/record/application/x-virtual-boy-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-vmdk-disk": {
+      "import": "./src/data/record/application/x-vmdk-disk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-vnd.corel.zcf.draw.document+zip": {
+      "import": "./src/data/record/application/x-vnd.corel.zcf.draw.document+zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wais-source": {
+      "import": "./src/data/record/application/x-wais-source.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wii-rom": {
+      "import": "./src/data/record/application/x-wii-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wii-wad": {
+      "import": "./src/data/record/application/x-wii-wad.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-windows-themepack": {
+      "import": "./src/data/record/application/x-windows-themepack.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wonderswan-color-rom": {
+      "import": "./src/data/record/application/x-wonderswan-color-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wonderswan-rom": {
+      "import": "./src/data/record/application/x-wonderswan-rom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wpg": {
+      "import": "./src/data/record/application/x-wpg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-wwf": {
+      "import": "./src/data/record/application/x-wwf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-x509-ca-cert": {
+      "import": "./src/data/record/application/x-x509-ca-cert.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xar": {
+      "import": "./src/data/record/application/x-xar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xbel": {
+      "import": "./src/data/record/application/x-xbel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xpinstall": {
+      "import": "./src/data/record/application/x-xpinstall.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xz": {
+      "import": "./src/data/record/application/x-xz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xz-compressed-tar": {
+      "import": "./src/data/record/application/x-xz-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-xzpdf": {
+      "import": "./src/data/record/application/x-xzpdf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-zerosize": {
+      "import": "./src/data/record/application/x-zerosize.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-zip-compressed-fb2": {
+      "import": "./src/data/record/application/x-zip-compressed-fb2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-zoo": {
+      "import": "./src/data/record/application/x-zoo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-zpaq": {
+      "import": "./src/data/record/application/x-zpaq.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x-zstd-compressed-tar": {
+      "import": "./src/data/record/application/x-zstd-compressed-tar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x.sf3-archive": {
+      "import": "./src/data/record/application/x.sf3-archive.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x.sf3-log": {
+      "import": "./src/data/record/application/x.sf3-log.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x.sf3-table": {
+      "import": "./src/data/record/application/x.sf3-table.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/x.sf3-text": {
+      "import": "./src/data/record/application/x.sf3-text.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xhtml+xml": {
+      "import": "./src/data/record/application/xhtml+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xliff+xml": {
+      "import": "./src/data/record/application/xliff+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xml": {
+      "import": "./src/data/record/application/xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xml-dtd": {
+      "import": "./src/data/record/application/xml-dtd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xml-external-parsed-entity": {
+      "import": "./src/data/record/application/xml-external-parsed-entity.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xslt+xml": {
+      "import": "./src/data/record/application/xslt+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/xspf+xml": {
+      "import": "./src/data/record/application/xspf+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/yaml": {
+      "import": "./src/data/record/application/yaml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/zip": {
+      "import": "./src/data/record/application/zip.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/zlib": {
+      "import": "./src/data/record/application/zlib.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./application/zstd": {
+      "import": "./src/data/record/application/zstd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/AMR": {
+      "import": "./src/data/record/audio/AMR.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/AMR-WB": {
+      "import": "./src/data/record/audio/AMR-WB.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/aac": {
+      "import": "./src/data/record/audio/aac.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/ac3": {
+      "import": "./src/data/record/audio/ac3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/annodex": {
+      "import": "./src/data/record/audio/annodex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/basic": {
+      "import": "./src/data/record/audio/basic.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/flac": {
+      "import": "./src/data/record/audio/flac.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/matroska": {
+      "import": "./src/data/record/audio/matroska.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/midi": {
+      "import": "./src/data/record/audio/midi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/mobile-xmf": {
+      "import": "./src/data/record/audio/mobile-xmf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/mp2": {
+      "import": "./src/data/record/audio/mp2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/mp4": {
+      "import": "./src/data/record/audio/mp4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/mpeg": {
+      "import": "./src/data/record/audio/mpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/ogg": {
+      "import": "./src/data/record/audio/ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/prs.sid": {
+      "import": "./src/data/record/audio/prs.sid.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/soundfont": {
+      "import": "./src/data/record/audio/soundfont.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/usac": {
+      "import": "./src/data/record/audio/usac.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.audible.aax": {
+      "import": "./src/data/record/audio/vnd.audible.aax.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.audible.aaxc": {
+      "import": "./src/data/record/audio/vnd.audible.aaxc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.dts": {
+      "import": "./src/data/record/audio/vnd.dts.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.dts.hd": {
+      "import": "./src/data/record/audio/vnd.dts.hd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.rn-realaudio": {
+      "import": "./src/data/record/audio/vnd.rn-realaudio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vnd.wave": {
+      "import": "./src/data/record/audio/vnd.wave.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/vorbis": {
+      "import": "./src/data/record/audio/vorbis.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/webm": {
+      "import": "./src/data/record/audio/webm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-669": {
+      "import": "./src/data/record/audio/x-669.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-adpcm": {
+      "import": "./src/data/record/audio/x-adpcm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-aifc": {
+      "import": "./src/data/record/audio/x-aifc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-aiff": {
+      "import": "./src/data/record/audio/x-aiff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-amzxml": {
+      "import": "./src/data/record/audio/x-amzxml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-ape": {
+      "import": "./src/data/record/audio/x-ape.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-dff": {
+      "import": "./src/data/record/audio/x-dff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-dsf": {
+      "import": "./src/data/record/audio/x-dsf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-dsp": {
+      "import": "./src/data/record/audio/x-dsp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-flac+ogg": {
+      "import": "./src/data/record/audio/x-flac+ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-gsm": {
+      "import": "./src/data/record/audio/x-gsm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-iriver-pla": {
+      "import": "./src/data/record/audio/x-iriver-pla.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-it": {
+      "import": "./src/data/record/audio/x-it.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-m4b": {
+      "import": "./src/data/record/audio/x-m4b.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-m4r": {
+      "import": "./src/data/record/audio/x-m4r.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-med": {
+      "import": "./src/data/record/audio/x-med.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-minipsf": {
+      "import": "./src/data/record/audio/x-minipsf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-mo3": {
+      "import": "./src/data/record/audio/x-mo3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-mod": {
+      "import": "./src/data/record/audio/x-mod.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-mpegurl": {
+      "import": "./src/data/record/audio/x-mpegurl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-ms-asx": {
+      "import": "./src/data/record/audio/x-ms-asx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-ms-wma": {
+      "import": "./src/data/record/audio/x-ms-wma.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-mtm": {
+      "import": "./src/data/record/audio/x-mtm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-musepack": {
+      "import": "./src/data/record/audio/x-musepack.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-opus+ogg": {
+      "import": "./src/data/record/audio/x-opus+ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-pn-audibleaudio": {
+      "import": "./src/data/record/audio/x-pn-audibleaudio.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-psf": {
+      "import": "./src/data/record/audio/x-psf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-psflib": {
+      "import": "./src/data/record/audio/x-psflib.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-s3m": {
+      "import": "./src/data/record/audio/x-s3m.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-scpls": {
+      "import": "./src/data/record/audio/x-scpls.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-sf1": {
+      "import": "./src/data/record/audio/x-sf1.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-sf3": {
+      "import": "./src/data/record/audio/x-sf3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-speex": {
+      "import": "./src/data/record/audio/x-speex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-speex+ogg": {
+      "import": "./src/data/record/audio/x-speex+ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-stm": {
+      "import": "./src/data/record/audio/x-stm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-tak": {
+      "import": "./src/data/record/audio/x-tak.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-tta": {
+      "import": "./src/data/record/audio/x-tta.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-ult": {
+      "import": "./src/data/record/audio/x-ult.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-voc": {
+      "import": "./src/data/record/audio/x-voc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-wavpack": {
+      "import": "./src/data/record/audio/x-wavpack.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-wavpack-correction": {
+      "import": "./src/data/record/audio/x-wavpack-correction.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-xi": {
+      "import": "./src/data/record/audio/x-xi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-xm": {
+      "import": "./src/data/record/audio/x-xm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x-xmf": {
+      "import": "./src/data/record/audio/x-xmf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./audio/x.sf3": {
+      "import": "./src/data/record/audio/x.sf3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./chemical/x-pdb": {
+      "import": "./src/data/record/chemical/x-pdb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./data": {
+      "import": "./src/data/index.mjs",
+      "types": "./src/data/index.d.mts"
+    },
+    "./font/collection": {
+      "import": "./src/data/record/font/collection.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/otf": {
+      "import": "./src/data/record/font/otf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/ttf": {
+      "import": "./src/data/record/font/ttf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/woff": {
+      "import": "./src/data/record/font/woff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./font/woff2": {
+      "import": "./src/data/record/font/woff2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/apng": {
+      "import": "./src/data/record/image/apng.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/astc": {
+      "import": "./src/data/record/image/astc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/avci": {
+      "import": "./src/data/record/image/avci.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/avif": {
+      "import": "./src/data/record/image/avif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/bmp": {
+      "import": "./src/data/record/image/bmp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/cgm": {
+      "import": "./src/data/record/image/cgm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/dpx": {
+      "import": "./src/data/record/image/dpx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/emf": {
+      "import": "./src/data/record/image/emf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/g3fax": {
+      "import": "./src/data/record/image/g3fax.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/gif": {
+      "import": "./src/data/record/image/gif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/heif": {
+      "import": "./src/data/record/image/heif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/hej2k": {
+      "import": "./src/data/record/image/hej2k.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/ief": {
+      "import": "./src/data/record/image/ief.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jp2": {
+      "import": "./src/data/record/image/jp2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jpeg": {
+      "import": "./src/data/record/image/jpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jpm": {
+      "import": "./src/data/record/image/jpm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jpx": {
+      "import": "./src/data/record/image/jpx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jxl": {
+      "import": "./src/data/record/image/jxl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/jxr": {
+      "import": "./src/data/record/image/jxr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/ktx": {
+      "import": "./src/data/record/image/ktx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/ktx2": {
+      "import": "./src/data/record/image/ktx2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/openraster": {
+      "import": "./src/data/record/image/openraster.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/png": {
+      "import": "./src/data/record/image/png.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/qoi": {
+      "import": "./src/data/record/image/qoi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/rle": {
+      "import": "./src/data/record/image/rle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/svg+xml": {
+      "import": "./src/data/record/image/svg+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/svg+xml-compressed": {
+      "import": "./src/data/record/image/svg+xml-compressed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/tiff": {
+      "import": "./src/data/record/image/tiff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.adobe.photoshop": {
+      "import": "./src/data/record/image/vnd.adobe.photoshop.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.djvu": {
+      "import": "./src/data/record/image/vnd.djvu.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.djvu+multipage": {
+      "import": "./src/data/record/image/vnd.djvu+multipage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.dwg": {
+      "import": "./src/data/record/image/vnd.dwg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.dxf": {
+      "import": "./src/data/record/image/vnd.dxf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.fpx": {
+      "import": "./src/data/record/image/vnd.fpx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.microsoft.icon": {
+      "import": "./src/data/record/image/vnd.microsoft.icon.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.ms-dds": {
+      "import": "./src/data/record/image/vnd.ms-dds.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.ms-modi": {
+      "import": "./src/data/record/image/vnd.ms-modi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.radiance": {
+      "import": "./src/data/record/image/vnd.radiance.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.rn-realpix": {
+      "import": "./src/data/record/image/vnd.rn-realpix.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.wap.wbmp": {
+      "import": "./src/data/record/image/vnd.wap.wbmp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/vnd.zbrush.pcx": {
+      "import": "./src/data/record/image/vnd.zbrush.pcx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/webp": {
+      "import": "./src/data/record/image/webp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/wmf": {
+      "import": "./src/data/record/image/wmf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-3ds": {
+      "import": "./src/data/record/image/x-3ds.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-adobe-dng": {
+      "import": "./src/data/record/image/x-adobe-dng.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-applix-graphics": {
+      "import": "./src/data/record/image/x-applix-graphics.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-aseprite": {
+      "import": "./src/data/record/image/x-aseprite.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-bzeps": {
+      "import": "./src/data/record/image/x-bzeps.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-canon-cr2": {
+      "import": "./src/data/record/image/x-canon-cr2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-canon-cr3": {
+      "import": "./src/data/record/image/x-canon-cr3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-canon-crw": {
+      "import": "./src/data/record/image/x-canon-crw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-cmu-raster": {
+      "import": "./src/data/record/image/x-cmu-raster.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-compressed-xcf": {
+      "import": "./src/data/record/image/x-compressed-xcf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-dcraw": {
+      "import": "./src/data/record/image/x-dcraw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-dib": {
+      "import": "./src/data/record/image/x-dib.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-eps": {
+      "import": "./src/data/record/image/x-eps.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-epson-erf": {
+      "import": "./src/data/record/image/x-epson-erf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-exr": {
+      "import": "./src/data/record/image/x-exr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-farbfeld": {
+      "import": "./src/data/record/image/x-farbfeld.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-fuji-raf": {
+      "import": "./src/data/record/image/x-fuji-raf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-gimp-gbr": {
+      "import": "./src/data/record/image/x-gimp-gbr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-gimp-gih": {
+      "import": "./src/data/record/image/x-gimp-gih.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-gimp-pat": {
+      "import": "./src/data/record/image/x-gimp-pat.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-gzeps": {
+      "import": "./src/data/record/image/x-gzeps.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-hasselblad-3fr": {
+      "import": "./src/data/record/image/x-hasselblad-3fr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-hasselblad-fff": {
+      "import": "./src/data/record/image/x-hasselblad-fff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-icns": {
+      "import": "./src/data/record/image/x-icns.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-ilbm": {
+      "import": "./src/data/record/image/x-ilbm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-jng": {
+      "import": "./src/data/record/image/x-jng.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-jp2-codestream": {
+      "import": "./src/data/record/image/x-jp2-codestream.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-kiss-cel": {
+      "import": "./src/data/record/image/x-kiss-cel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-kodak-dcr": {
+      "import": "./src/data/record/image/x-kodak-dcr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-kodak-k25": {
+      "import": "./src/data/record/image/x-kodak-k25.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-kodak-kdc": {
+      "import": "./src/data/record/image/x-kodak-kdc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-leaf-mos": {
+      "import": "./src/data/record/image/x-leaf-mos.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-lwo": {
+      "import": "./src/data/record/image/x-lwo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-lws": {
+      "import": "./src/data/record/image/x-lws.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-macpaint": {
+      "import": "./src/data/record/image/x-macpaint.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-mamiya-mef": {
+      "import": "./src/data/record/image/x-mamiya-mef.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-minolta-mdc": {
+      "import": "./src/data/record/image/x-minolta-mdc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-minolta-mrw": {
+      "import": "./src/data/record/image/x-minolta-mrw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-msod": {
+      "import": "./src/data/record/image/x-msod.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-niff": {
+      "import": "./src/data/record/image/x-niff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-nikon-nef": {
+      "import": "./src/data/record/image/x-nikon-nef.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-nikon-nrw": {
+      "import": "./src/data/record/image/x-nikon-nrw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-olympus-orf": {
+      "import": "./src/data/record/image/x-olympus-orf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-panasonic-rw": {
+      "import": "./src/data/record/image/x-panasonic-rw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-panasonic-rw2": {
+      "import": "./src/data/record/image/x-panasonic-rw2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-pentax-pef": {
+      "import": "./src/data/record/image/x-pentax-pef.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-pfm": {
+      "import": "./src/data/record/image/x-pfm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-phaseone-iiq": {
+      "import": "./src/data/record/image/x-phaseone-iiq.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-phm": {
+      "import": "./src/data/record/image/x-phm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-photo-cd": {
+      "import": "./src/data/record/image/x-photo-cd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-pict": {
+      "import": "./src/data/record/image/x-pict.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-portable-anymap": {
+      "import": "./src/data/record/image/x-portable-anymap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-portable-arbitrarymap": {
+      "import": "./src/data/record/image/x-portable-arbitrarymap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-portable-bitmap": {
+      "import": "./src/data/record/image/x-portable-bitmap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-portable-graymap": {
+      "import": "./src/data/record/image/x-portable-graymap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-portable-pixmap": {
+      "import": "./src/data/record/image/x-portable-pixmap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-pxr": {
+      "import": "./src/data/record/image/x-pxr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-quicktime": {
+      "import": "./src/data/record/image/x-quicktime.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-rgb": {
+      "import": "./src/data/record/image/x-rgb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-samsung-srw": {
+      "import": "./src/data/record/image/x-samsung-srw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sct": {
+      "import": "./src/data/record/image/x-sct.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sgi": {
+      "import": "./src/data/record/image/x-sgi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sigma-x3f": {
+      "import": "./src/data/record/image/x-sigma-x3f.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sinar-sti": {
+      "import": "./src/data/record/image/x-sinar-sti.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-skencil": {
+      "import": "./src/data/record/image/x-skencil.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sony-arw": {
+      "import": "./src/data/record/image/x-sony-arw.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sony-sr2": {
+      "import": "./src/data/record/image/x-sony-sr2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sony-srf": {
+      "import": "./src/data/record/image/x-sony-srf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-sun-raster": {
+      "import": "./src/data/record/image/x-sun-raster.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-tga": {
+      "import": "./src/data/record/image/x-tga.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-tiff-multipage": {
+      "import": "./src/data/record/image/x-tiff-multipage.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-tim": {
+      "import": "./src/data/record/image/x-tim.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-win-bitmap": {
+      "import": "./src/data/record/image/x-win-bitmap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xbitmap": {
+      "import": "./src/data/record/image/x-xbitmap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xcf": {
+      "import": "./src/data/record/image/x-xcf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xcursor": {
+      "import": "./src/data/record/image/x-xcursor.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xfig": {
+      "import": "./src/data/record/image/x-xfig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xpixmap": {
+      "import": "./src/data/record/image/x-xpixmap.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xv-thumbnail": {
+      "import": "./src/data/record/image/x-xv-thumbnail.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x-xwindowdump": {
+      "import": "./src/data/record/image/x-xwindowdump.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x.sf3": {
+      "import": "./src/data/record/image/x.sf3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./image/x.sf3-vector": {
+      "import": "./src/data/record/image/x.sf3-vector.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/blockdevice": {
+      "import": "./src/data/record/inode/blockdevice.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/chardevice": {
+      "import": "./src/data/record/inode/chardevice.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/directory": {
+      "import": "./src/data/record/inode/directory.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/fifo": {
+      "import": "./src/data/record/inode/fifo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/mount-point": {
+      "import": "./src/data/record/inode/mount-point.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/socket": {
+      "import": "./src/data/record/inode/socket.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./inode/symlink": {
+      "import": "./src/data/record/inode/symlink.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/delivery-status": {
+      "import": "./src/data/record/message/delivery-status.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/disposition-notification": {
+      "import": "./src/data/record/message/disposition-notification.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/external-body": {
+      "import": "./src/data/record/message/external-body.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/news": {
+      "import": "./src/data/record/message/news.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/partial": {
+      "import": "./src/data/record/message/partial.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/rfc822": {
+      "import": "./src/data/record/message/rfc822.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./message/x-gnu-rmail": {
+      "import": "./src/data/record/message/x-gnu-rmail.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/3mf": {
+      "import": "./src/data/record/model/3mf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/gltf+json": {
+      "import": "./src/data/record/model/gltf+json.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/gltf-binary": {
+      "import": "./src/data/record/model/gltf-binary.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/iges": {
+      "import": "./src/data/record/model/iges.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/mtl": {
+      "import": "./src/data/record/model/mtl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/obj": {
+      "import": "./src/data/record/model/obj.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/step": {
+      "import": "./src/data/record/model/step.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/stl": {
+      "import": "./src/data/record/model/stl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/vrml": {
+      "import": "./src/data/record/model/vrml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/x-brep": {
+      "import": "./src/data/record/model/x-brep.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/x.sf3": {
+      "import": "./src/data/record/model/x.sf3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./model/x.sf3-physics": {
+      "import": "./src/data/record/model/x.sf3-physics.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/alternative": {
+      "import": "./src/data/record/multipart/alternative.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/appledouble": {
+      "import": "./src/data/record/multipart/appledouble.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/digest": {
+      "import": "./src/data/record/multipart/digest.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/encrypted": {
+      "import": "./src/data/record/multipart/encrypted.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/mixed": {
+      "import": "./src/data/record/multipart/mixed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/related": {
+      "import": "./src/data/record/multipart/related.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/report": {
+      "import": "./src/data/record/multipart/report.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/signed": {
+      "import": "./src/data/record/multipart/signed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./multipart/x-mixed-replace": {
+      "import": "./src/data/record/multipart/x-mixed-replace.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/cache-manifest": {
+      "import": "./src/data/record/text/cache-manifest.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/calendar": {
+      "import": "./src/data/record/text/calendar.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/css": {
+      "import": "./src/data/record/text/css.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/csv": {
+      "import": "./src/data/record/text/csv.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/csv-schema": {
+      "import": "./src/data/record/text/csv-schema.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/enriched": {
+      "import": "./src/data/record/text/enriched.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/gff3": {
+      "import": "./src/data/record/text/gff3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/html": {
+      "import": "./src/data/record/text/html.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/javascript": {
+      "import": "./src/data/record/text/javascript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/jscript.encode": {
+      "import": "./src/data/record/text/jscript.encode.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/jsx": {
+      "import": "./src/data/record/text/jsx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/julia": {
+      "import": "./src/data/record/text/julia.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/markdown": {
+      "import": "./src/data/record/text/markdown.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/n3": {
+      "import": "./src/data/record/text/n3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/org": {
+      "import": "./src/data/record/text/org.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/plain": {
+      "import": "./src/data/record/text/plain.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/rfc822-headers": {
+      "import": "./src/data/record/text/rfc822-headers.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/richtext": {
+      "import": "./src/data/record/text/richtext.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/rust": {
+      "import": "./src/data/record/text/rust.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/scriptlet": {
+      "import": "./src/data/record/text/scriptlet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/sgml": {
+      "import": "./src/data/record/text/sgml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/slint": {
+      "import": "./src/data/record/text/slint.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/spdx": {
+      "import": "./src/data/record/text/spdx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/tab-separated-values": {
+      "import": "./src/data/record/text/tab-separated-values.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/tcl": {
+      "import": "./src/data/record/text/tcl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/troff": {
+      "import": "./src/data/record/text/troff.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/tsx": {
+      "import": "./src/data/record/text/tsx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/turtle": {
+      "import": "./src/data/record/text/turtle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vbscript": {
+      "import": "./src/data/record/text/vbscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vbscript.encode": {
+      "import": "./src/data/record/text/vbscript.encode.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vcard": {
+      "import": "./src/data/record/text/vcard.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.familysearch.gedcom": {
+      "import": "./src/data/record/text/vnd.familysearch.gedcom.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.graphviz": {
+      "import": "./src/data/record/text/vnd.graphviz.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.plantuml": {
+      "import": "./src/data/record/text/vnd.plantuml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.rn-realtext": {
+      "import": "./src/data/record/text/vnd.rn-realtext.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.senx.warpscript": {
+      "import": "./src/data/record/text/vnd.senx.warpscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.sun.j2me.app-descriptor": {
+      "import": "./src/data/record/text/vnd.sun.j2me.app-descriptor.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.trolltech.linguist": {
+      "import": "./src/data/record/text/vnd.trolltech.linguist.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.typst": {
+      "import": "./src/data/record/text/vnd.typst.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.wap.wml": {
+      "import": "./src/data/record/text/vnd.wap.wml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vnd.wap.wmlscript": {
+      "import": "./src/data/record/text/vnd.wap.wmlscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/vtt": {
+      "import": "./src/data/record/text/vtt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-adasrc": {
+      "import": "./src/data/record/text/x-adasrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-asm": {
+      "import": "./src/data/record/text/x-asm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-authors": {
+      "import": "./src/data/record/text/x-authors.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-awk": {
+      "import": "./src/data/record/text/x-awk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-basic": {
+      "import": "./src/data/record/text/x-basic.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-bibtex": {
+      "import": "./src/data/record/text/x-bibtex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-blueprint": {
+      "import": "./src/data/record/text/x-blueprint.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-c++hdr": {
+      "import": "./src/data/record/text/x-c++hdr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-c++src": {
+      "import": "./src/data/record/text/x-c++src.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-changelog": {
+      "import": "./src/data/record/text/x-changelog.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-chdr": {
+      "import": "./src/data/record/text/x-chdr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-cmake": {
+      "import": "./src/data/record/text/x-cmake.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-cobol": {
+      "import": "./src/data/record/text/x-cobol.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-common-lisp": {
+      "import": "./src/data/record/text/x-common-lisp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-component": {
+      "import": "./src/data/record/text/x-component.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-copying": {
+      "import": "./src/data/record/text/x-copying.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-credits": {
+      "import": "./src/data/record/text/x-credits.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-crystal": {
+      "import": "./src/data/record/text/x-crystal.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-csh": {
+      "import": "./src/data/record/text/x-csh.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-csharp": {
+      "import": "./src/data/record/text/x-csharp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-csrc": {
+      "import": "./src/data/record/text/x-csrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-cython": {
+      "import": "./src/data/record/text/x-cython.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-dbus-service": {
+      "import": "./src/data/record/text/x-dbus-service.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-dcl": {
+      "import": "./src/data/record/text/x-dcl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-devicetree-binary": {
+      "import": "./src/data/record/text/x-devicetree-binary.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-devicetree-source": {
+      "import": "./src/data/record/text/x-devicetree-source.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-dockerfile": {
+      "import": "./src/data/record/text/x-dockerfile.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-dsl": {
+      "import": "./src/data/record/text/x-dsl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-dsrc": {
+      "import": "./src/data/record/text/x-dsrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-editorconfig": {
+      "import": "./src/data/record/text/x-editorconfig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-eiffel": {
+      "import": "./src/data/record/text/x-eiffel.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-elixir": {
+      "import": "./src/data/record/text/x-elixir.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-emacs-lisp": {
+      "import": "./src/data/record/text/x-emacs-lisp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-erlang": {
+      "import": "./src/data/record/text/x-erlang.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-fortran": {
+      "import": "./src/data/record/text/x-fortran.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gawk": {
+      "import": "./src/data/record/text/x-gawk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gcode-gx": {
+      "import": "./src/data/record/text/x-gcode-gx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-genie": {
+      "import": "./src/data/record/text/x-genie.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gettext-translation": {
+      "import": "./src/data/record/text/x-gettext-translation.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gettext-translation-template": {
+      "import": "./src/data/record/text/x-gettext-translation-template.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gherkin": {
+      "import": "./src/data/record/text/x-gherkin.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-go": {
+      "import": "./src/data/record/text/x-go.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-go-mod": {
+      "import": "./src/data/record/text/x-go-mod.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-google-video-pointer": {
+      "import": "./src/data/record/text/x-google-video-pointer.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gradle": {
+      "import": "./src/data/record/text/x-gradle.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-gradle-kts": {
+      "import": "./src/data/record/text/x-gradle-kts.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-groovy": {
+      "import": "./src/data/record/text/x-groovy.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-haskell": {
+      "import": "./src/data/record/text/x-haskell.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-iMelody": {
+      "import": "./src/data/record/text/x-iMelody.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-idl": {
+      "import": "./src/data/record/text/x-idl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-install": {
+      "import": "./src/data/record/text/x-install.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-iptables": {
+      "import": "./src/data/record/text/x-iptables.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-java": {
+      "import": "./src/data/record/text/x-java.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-kaitai-struct": {
+      "import": "./src/data/record/text/x-kaitai-struct.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-kotlin": {
+      "import": "./src/data/record/text/x-kotlin.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ldif": {
+      "import": "./src/data/record/text/x-ldif.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-lilypond": {
+      "import": "./src/data/record/text/x-lilypond.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-literate-haskell": {
+      "import": "./src/data/record/text/x-literate-haskell.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-log": {
+      "import": "./src/data/record/text/x-log.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-lrc": {
+      "import": "./src/data/record/text/x-lrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-lua": {
+      "import": "./src/data/record/text/x-lua.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-makefile": {
+      "import": "./src/data/record/text/x-makefile.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-matlab": {
+      "import": "./src/data/record/text/x-matlab.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-maven+xml": {
+      "import": "./src/data/record/text/x-maven+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-meson": {
+      "import": "./src/data/record/text/x-meson.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-microdvd": {
+      "import": "./src/data/record/text/x-microdvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-moc": {
+      "import": "./src/data/record/text/x-moc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-modelica": {
+      "import": "./src/data/record/text/x-modelica.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-mof": {
+      "import": "./src/data/record/text/x-mof.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-mpl2": {
+      "import": "./src/data/record/text/x-mpl2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-mpsub": {
+      "import": "./src/data/record/text/x-mpsub.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-mrml": {
+      "import": "./src/data/record/text/x-mrml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ms-regedit": {
+      "import": "./src/data/record/text/x-ms-regedit.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ms-visualstudio.project": {
+      "import": "./src/data/record/text/x-ms-visualstudio.project.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ms-visualstudio.workspace": {
+      "import": "./src/data/record/text/x-ms-visualstudio.workspace.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-mup": {
+      "import": "./src/data/record/text/x-mup.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nawk": {
+      "import": "./src/data/record/text/x-nawk.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nfo": {
+      "import": "./src/data/record/text/x-nfo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nim": {
+      "import": "./src/data/record/text/x-nim.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nimscript": {
+      "import": "./src/data/record/text/x-nimscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nix": {
+      "import": "./src/data/record/text/x-nix.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-nsis": {
+      "import": "./src/data/record/text/x-nsis.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-objc++src": {
+      "import": "./src/data/record/text/x-objc++src.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-objcsrc": {
+      "import": "./src/data/record/text/x-objcsrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ocaml": {
+      "import": "./src/data/record/text/x-ocaml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ocl": {
+      "import": "./src/data/record/text/x-ocl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ooc": {
+      "import": "./src/data/record/text/x-ooc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-opencl-c++src": {
+      "import": "./src/data/record/text/x-opencl-c++src.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-opencl-csrc": {
+      "import": "./src/data/record/text/x-opencl-csrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-opml+xml": {
+      "import": "./src/data/record/text/x-opml+xml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-pascal": {
+      "import": "./src/data/record/text/x-pascal.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-patch": {
+      "import": "./src/data/record/text/x-patch.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-python": {
+      "import": "./src/data/record/text/x-python.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-python2": {
+      "import": "./src/data/record/text/x-python2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-python3": {
+      "import": "./src/data/record/text/x-python3.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-qml": {
+      "import": "./src/data/record/text/x-qml.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-r": {
+      "import": "./src/data/record/text/x-r.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-readme": {
+      "import": "./src/data/record/text/x-readme.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-reject": {
+      "import": "./src/data/record/text/x-reject.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-rpm-spec": {
+      "import": "./src/data/record/text/x-rpm-spec.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-rst": {
+      "import": "./src/data/record/text/x-rst.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-sagemath": {
+      "import": "./src/data/record/text/x-sagemath.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-sass": {
+      "import": "./src/data/record/text/x-sass.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-scala": {
+      "import": "./src/data/record/text/x-scala.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-scheme": {
+      "import": "./src/data/record/text/x-scheme.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-scons": {
+      "import": "./src/data/record/text/x-scons.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-scss": {
+      "import": "./src/data/record/text/x-scss.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-sed": {
+      "import": "./src/data/record/text/x-sed.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-setext": {
+      "import": "./src/data/record/text/x-setext.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-shellscript": {
+      "import": "./src/data/record/text/x-shellscript.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ssa": {
+      "import": "./src/data/record/text/x-ssa.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ssh-private-key": {
+      "import": "./src/data/record/text/x-ssh-private-key.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-ssh-public-key": {
+      "import": "./src/data/record/text/x-ssh-public-key.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-subviewer": {
+      "import": "./src/data/record/text/x-subviewer.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-svhdr": {
+      "import": "./src/data/record/text/x-svhdr.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-svsrc": {
+      "import": "./src/data/record/text/x-svsrc.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-swift": {
+      "import": "./src/data/record/text/x-swift.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-systemd-unit": {
+      "import": "./src/data/record/text/x-systemd-unit.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-tex": {
+      "import": "./src/data/record/text/x-tex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-todo-txt": {
+      "import": "./src/data/record/text/x-todo-txt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-troff-me": {
+      "import": "./src/data/record/text/x-troff-me.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-troff-mm": {
+      "import": "./src/data/record/text/x-troff-mm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-troff-ms": {
+      "import": "./src/data/record/text/x-troff-ms.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-twig": {
+      "import": "./src/data/record/text/x-twig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-txt2tags": {
+      "import": "./src/data/record/text/x-txt2tags.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-uil": {
+      "import": "./src/data/record/text/x-uil.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-uri": {
+      "import": "./src/data/record/text/x-uri.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-uuencode": {
+      "import": "./src/data/record/text/x-uuencode.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-vala": {
+      "import": "./src/data/record/text/x-vala.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-vb": {
+      "import": "./src/data/record/text/x-vb.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-verilog": {
+      "import": "./src/data/record/text/x-verilog.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-vhdl": {
+      "import": "./src/data/record/text/x-vhdl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-xmi": {
+      "import": "./src/data/record/text/x-xmi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-xslfo": {
+      "import": "./src/data/record/text/x-xslfo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x-zig": {
+      "import": "./src/data/record/text/x-zig.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/x.gcode": {
+      "import": "./src/data/record/text/x.gcode.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./text/xmcd": {
+      "import": "./src/data/record/text/xmcd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/3gpp": {
+      "import": "./src/data/record/video/3gpp.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/3gpp2": {
+      "import": "./src/data/record/video/3gpp2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/annodex": {
+      "import": "./src/data/record/video/annodex.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/dv": {
+      "import": "./src/data/record/video/dv.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/isivideo": {
+      "import": "./src/data/record/video/isivideo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/matroska": {
+      "import": "./src/data/record/video/matroska.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/matroska-3d": {
+      "import": "./src/data/record/video/matroska-3d.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/mj2": {
+      "import": "./src/data/record/video/mj2.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/mp2t": {
+      "import": "./src/data/record/video/mp2t.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/mp4": {
+      "import": "./src/data/record/video/mp4.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/mpeg": {
+      "import": "./src/data/record/video/mpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/ogg": {
+      "import": "./src/data/record/video/ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/quicktime": {
+      "import": "./src/data/record/video/quicktime.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.avi": {
+      "import": "./src/data/record/video/vnd.avi.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.mpegurl": {
+      "import": "./src/data/record/video/vnd.mpegurl.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.radgamettools.bink": {
+      "import": "./src/data/record/video/vnd.radgamettools.bink.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.radgamettools.smacker": {
+      "import": "./src/data/record/video/vnd.radgamettools.smacker.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.rn-realvideo": {
+      "import": "./src/data/record/video/vnd.rn-realvideo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.vivo": {
+      "import": "./src/data/record/video/vnd.vivo.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/vnd.youtube.yt": {
+      "import": "./src/data/record/video/vnd.youtube.yt.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/wavelet": {
+      "import": "./src/data/record/video/wavelet.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/webm": {
+      "import": "./src/data/record/video/webm.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-anim": {
+      "import": "./src/data/record/video/x-anim.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-flic": {
+      "import": "./src/data/record/video/x-flic.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-flv": {
+      "import": "./src/data/record/video/x-flv.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-javafx": {
+      "import": "./src/data/record/video/x-javafx.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-mjpeg": {
+      "import": "./src/data/record/video/x-mjpeg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-mng": {
+      "import": "./src/data/record/video/x-mng.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-ms-wmv": {
+      "import": "./src/data/record/video/x-ms-wmv.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-nsv": {
+      "import": "./src/data/record/video/x-nsv.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-ogm+ogg": {
+      "import": "./src/data/record/video/x-ogm+ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-sgi-movie": {
+      "import": "./src/data/record/video/x-sgi-movie.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./video/x-theora+ogg": {
+      "import": "./src/data/record/video/x-theora+ogg.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/audio-cdda": {
+      "import": "./src/data/record/x-content/audio-cdda.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/audio-dvd": {
+      "import": "./src/data/record/x-content/audio-dvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/audio-player": {
+      "import": "./src/data/record/x-content/audio-player.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/blank-bd": {
+      "import": "./src/data/record/x-content/blank-bd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/blank-cd": {
+      "import": "./src/data/record/x-content/blank-cd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/blank-dvd": {
+      "import": "./src/data/record/x-content/blank-dvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/blank-hddvd": {
+      "import": "./src/data/record/x-content/blank-hddvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/ebook-reader": {
+      "import": "./src/data/record/x-content/ebook-reader.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/image-dcf": {
+      "import": "./src/data/record/x-content/image-dcf.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/image-picturecd": {
+      "import": "./src/data/record/x-content/image-picturecd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/ostree-repository": {
+      "import": "./src/data/record/x-content/ostree-repository.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/software": {
+      "import": "./src/data/record/x-content/software.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/unix-software": {
+      "import": "./src/data/record/x-content/unix-software.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/video-bluray": {
+      "import": "./src/data/record/x-content/video-bluray.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/video-dvd": {
+      "import": "./src/data/record/x-content/video-dvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/video-hddvd": {
+      "import": "./src/data/record/x-content/video-hddvd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/video-svcd": {
+      "import": "./src/data/record/x-content/video-svcd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/video-vcd": {
+      "import": "./src/data/record/x-content/video-vcd.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-content/win32-software": {
+      "import": "./src/data/record/x-content/win32-software.mjs",
+      "types": "./src/data/record.d.mts"
+    },
+    "./x-epoc/x-sisx-app": {
+      "import": "./src/data/record/x-epoc/x-sisx-app.mjs",
+      "types": "./src/data/record.d.mts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/produck/node-meta/tree/main/packages/freedesktop/mime#readme",
+  "keywords": [
+    "freedesktop",
+    "glob",
+    "magic",
+    "media-type",
+    "metadata",
+    "mime",
+    "node",
+    "shared-mime-info"
+  ],
+  "license": "MIT",
+  "name": "@produck/meta-freedesktop-mime",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/freedesktop/mime",
+    "type": "git",
+    "url": "git+https://github.com/produck/node-meta.git"
+  },
+  "scripts": {
+    "produck:coverage": "c8 --reporter=lcov --reporter=html --reporter=text-summary npm test",
+    "sync": "node scripts/sync.mjs",
+    "test": "node test/index.mjs",
+    "type-check": "tsc --noEmit"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "version": "0.1.0"
+}

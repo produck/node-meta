@@ -1,0 +1,32 @@
+/** The media type this record describes. */
+export const mediaType = 'application/x-pocket-word';
+
+export const commentList = ['Pocket Word document'];
+export const acronym = null;
+export const expandedAcronym = null;
+export const genericIconName = 'x-office-document';
+export const aliasList = [];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.psw',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [
+  {
+    priority: null,
+    matchList: [
+      {
+        type: 'string',
+        value: '{\\\\pwi',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+    ],
+  },
+];
+export const treeMagicList = [];
+export const rootXmlList = [];

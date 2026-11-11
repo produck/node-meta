@@ -1,0 +1,46 @@
+/** The media type this record describes. */
+export const mediaType = 'application/x-t602';
+
+export const commentList = ['T602 document'];
+export const acronym = null;
+export const expandedAcronym = null;
+export const genericIconName = 'x-office-document';
+export const aliasList = [];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.602',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [
+  {
+    priority: null,
+    matchList: [
+      {
+        type: 'string',
+        value: '@CT 0',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+      {
+        type: 'string',
+        value: '@CT 1',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+      {
+        type: 'string',
+        value: '@CT 2',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+    ],
+  },
+];
+export const treeMagicList = [];
+export const rootXmlList = [];

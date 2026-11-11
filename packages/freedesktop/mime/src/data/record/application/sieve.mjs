@@ -1,0 +1,24 @@
+/** The media type this record describes. */
+export const mediaType = 'application/sieve';
+
+export const commentList = ['Sieve mail filter script'];
+export const acronym = null;
+export const expandedAcronym = null;
+export const genericIconName = 'text-x-script';
+export const aliasList = [];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.siv',
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: '*.sieve',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];

@@ -1,0 +1,32 @@
+/** The media type this record describes. */
+export const mediaType = 'application/vnd.rar';
+
+export const commentList = ['RAR archive'];
+export const acronym = 'RAR';
+export const expandedAcronym = 'Roshal ARchive';
+export const genericIconName = 'package-x-generic';
+export const aliasList = ['application/x-rar', 'application/x-rar-compressed'];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.rar',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [
+  {
+    priority: 60,
+    matchList: [
+      {
+        type: 'string',
+        value: 'Rar!',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+    ],
+  },
+];
+export const treeMagicList = [];
+export const rootXmlList = [];

@@ -32,6 +32,7 @@
   },
   "workspaces": [
     "packages/apache/mime-extension",
+    "packages/freedesktop/mime",
     "packages/iana/charset",
     "packages/iana/media-type",
     "packages/whatwg/mime"

@@ -1,0 +1,48 @@
+/** The media type this record describes. */
+export const mediaType = 'application/vnd.oasis.opendocument.text-web';
+
+export const commentList = ['OTH template'];
+export const acronym = 'OTH';
+export const expandedAcronym = 'OpenDocument HTML';
+export const genericIconName = 'text-html';
+export const aliasList = [];
+export const subClassOfList = ['application/zip'];
+export const globList = [
+  {
+    pattern: '*.oth',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [
+  {
+    priority: 70,
+    matchList: [
+      {
+        type: 'string',
+        value: 'PK\\003\\004',
+        offset: '0',
+        mask: null,
+        matchList: [
+          {
+            type: 'string',
+            value: 'mimetype',
+            offset: '30',
+            mask: null,
+            matchList: [
+              {
+                type: 'string',
+                value: 'application/vnd.oasis.opendocument.text-web',
+                offset: '38',
+                mask: null,
+                matchList: [],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+export const treeMagicList = [];
+export const rootXmlList = [];

@@ -1,0 +1,32 @@
+/** The media type this record describes. */
+export const mediaType = 'image/x-exr';
+
+export const commentList = ['EXR image'];
+export const acronym = null;
+export const expandedAcronym = null;
+export const genericIconName = null;
+export const aliasList = [];
+export const subClassOfList = [];
+export const globList = [
+  {
+    pattern: '*.exr',
+    weight: null,
+    caseSensitive: false,
+  },
+];
+export const magicList = [
+  {
+    priority: null,
+    matchList: [
+      {
+        type: 'little32',
+        value: '20000630',
+        offset: '0',
+        mask: null,
+        matchList: [],
+      },
+    ],
+  },
+];
+export const treeMagicList = [];
+export const rootXmlList = [];
