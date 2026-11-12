@@ -7,33 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.mod',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.m15',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.stk',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.nst',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.fst',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 40,
@@ -99,3 +72,40 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mod';
+const glob1 = '*.m15';
+const glob2 = '*.stk';
+const glob3 = '*.nst';
+const glob4 = '*.fst';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

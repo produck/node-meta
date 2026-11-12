@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = ['application/x-bzip2'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pdf.bz2';
+
 export const globList = [
   {
-    pattern: '*.pdf.bz2',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

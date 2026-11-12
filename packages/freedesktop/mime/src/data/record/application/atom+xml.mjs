@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-html';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.atom',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 70,
@@ -36,3 +29,16 @@ export const rootXmlList = [
     localName: 'feed',
   },
 ];
+
+/** About glob */
+const glob0 = '*.atom';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'font-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.ttx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -31,3 +24,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ttx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

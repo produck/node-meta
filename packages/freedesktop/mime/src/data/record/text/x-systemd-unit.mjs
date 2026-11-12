@@ -7,63 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.automount',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.device',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mount',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.path',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.scope',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.service',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.slice',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.socket',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.swap',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.target',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.timer',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -227,3 +170,88 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.automount';
+const glob1 = '*.device';
+const glob2 = '*.mount';
+const glob3 = '*.path';
+const glob4 = '*.scope';
+const glob5 = '*.service';
+const glob6 = '*.slice';
+const glob7 = '*.socket';
+const glob8 = '*.swap';
+const glob9 = '*.target';
+const glob10 = '*.timer';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob6,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob7,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob8,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob9,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob10,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+  glob7,
+  glob8,
+  glob9,
+  glob10,
+];

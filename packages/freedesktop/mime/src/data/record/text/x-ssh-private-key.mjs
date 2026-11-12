@@ -7,7 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [];
 export const magicList = [
   {
     priority: null,
@@ -24,3 +23,7 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

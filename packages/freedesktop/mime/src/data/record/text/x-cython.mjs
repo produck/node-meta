@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.pxd',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pxi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pyx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -61,3 +44,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pxd';
+const glob1 = '*.pxi';
+const glob2 = '*.pyx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

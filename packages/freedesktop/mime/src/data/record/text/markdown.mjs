@@ -7,23 +7,31 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = ['text/x-markdown'];
 export const subClassOfList = ['text/plain'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.md';
+const glob1 = '*.mkd';
+const glob2 = '*.markdown';
+
 export const globList = [
   {
-    pattern: '*.md',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.mkd',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.markdown',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2];

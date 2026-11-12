@@ -7,18 +7,25 @@ export const expandedAcronym = 'Standard Generalized Markup Language';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sgml';
+const glob1 = '*.sgm';
+
 export const globList = [
   {
-    pattern: '*.sgml',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.sgm',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

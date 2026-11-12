@@ -12,13 +12,14 @@ ships with GNOME, KDE and every distribution that depends on them.
 Its value here is breadth of evidence. Most sources offer one signal; this one
 offers five, all of them recorded per media type:
 
-| Signal           | What it says                                         |
-| ---------------- | ---------------------------------------------------- |
-| `globList`       | Filename patterns, for example `*.png` or `Makefile` |
-| `magicList`      | Byte signatures at fixed offsets, nestable           |
-| `aliasList`      | Other media types that name the same format          |
-| `subClassOfList` | Media types this one inherits behaviour from         |
-| `rootXmlList`    | XML root element signatures                          |
+| Signal            | What it says                                         |
+| ----------------- | ---------------------------------------------------- |
+| `globList`        | Filename patterns, for example `*.png` or `Makefile` |
+| `globPatternList` | The same patterns, flattened to strings              |
+| `magicList`       | Byte signatures at fixed offsets, nestable           |
+| `aliasList`       | Other media types that name the same format          |
+| `subClassOfList`  | Media types this one inherits behaviour from         |
+| `rootXmlList`     | XML root element signatures                          |
 
 It also records a declared priority on magic rules and a weight on glob
 patterns, because two types may claim the same filename. That ordering is part
@@ -94,9 +95,18 @@ them:
 | `aliasList`       | `(string \| null)[]` |
 | `subClassOfList`  | `(string \| null)[]` |
 | `globList`        | `Glob[]`             |
+| `globPatternList` | `string[]`           |
 | `magicList`       | `Magic[]`            |
 | `treeMagicList`   | `TreeMagic[]`        |
 | `rootXmlList`     | `RootXml[]`          |
+
+`globPatternList` repeats the `pattern` field of `globList` as a flat string
+array. The duplication is deliberate: a bundler can fold a flat list of string
+literals into a single constant, but it cannot do the same for an array of
+objects, so a consumer that only needs the patterns pays for the whole `Glob`
+shape if it walks `globList`. The list is always present, empty when there is no
+glob, so the export surface does not vary by record. It mirrors `globList`
+positionally and does not deduplicate.
 
 Nested shapes:
 
@@ -176,7 +186,7 @@ import { globList } from '@produck/meta-freedesktop-mime/text/javascript';
 import * as JS from '@produck/meta-freedesktop-mime/text/javascript';
 import * as PNG from '@produck/meta-freedesktop-mime/image/png';
 
-JS.globList.map((glob) => glob.pattern); // *.cjs, *.js, *.jsm, *.mjs
+JS.globPatternList; // ['*.cjs', '*.js', '*.jsm', '*.mjs']
 PNG.acronym; // 'PNG'
 ```
 

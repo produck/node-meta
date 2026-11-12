@@ -10,18 +10,6 @@ export const aliasList = [
   'application/futuresplash',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.swf',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.spl',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -52,3 +40,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.swf';
+const glob1 = '*.spl';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['image/x-bmp', 'image/x-MS-bmp'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.bmp',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dib',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -64,3 +52,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.bmp';
+const glob1 = '*.dib';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

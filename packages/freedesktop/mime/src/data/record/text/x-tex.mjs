@@ -7,43 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['application/x-tex'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.tex',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ltx',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sty',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.cls',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dtx',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ins',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.latex',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -72,3 +35,60 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.tex';
+const glob1 = '*.ltx';
+const glob2 = '*.sty';
+const glob3 = '*.cls';
+const glob4 = '*.dtx';
+const glob5 = '*.ins';
+const glob6 = '*.latex';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob6,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+];

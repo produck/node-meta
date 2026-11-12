@@ -7,33 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.php',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.php3',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.php4',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.php5',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.phps',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 80,
@@ -50,3 +23,40 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.php';
+const glob1 = '*.php3';
+const glob2 = '*.php4';
+const glob3 = '*.php5';
+const glob4 = '*.phps';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

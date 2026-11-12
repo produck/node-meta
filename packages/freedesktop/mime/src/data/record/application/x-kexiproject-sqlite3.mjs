@@ -10,13 +10,19 @@ export const aliasList = [
   'application/x-kexiproject-sqlite',
 ];
 export const subClassOfList = ['application/vnd.sqlite3'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.kexi';
+
 export const globList = [
   {
-    pattern: '*.kexi',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

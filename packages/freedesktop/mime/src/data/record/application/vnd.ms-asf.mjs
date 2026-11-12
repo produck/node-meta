@@ -11,13 +11,6 @@ export const aliasList = [
   'video/x-ms-asf-plugin',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.asf',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -41,3 +34,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.asf';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

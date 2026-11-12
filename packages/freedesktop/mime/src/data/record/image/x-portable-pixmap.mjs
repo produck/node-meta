@@ -7,13 +7,6 @@ export const expandedAcronym = 'Portable PixMap';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['image/x-portable-anymap'];
-export const globList = [
-  {
-    pattern: '*.ppm',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -95,3 +88,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ppm';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

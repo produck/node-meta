@@ -7,18 +7,6 @@ export const expandedAcronym = 'eXtensible Stylesheet Language Transformation';
 export const genericIconName = 'text-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.xsl',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xslt',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -41,3 +29,22 @@ export const rootXmlList = [
     localName: 'stylesheet',
   },
 ];
+
+/** About glob */
+const glob0 = '*.xsl';
+const glob1 = '*.xslt';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

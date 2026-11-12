@@ -7,13 +7,19 @@ export const expandedAcronym = 'JSON Resource Descriptor';
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['application/json'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.jrd';
+
 export const globList = [
   {
-    pattern: '*.jrd',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

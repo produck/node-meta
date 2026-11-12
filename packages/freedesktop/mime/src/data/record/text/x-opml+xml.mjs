@@ -7,13 +7,6 @@ export const expandedAcronym = 'Outline Processor Markup Language';
 export const genericIconName = 'text-html';
 export const aliasList = ['text/x-opml'];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.opml',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 70,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.opml';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

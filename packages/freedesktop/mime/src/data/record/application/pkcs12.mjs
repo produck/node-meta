@@ -7,28 +7,37 @@ export const expandedAcronym = 'Public-Key Cryptography Standards';
 export const genericIconName = null;
 export const aliasList = ['application/x-pkcs12'];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.der';
+const glob1 = '*.p12';
+const glob2 = '*.pem';
+const glob3 = '*.pfx';
+
 export const globList = [
   {
-    pattern: '*.der',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.p12',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.pem',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.pfx',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

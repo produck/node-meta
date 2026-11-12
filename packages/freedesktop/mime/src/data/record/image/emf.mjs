@@ -11,13 +11,6 @@ export const aliasList = [
   'application/emf',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.emf',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -58,3 +51,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.emf';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

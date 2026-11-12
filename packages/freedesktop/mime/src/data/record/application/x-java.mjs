@@ -13,13 +13,6 @@ export const aliasList = [
   'application/x-java-vm',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.class',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -36,3 +29,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.class';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

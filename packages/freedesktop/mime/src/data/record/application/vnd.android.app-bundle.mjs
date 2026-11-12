@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/java-archive'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.aab';
+
 export const globList = [
   {
-    pattern: '*.aab',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

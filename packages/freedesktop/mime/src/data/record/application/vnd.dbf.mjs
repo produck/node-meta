@@ -12,13 +12,19 @@ export const aliasList = [
   'application/x-dbf',
 ];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.dbf';
+
 export const globList = [
   {
-    pattern: '*.dbf',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

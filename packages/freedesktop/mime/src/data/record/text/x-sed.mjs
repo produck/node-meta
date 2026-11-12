@@ -7,13 +7,6 @@ export const expandedAcronym = 'Stream EDitor';
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['application/x-executable'];
-export const globList = [
-  {
-    pattern: '*.sed',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -45,3 +38,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sed';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

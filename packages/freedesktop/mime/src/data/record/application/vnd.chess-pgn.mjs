@@ -7,13 +7,6 @@ export const expandedAcronym = 'Portable Game Notation';
 export const genericIconName = 'text-x-generic';
 export const aliasList = ['application/x-chess-pgn'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.pgn',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pgn';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

@@ -7,18 +7,6 @@ export const expandedAcronym = 'AV1 Image File Format';
 export const genericIconName = null;
 export const aliasList = ['image/avif-sequence'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.avif',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.avifs',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -71,3 +59,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.avif';
+const glob1 = '*.avifs';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

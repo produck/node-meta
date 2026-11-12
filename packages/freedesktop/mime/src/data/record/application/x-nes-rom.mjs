@@ -7,28 +7,37 @@ export const expandedAcronym = null;
 export const genericIconName = 'application-x-executable';
 export const aliasList = [];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.nes';
+const glob1 = '*.nez';
+const glob2 = '*.unf';
+const glob3 = '*.unif';
+
 export const globList = [
   {
-    pattern: '*.nes',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.nez',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.unf',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.unif',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

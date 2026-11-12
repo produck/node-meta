@@ -7,28 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = ['application/x-ole-storage'];
-export const globList = [
-  {
-    pattern: '*.vsd',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vst',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vsw',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vss',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -62,3 +40,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vsd';
+const glob1 = '*.vst';
+const glob2 = '*.vsw';
+const glob3 = '*.vss';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

@@ -7,13 +7,6 @@ export const expandedAcronym = 'Open Virtualization Format';
 export const genericIconName = null;
 export const aliasList = ['application/x-virtualbox-ova'];
 export const subClassOfList = ['application/x-tar'];
-export const globList = [
-  {
-    pattern: '*.ova',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 62,
@@ -45,3 +38,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ova';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

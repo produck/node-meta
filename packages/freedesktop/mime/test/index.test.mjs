@@ -81,6 +81,10 @@ describe('data', () => {
         record.subClassOfList.every((item) => typeof item === 'string'),
       );
       assert.ok(Array.isArray(record.globList));
+      assert.ok(Array.isArray(record.globPatternList));
+      assert.ok(
+        record.globPatternList.every((item) => typeof item === 'string'),
+      );
       assert.ok(Array.isArray(record.magicList));
       assert.ok(Array.isArray(record.treeMagicList));
       assert.ok(Array.isArray(record.rootXmlList));
@@ -160,6 +164,31 @@ describe('data', () => {
     assert.ok(
       patternList.includes('Makefile') || patternList.includes('makefile'),
     );
+  });
+
+  it('should mirror globList into globPatternList', () => {
+    for (const key of keyList) {
+      const record = data[key];
+
+      assert.deepEqual(
+        record.globPatternList,
+        record.globList.map((glob) => glob.pattern),
+        key,
+      );
+    }
+  });
+
+  it('should export an empty globPatternList when there is no glob', () => {
+    const empty = data['application/octet-stream'];
+
+    assert.deepEqual(empty.globList, []);
+    assert.deepEqual(empty.globPatternList, []);
+  });
+
+  it('should not deduplicate repeated glob patterns', () => {
+    const record = data['text/vnd.senx.warpscript'];
+
+    assert.deepEqual(record.globPatternList, ['*.mc2', '*.mc2']);
   });
 
   it('should keep tree magic rules', () => {

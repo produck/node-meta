@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.scn',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.tscn',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.escn',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -40,3 +23,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.scn';
+const glob1 = '*.tscn';
+const glob2 = '*.escn';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

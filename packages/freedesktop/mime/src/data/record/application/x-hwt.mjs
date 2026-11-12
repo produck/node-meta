@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = ['application/vnd.haansoft-hwt'];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.hwt';
+
 export const globList = [
   {
-    pattern: '*.hwt',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

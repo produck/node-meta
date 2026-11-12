@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['application/x-executable', 'text/x-cython'];
-export const globList = [
-  {
-    pattern: '*.py',
-    weight: 60,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wsgi',
-    weight: 60,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -98,3 +86,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.py';
+const glob1 = '*.wsgi';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 60,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 60,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

@@ -11,23 +11,6 @@ export const aliasList = [
   'image/heif-sequence',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.heic',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.heif',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.hif',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 40,
@@ -79,3 +62,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.heic';
+const glob1 = '*.heif';
+const glob2 = '*.hif';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

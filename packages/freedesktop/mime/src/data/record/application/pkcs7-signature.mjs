@@ -7,23 +7,6 @@ export const expandedAcronym = 'Secure/Multipurpose Internet Mail Extensions';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.der',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.p7s',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pem',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -47,3 +30,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.der';
+const glob1 = '*.p7s';
+const glob2 = '*.pem';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

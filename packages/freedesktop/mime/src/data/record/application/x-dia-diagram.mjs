@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'image-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.dia',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -36,3 +29,16 @@ export const rootXmlList = [
     localName: 'diagram',
   },
 ];
+
+/** About glob */
+const glob0 = '*.dia';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

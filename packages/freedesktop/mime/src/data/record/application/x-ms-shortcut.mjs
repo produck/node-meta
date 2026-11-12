@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'emblem-symbolic-link';
 export const aliasList = ['application/x-win-lnk'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.lnk',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -31,3 +24,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.lnk';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

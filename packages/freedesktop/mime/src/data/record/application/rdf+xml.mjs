@@ -7,23 +7,6 @@ export const expandedAcronym = 'Resource Description Framework';
 export const genericIconName = null;
 export const aliasList = ['text/rdf'];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.rdf',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.rdfs',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.owl',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [
@@ -33,3 +16,28 @@ export const rootXmlList = [
     localName: 'RDF',
   },
 ];
+
+/** About glob */
+const glob0 = '*.rdf';
+const glob1 = '*.rdfs';
+const glob2 = '*.owl';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

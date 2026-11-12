@@ -7,33 +7,6 @@ export const expandedAcronym = 'Disk Operating System';
 export const genericIconName = 'application-x-executable';
 export const aliasList = [];
 export const subClassOfList = ['application/x-msdownload'];
-export const globList = [
-  {
-    pattern: '*.exe',
-    weight: 10,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.386',
-    weight: 10,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dll',
-    weight: 10,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sys',
-    weight: 10,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vxd',
-    weight: 10,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -84,3 +57,40 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.exe';
+const glob1 = '*.386';
+const glob2 = '*.dll';
+const glob3 = '*.sys';
+const glob4 = '*.vxd';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 10,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 10,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 10,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: 10,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: 10,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

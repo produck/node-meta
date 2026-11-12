@@ -11,28 +11,6 @@ export const aliasList = [
   'application/x-mspowerpoint',
 ];
 export const subClassOfList = ['application/x-ole-storage'];
-export const globList = [
-  {
-    pattern: '*.ppz',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ppt',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pps',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pot',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -66,3 +44,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ppz';
+const glob1 = '*.ppt';
+const glob2 = '*.pps';
+const glob3 = '*.pot';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

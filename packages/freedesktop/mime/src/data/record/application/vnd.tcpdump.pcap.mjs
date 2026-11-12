@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['application/x-pcap', 'application/pcap'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.pcap',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.cap',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dmp',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -47,3 +30,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pcap';
+const glob1 = '*.cap';
+const glob2 = '*.dmp';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

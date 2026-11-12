@@ -7,13 +7,6 @@ export const expandedAcronym = 'StereoLithography';
 export const genericIconName = 'image-x-generic';
 export const aliasList = ['model/x.stl-ascii', 'model/x.stl-binary'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.stl',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.stl';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

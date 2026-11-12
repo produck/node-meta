@@ -7,43 +7,63 @@ export const expandedAcronym = null;
 export const genericIconName = 'image-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/x-ole-storage'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = 'ehthumbs.db';
+const glob1 = 'ehthumbs_vista.db';
+const glob2 = 'image.db';
+const glob3 = 'musicthumbs.db';
+const glob4 = 'thumbs.db';
+const glob5 = 'tvthumb.db';
+const glob6 = 'video.db';
+
 export const globList = [
   {
-    pattern: 'ehthumbs.db',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'ehthumbs_vista.db',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'image.db',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'musicthumbs.db',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'thumbs.db',
+    pattern: glob4,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'tvthumb.db',
+    pattern: glob5,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'video.db',
+    pattern: glob6,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+];

@@ -7,43 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = ['text/x-perl'];
 export const subClassOfList = ['application/x-executable', 'text/plain'];
-export const globList = [
-  {
-    pattern: '*.pl',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.PL',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pm',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.al',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.perl',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pod',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.t',
-    weight: 10,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -135,3 +98,60 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pl';
+const glob1 = '*.PL';
+const glob2 = '*.pm';
+const glob3 = '*.al';
+const glob4 = '*.perl';
+const glob5 = '*.pod';
+const glob6 = '*.t';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob6,
+    weight: 10,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+];

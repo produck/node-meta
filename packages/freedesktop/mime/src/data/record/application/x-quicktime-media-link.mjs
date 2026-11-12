@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'video-x-generic';
 export const aliasList = ['application/x-quicktimeplayer'];
 export const subClassOfList = ['video/quicktime'];
-export const globList = [
-  {
-    pattern: '*.qtl',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -59,3 +52,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.qtl';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

@@ -7,13 +7,6 @@ export const expandedAcronym = 'Red Hat Package Manager';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.spec',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.spec';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

@@ -7,48 +7,6 @@ export const expandedAcronym = 'Extensible Firmware Interface';
 export const genericIconName = 'application-x-executable';
 export const aliasList = [];
 export const subClassOfList = ['application/x-msdownload'];
-export const globList = [
-  {
-    pattern: '*.exe',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dll',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.cpl',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.drv',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.scr',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.efi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ocx',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sys',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 90,
@@ -73,3 +31,67 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.exe';
+const glob1 = '*.dll';
+const glob2 = '*.cpl';
+const glob3 = '*.drv';
+const glob4 = '*.scr';
+const glob5 = '*.efi';
+const glob6 = '*.ocx';
+const glob7 = '*.sys';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob6,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob7,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+  glob7,
+];

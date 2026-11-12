@@ -7,28 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.groovy',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gvy',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gy',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gsh',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -73,3 +51,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.groovy';
+const glob1 = '*.gvy';
+const glob2 = '*.gy';
+const glob3 = '*.gsh';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

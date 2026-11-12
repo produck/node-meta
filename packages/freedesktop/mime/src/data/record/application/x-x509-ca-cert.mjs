@@ -7,33 +7,6 @@ export const expandedAcronym = 'Certificate Authority';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/pkix-cert'];
-export const globList = [
-  {
-    pattern: '*.cer',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.cert',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.crt',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.der',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pem',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -57,3 +30,40 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.cer';
+const glob1 = '*.cert';
+const glob2 = '*.crt';
+const glob3 = '*.der';
+const glob4 = '*.pem';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

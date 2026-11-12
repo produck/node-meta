@@ -7,23 +7,6 @@ export const expandedAcronym = 'Advanced Audio Coding';
 export const genericIconName = null;
 export const aliasList = ['audio/x-aac'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.aac',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.adts',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ass',
-    weight: 10,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -47,3 +30,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.aac';
+const glob1 = '*.adts';
+const glob2 = '*.ass';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 10,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

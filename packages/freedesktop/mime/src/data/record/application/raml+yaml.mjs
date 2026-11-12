@@ -7,13 +7,6 @@ export const expandedAcronym = 'RESTful API Modeling Language';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/yaml'];
-export const globList = [
-  {
-    pattern: '*.raml',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.raml';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

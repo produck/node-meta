@@ -7,13 +7,6 @@ export const expandedAcronym = 'RDF Site Summary';
 export const genericIconName = 'text-html';
 export const aliasList = ['text/rss'];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.rss',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 70,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.rss';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

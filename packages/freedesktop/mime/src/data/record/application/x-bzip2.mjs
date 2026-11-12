@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = ['application/bzip2', 'application/x-bzip'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.bz2',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.bz2';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

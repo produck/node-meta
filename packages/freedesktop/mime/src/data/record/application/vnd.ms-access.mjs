@@ -14,13 +14,6 @@ export const aliasList = [
   'zz-application/zz-winassoc-mdb',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.mdb',
-    weight: 60,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mdb';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 60,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

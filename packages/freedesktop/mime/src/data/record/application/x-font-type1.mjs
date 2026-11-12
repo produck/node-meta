@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'font-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/postscript'];
-export const globList = [
-  {
-    pattern: '*.pfa',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pfb',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gsf',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -75,3 +58,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pfa';
+const glob1 = '*.pfb';
+const glob2 = '*.gsf';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

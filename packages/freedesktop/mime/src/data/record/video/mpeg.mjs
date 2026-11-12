@@ -12,38 +12,6 @@ export const aliasList = [
   'video/x-mpeg2',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.mpeg',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mpg',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mp2',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mpe',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vob',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '[0-9][0-9][0-9].vdr',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -74,3 +42,46 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mpeg';
+const glob1 = '*.mpg';
+const glob2 = '*.mp2';
+const glob3 = '*.mpe';
+const glob4 = '*.vob';
+const glob5 = '[0-9][0-9][0-9].vdr';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4, glob5];

@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/zip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.msix';
+
 export const globList = [
   {
-    pattern: '*.msix',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

@@ -7,13 +7,6 @@ export const expandedAcronym = 'XML Shareable Playlist Format';
 export const genericIconName = 'audio-x-generic';
 export const aliasList = ['application/x-xspf+xml'];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.xspf',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -43,3 +36,16 @@ export const rootXmlList = [
     localName: 'playlist',
   },
 ];
+
+/** About glob */
+const glob0 = '*.xspf';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

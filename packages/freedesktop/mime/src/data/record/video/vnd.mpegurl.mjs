@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['video/x-mpegurl'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.m1u',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.m4u',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mxu',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -40,3 +23,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.m1u';
+const glob1 = '*.m4u';
+const glob2 = '*.mxu';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

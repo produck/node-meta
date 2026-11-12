@@ -7,28 +7,37 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = ['application/x-ole-storage'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.p65';
+const glob1 = '*.pm';
+const glob2 = '*.pm6';
+const glob3 = '*.pmd';
+
 export const globList = [
   {
-    pattern: '*.p65',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.pm',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.pm6',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.pmd',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

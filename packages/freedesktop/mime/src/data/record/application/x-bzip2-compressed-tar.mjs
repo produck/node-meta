@@ -7,23 +7,31 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = ['application/x-bzip-compressed-tar'];
 export const subClassOfList = ['application/x-bzip2'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.tar.bz2';
+const glob1 = '*.tbz2';
+const glob2 = '*.tb2';
+
 export const globList = [
   {
-    pattern: '*.tar.bz2',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.tbz2',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.tb2',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2];

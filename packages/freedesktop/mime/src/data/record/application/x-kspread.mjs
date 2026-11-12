@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-spreadsheet';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.ksp',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -69,3 +62,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ksp';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

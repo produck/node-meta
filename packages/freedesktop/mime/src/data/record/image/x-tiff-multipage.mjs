@@ -7,7 +7,10 @@ export const expandedAcronym = 'Tagged Image File Format';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['image/tiff'];
-export const globList = [];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

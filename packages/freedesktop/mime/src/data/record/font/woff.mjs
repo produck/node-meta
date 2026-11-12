@@ -7,13 +7,6 @@ export const expandedAcronym = 'Web Open Font Format';
 export const genericIconName = null;
 export const aliasList = ['application/font-woff'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.woff',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.woff';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

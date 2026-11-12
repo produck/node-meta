@@ -11,13 +11,6 @@ export const aliasList = [
   'application/x-gpx',
 ];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.gpx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [
@@ -32,3 +25,16 @@ export const rootXmlList = [
     localName: 'gpx',
   },
 ];
+
+/** About glob */
+const glob0 = '*.gpx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

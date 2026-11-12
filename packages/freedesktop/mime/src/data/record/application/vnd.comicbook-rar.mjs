@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = ['application/x-cbr'];
 export const subClassOfList = ['application/vnd.rar'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.cbr';
+
 export const globList = [
   {
-    pattern: '*.cbr',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

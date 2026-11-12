@@ -226,8 +226,45 @@ function renderValue(value, depth) {
   return `{\n${lines.join('\n')}\n${pad}}`;
 }
 
+function renderGlob(globList) {
+  if (globList.length === 0) {
+    return [
+      'export const globList = [];',
+      '',
+      'export const globPatternList = [];',
+    ];
+  }
+
+  const constLineList = globList.map(
+    (glob, index) => `const glob${index} = ${literal(glob.pattern)};`,
+  );
+
+  const itemLineList = globList.map((glob, index) =>
+    [
+      '  {',
+      `    pattern: glob${index},`,
+      `    weight: ${literal(glob.weight)},`,
+      `    caseSensitive: ${literal(glob.caseSensitive)},`,
+      '  },',
+    ].join('\n'),
+  );
+
+  const patternLineList = globList.map((glob, index) => `glob${index}`);
+
+  return [
+    '/** About glob */',
+    ...constLineList,
+    '',
+    'export const globList = [',
+    ...itemLineList,
+    '];',
+    '',
+    `export const globPatternList = [${patternLineList.join(', ')}];`,
+  ];
+}
+
 function renderRecord(record) {
-  const { mediaType, ...fieldMap } = record;
+  const { mediaType, globList, ...fieldMap } = record;
   const lineList = Object.entries(fieldMap).map(
     ([key, value]) => `export const ${key} = ${renderValue(value, 0)};`,
   );
@@ -237,6 +274,8 @@ function renderRecord(record) {
     `export const mediaType = ${literal(mediaType)};`,
     '',
     ...lineList,
+    '',
+    ...renderGlob(globList),
     '',
   ].join('\n');
 }
@@ -331,6 +370,7 @@ function renderRecordTypes() {
     '  aliasList: (string | null)[];',
     '  subClassOfList: (string | null)[];',
     '  globList: Glob[];',
+    '  globPatternList: string[];',
     '  magicList: Magic[];',
     '  treeMagicList: TreeMagic[];',
     '  rootXmlList: RootXml[];',

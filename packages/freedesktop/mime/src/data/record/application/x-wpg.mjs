@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'image-x-generic';
 export const aliasList = [];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.wpg';
+
 export const globList = [
   {
-    pattern: '*.wpg',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

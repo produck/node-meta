@@ -7,18 +7,6 @@ export const expandedAcronym = 'GEnealogical Data COMmunication';
 export const genericIconName = 'x-office-document';
 export const aliasList = ['application/x-gedcom', 'text/gedcom'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.ged',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gedcom',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ged';
+const glob1 = '*.gedcom';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

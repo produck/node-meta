@@ -7,18 +7,6 @@ export const expandedAcronym = 'Virtual Hard Disk';
 export const genericIconName = null;
 export const aliasList = ['application/x-virtualbox-vhd'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.vhd',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vpc',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vhd';
+const glob1 = '*.vpc';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

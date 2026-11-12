@@ -11,18 +11,6 @@ export const aliasList = [
   'image/x-jpeg2000-image',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.jp2',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.jpg2',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -40,3 +28,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.jp2';
+const glob1 = '*.jpg2';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

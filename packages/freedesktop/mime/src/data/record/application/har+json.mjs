@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/json'];
-export const globList = [
-  {
-    pattern: '*.har',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -38,3 +31,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.har';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

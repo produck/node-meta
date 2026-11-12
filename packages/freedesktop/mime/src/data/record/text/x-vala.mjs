@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['text/plain', 'application/x-executable'];
-export const globList = [
-  {
-    pattern: '*.vala',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vapi',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -119,3 +107,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vala';
+const glob1 = '*.vapi';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

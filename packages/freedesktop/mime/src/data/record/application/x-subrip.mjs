@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-generic';
 export const aliasList = ['application/x-srt'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.srt',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -38,3 +31,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.srt';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

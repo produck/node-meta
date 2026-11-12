@@ -7,13 +7,6 @@ export const expandedAcronym = 'SPARQL Protocol and RDF Query Language';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.srx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [
@@ -23,3 +16,16 @@ export const rootXmlList = [
     localName: 'sparql',
   },
 ];
+
+/** About glob */
+const glob0 = '*.srx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

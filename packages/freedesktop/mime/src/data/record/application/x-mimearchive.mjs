@@ -7,18 +7,25 @@ export const expandedAcronym = 'MIME HTML';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['multipart/related'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mhtml';
+const glob1 = '*.mht';
+
 export const globList = [
   {
-    pattern: '*.mhtml',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.mht',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

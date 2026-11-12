@@ -7,13 +7,6 @@ export const expandedAcronym = 'eXtensible Music Format';
 export const genericIconName = null;
 export const aliasList = ['audio/vnd.nokia.mobile-xmf'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.mxmf',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mxmf';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

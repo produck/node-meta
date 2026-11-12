@@ -7,28 +7,37 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.f';
+const glob1 = '*.f90';
+const glob2 = '*.f95';
+const glob3 = '*.for';
+
 export const globList = [
   {
-    pattern: '*.f',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.f90',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.f95',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.for',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

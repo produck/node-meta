@@ -11,18 +11,6 @@ export const aliasList = [
   'text/x-msdos-batch',
 ];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.bat',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.cmd',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -68,3 +56,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.bat';
+const glob1 = '*.cmd';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

@@ -7,13 +7,19 @@ export const expandedAcronym = 'Kodak DC25';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['image/x-dcraw', 'image/tiff'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.k25';
+
 export const globList = [
   {
-    pattern: '*.k25',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

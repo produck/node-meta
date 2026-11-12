@@ -7,13 +7,19 @@ export const expandedAcronym = 'Keyhole Markup Language';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/zip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.kmz';
+
 export const globList = [
   {
-    pattern: '*.kmz',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

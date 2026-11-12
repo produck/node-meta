@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['video/x-matroska-3d'];
 export const subClassOfList = ['application/x-matroska'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mk3d';
+
 export const globList = [
   {
-    pattern: '*.mk3d',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

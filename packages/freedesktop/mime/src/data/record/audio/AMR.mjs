@@ -7,13 +7,6 @@ export const expandedAcronym = 'Adaptive Multi-Rate';
 export const genericIconName = null;
 export const aliasList = ['audio/amr-encrypted'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.amr',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.amr';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

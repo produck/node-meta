@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'image-x-generic';
 export const aliasList = ['video/fli', 'video/x-fli', 'video/x-flc'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.fli',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.flc',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -58,3 +46,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.fli';
+const glob1 = '*.flc';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

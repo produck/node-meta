@@ -7,18 +7,6 @@ export const expandedAcronym = 'Portable Network Graphics';
 export const genericIconName = null;
 export const aliasList = ['image/vnd.mozilla.apng'];
 export const subClassOfList = ['image/png'];
-export const globList = [
-  {
-    pattern: '*.apng',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.png',
-    weight: 40,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -43,3 +31,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.apng';
+const glob1 = '*.png';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 40,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

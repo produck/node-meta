@@ -7,28 +7,6 @@ export const expandedAcronym = 'vCalendar/iCalendar';
 export const genericIconName = 'x-office-calendar';
 export const aliasList = ['text/x-vcalendar', 'application/ics'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.vcs',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ics',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.ifb',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.icalendar',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -52,3 +30,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vcs';
+const glob1 = '*.ics';
+const glob2 = '*.ifb';
+const glob3 = '*.icalendar';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

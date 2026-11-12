@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['audio/x-multimate-mod'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.ult',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 40,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ult';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

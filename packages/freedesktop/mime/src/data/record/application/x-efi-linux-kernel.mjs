@@ -10,43 +10,6 @@ export const subClassOfList = [
   'application/vnd.microsoft.portable-executable',
   'application/x-linux-kernel',
 ];
-export const globList = [
-  {
-    pattern: 'vmlinux.efi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: 'vmlinuz.efi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.efi',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: 'bzImage*',
-    weight: 40,
-    caseSensitive: true,
-  },
-  {
-    pattern: 'zImage*',
-    weight: 40,
-    caseSensitive: true,
-  },
-  {
-    pattern: 'vmlinux*',
-    weight: 40,
-    caseSensitive: true,
-  },
-  {
-    pattern: 'vmlinuz*',
-    weight: 40,
-    caseSensitive: true,
-  },
-];
 export const magicList = [
   {
     priority: 95,
@@ -122,3 +85,60 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = 'vmlinux.efi';
+const glob1 = 'vmlinuz.efi';
+const glob2 = '*.efi';
+const glob3 = 'bzImage*';
+const glob4 = 'zImage*';
+const glob5 = 'vmlinux*';
+const glob6 = 'vmlinuz*';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: 40,
+    caseSensitive: true,
+  },
+  {
+    pattern: glob4,
+    weight: 40,
+    caseSensitive: true,
+  },
+  {
+    pattern: glob5,
+    weight: 40,
+    caseSensitive: true,
+  },
+  {
+    pattern: glob6,
+    weight: 40,
+    caseSensitive: true,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+];

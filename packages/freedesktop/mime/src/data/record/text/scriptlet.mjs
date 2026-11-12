@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.sct',
-    weight: 40,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wsc',
-    weight: 40,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sct';
+const glob1 = '*.wsc';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 40,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 40,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

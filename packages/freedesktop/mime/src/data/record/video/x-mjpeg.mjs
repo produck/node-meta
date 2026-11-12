@@ -7,18 +7,25 @@ export const expandedAcronym = 'Motion JPEG';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['image/jpeg'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mjpeg';
+const glob1 = '*.mjpg';
+
 export const globList = [
   {
-    pattern: '*.mjpeg',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.mjpg',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

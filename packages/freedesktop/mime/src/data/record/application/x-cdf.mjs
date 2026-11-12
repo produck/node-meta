@@ -7,13 +7,6 @@ export const expandedAcronym = 'Compact Disc';
 export const genericIconName = 'audio-x-generic';
 export const aliasList = ['application/x-cda', 'audio/x-cda'];
 export const subClassOfList = ['application/x-riff'];
-export const globList = [
-  {
-    pattern: '*.cda',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.cda';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

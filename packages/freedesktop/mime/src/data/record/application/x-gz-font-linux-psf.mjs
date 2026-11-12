@@ -7,13 +7,19 @@ export const expandedAcronym = 'PC Screen Font';
 export const genericIconName = 'font-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/gzip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.psf.gz';
+
 export const globList = [
   {
-    pattern: '*.psf.gz',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

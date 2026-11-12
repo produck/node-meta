@@ -7,13 +7,19 @@ export const expandedAcronym = 'Miniature Portable Sound Format';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['audio/x-psf'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.minipsf';
+
 export const globList = [
   {
-    pattern: '*.minipsf',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

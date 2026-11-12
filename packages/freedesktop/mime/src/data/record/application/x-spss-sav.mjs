@@ -7,18 +7,6 @@ export const expandedAcronym = 'Statistical Package for the Social Sciences';
 export const genericIconName = null;
 export const aliasList = ['application/x-spss-savefile'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.sav',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.zsav',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -42,3 +30,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sav';
+const glob1 = '*.zsav';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

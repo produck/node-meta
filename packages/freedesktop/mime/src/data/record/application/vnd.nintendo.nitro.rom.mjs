@@ -7,13 +7,6 @@ export const expandedAcronym = 'Dual Screen/Developers\' System';
 export const genericIconName = 'application-x-executable';
 export const aliasList = ['application/x-nintendo-ds-rom'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.nds',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -30,3 +23,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.nds';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

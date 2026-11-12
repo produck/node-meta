@@ -10,13 +10,6 @@ export const subClassOfList = [
   'application/x-executable',
   'application/vnd.efi.iso',
 ];
-export const globList = [
-  {
-    pattern: '*.appimage',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -57,3 +50,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.appimage';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

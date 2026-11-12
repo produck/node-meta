@@ -7,7 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [];
 export const magicList = [
   {
     priority: 80,
@@ -24,3 +23,7 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

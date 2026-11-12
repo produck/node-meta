@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = ['application/vnd.palm'];
-export const globList = [
-  {
-    pattern: '*.pdb',
-    weight: 30,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pdc',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -42,3 +30,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pdb';
+const glob1 = '*.pdc';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: 30,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

@@ -7,7 +7,6 @@ export const expandedAcronym = 'Pulse-code Modulation';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [];
 export const magicList = [
   {
     priority: null,
@@ -96,3 +95,7 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

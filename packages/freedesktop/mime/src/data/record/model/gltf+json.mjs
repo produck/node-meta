@@ -7,13 +7,19 @@ export const expandedAcronym = 'GL Transmission Format';
 export const genericIconName = 'image-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/json'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.gltf';
+
 export const globList = [
   {
-    pattern: '*.gltf',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = ['application/x-deb', 'application/x-debian-package'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.deb',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.udeb',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -43,3 +31,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.deb';
+const glob1 = '*.udeb';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

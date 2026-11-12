@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'application-x-executable';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.n64',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.z64',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.v64',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -54,3 +37,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.n64';
+const glob1 = '*.z64';
+const glob2 = '*.v64';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = ['application/x-zip-compressed', 'application/x-zip'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.zip',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.zipx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.zip';
+const glob1 = '*.zipx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

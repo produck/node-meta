@@ -7,7 +7,10 @@ export const expandedAcronym = null;
 export const genericIconName = 'folder';
 export const aliasList = ['x-directory/normal'];
 export const subClassOfList = [];
-export const globList = [];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

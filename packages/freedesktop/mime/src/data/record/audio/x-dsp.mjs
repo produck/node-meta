@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.dsm',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.dsp',
-    weight: 40,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -50,3 +38,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.dsm';
+const glob1 = '*.dsp';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: 40,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

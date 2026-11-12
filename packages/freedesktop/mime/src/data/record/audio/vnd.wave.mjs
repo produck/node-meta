@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['audio/wav', 'audio/x-wav'];
 export const subClassOfList = ['application/x-riff'];
-export const globList = [
-  {
-    pattern: '*.wav',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.wav';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

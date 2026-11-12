@@ -11,28 +11,6 @@ export const aliasList = [
   'text/jscript',
 ];
 export const subClassOfList = ['application/typescript', 'text/jsx'];
-export const globList = [
-  {
-    pattern: '*.cjs',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.js',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.jsm',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.mjs',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -112,3 +90,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.cjs';
+const glob1 = '*.js';
+const glob2 = '*.jsm';
+const glob3 = '*.mjs';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

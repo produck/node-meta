@@ -7,13 +7,19 @@ export const expandedAcronym = 'Global System for Mobile communications';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.gsm';
+
 export const globList = [
   {
-    pattern: '*.gsm',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

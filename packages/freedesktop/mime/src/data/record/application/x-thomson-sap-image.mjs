@@ -7,13 +7,6 @@ export const expandedAcronym = 'Système d\'Archivage Pukall';
 export const genericIconName = 'application-x-executable';
 export const aliasList = ['application/x-sap-file'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.sap',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -31,3 +24,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sap';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

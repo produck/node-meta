@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['video/x-theora'];
 export const subClassOfList = ['video/ogg'];
-export const globList = [
-  {
-    pattern: '*.ogg',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 80,
@@ -38,3 +31,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.ogg';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

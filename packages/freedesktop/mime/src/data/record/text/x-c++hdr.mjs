@@ -7,33 +7,43 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/x-chdr'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.hh';
+const glob1 = '*.hp';
+const glob2 = '*.hpp';
+const glob3 = '*.h++';
+const glob4 = '*.hxx';
+
 export const globList = [
   {
-    pattern: '*.hh',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.hp',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.hpp',
+    pattern: glob2,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.h++',
+    pattern: glob3,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.hxx',
+    pattern: glob4,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

@@ -7,18 +7,25 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/x-rpm'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.src.rpm';
+const glob1 = '*.spm';
+
 export const globList = [
   {
-    pattern: '*.src.rpm',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.spm',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

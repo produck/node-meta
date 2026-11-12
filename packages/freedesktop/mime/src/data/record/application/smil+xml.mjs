@@ -7,28 +7,6 @@ export const expandedAcronym = 'Synchronized Multimedia Integration Language';
 export const genericIconName = 'video-x-generic';
 export const aliasList = ['application/smil'];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.smil',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.smi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sml',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.kino',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 55,
@@ -61,3 +39,34 @@ export const rootXmlList = [
     localName: 'smil',
   },
 ];
+
+/** About glob */
+const glob0 = '*.smil';
+const glob1 = '*.smi';
+const glob2 = '*.sml';
+const glob3 = '*.kino';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

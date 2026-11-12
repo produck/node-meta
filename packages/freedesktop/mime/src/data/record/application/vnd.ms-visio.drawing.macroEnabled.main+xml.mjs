@@ -8,13 +8,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'image-x-generic';
 export const aliasList = [];
 export const subClassOfList = ['application/zip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vsdm';
+
 export const globList = [
   {
-    pattern: '*.vsdm',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

@@ -7,18 +7,6 @@ export const expandedAcronym = 'Lightning Memory-Mapped Database';
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.mdb',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.lmdb',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.mdb';
+const glob1 = '*.lmdb';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

@@ -7,28 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-document';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.abw',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.abw.CRASHED',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.abw.gz',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.zabw',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -58,3 +36,34 @@ export const rootXmlList = [
     localName: 'abiword',
   },
 ];
+
+/** About glob */
+const glob0 = '*.abw';
+const glob1 = '*.abw.CRASHED';
+const glob2 = '*.abw.gz';
+const glob3 = '*.zabw';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

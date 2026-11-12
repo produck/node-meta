@@ -7,7 +7,10 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+export const globList = [];
+
+export const globPatternList = [];

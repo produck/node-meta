@@ -7,18 +7,6 @@ export const expandedAcronym = 'XSL Formatting Objects';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.fo',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xslfo',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [];
 export const treeMagicList = [];
 export const rootXmlList = [
@@ -28,3 +16,22 @@ export const rootXmlList = [
     localName: 'root',
   },
 ];
+
+/** About glob */
+const glob0 = '*.fo';
+const glob1 = '*.xslfo';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

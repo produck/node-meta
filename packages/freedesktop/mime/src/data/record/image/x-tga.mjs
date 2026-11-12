@@ -15,33 +15,6 @@ export const aliasList = [
   'image/x-targa',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.tga',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.icb',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.tpic',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vda',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vst',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 10,
@@ -403,3 +376,40 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.tga';
+const glob1 = '*.icb';
+const glob2 = '*.tpic';
+const glob3 = '*.vda';
+const glob4 = '*.vst';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4];

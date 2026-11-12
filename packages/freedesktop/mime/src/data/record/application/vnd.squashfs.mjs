@@ -7,28 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/vnd.efi.img'];
-export const globList = [
-  {
-    pattern: '*.sfs',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sqfs',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.sqsh',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.squashfs',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -45,3 +23,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sfs';
+const glob1 = '*.sqfs';
+const glob2 = '*.sqsh';
+const glob3 = '*.squashfs';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

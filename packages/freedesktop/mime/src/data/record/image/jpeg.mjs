@@ -7,28 +7,6 @@ export const expandedAcronym = 'Joint Photographic Experts Group';
 export const genericIconName = null;
 export const aliasList = ['image/pjpeg'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.jpg',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.jpeg',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.jpe',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.jfif',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -52,3 +30,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.jpg';
+const glob1 = '*.jpeg';
+const glob2 = '*.jpe';
+const glob3 = '*.jfif';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

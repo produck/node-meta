@@ -7,18 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['audio/x-669-mod'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.669',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.uni',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 40,
@@ -216,3 +204,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.669';
+const glob1 = '*.uni';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

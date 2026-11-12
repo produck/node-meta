@@ -9,13 +9,19 @@ export const aliasList = [];
 export const subClassOfList = [
   'application/vnd.openxmlformats-officedocument.presentationml.slide',
 ];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sldm';
+
 export const globList = [
   {
-    pattern: '*.sldm',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

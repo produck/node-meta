@@ -7,18 +7,25 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['video/vivo'];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.viv';
+const glob1 = '*.vivo';
+
 export const globList = [
   {
-    pattern: '*.viv',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.vivo',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

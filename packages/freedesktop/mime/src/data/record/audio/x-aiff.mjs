@@ -7,18 +7,6 @@ export const expandedAcronym = 'Audio Interchange File Format';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/x-iff'];
-export const globList = [
-  {
-    pattern: '*.aiff',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.aif',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -42,3 +30,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.aiff';
+const glob1 = '*.aif';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

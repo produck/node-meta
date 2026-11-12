@@ -7,23 +7,6 @@ export const expandedAcronym = 'Portable Compiled Format';
 export const genericIconName = 'font-x-generic';
 export const aliasList = [];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.pcf',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pcf.Z',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.pcf.gz',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -40,3 +23,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.pcf';
+const glob1 = '*.pcf.Z';
+const glob2 = '*.pcf.gz';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

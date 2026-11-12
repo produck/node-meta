@@ -7,13 +7,19 @@ export const expandedAcronym = 'Compiled Help Modules';
 export const genericIconName = 'x-office-document';
 export const aliasList = ['application/x-chm'];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.chm';
+
 export const globList = [
   {
-    pattern: '*.chm',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

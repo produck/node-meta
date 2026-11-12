@@ -8,13 +8,19 @@ export const expandedAcronym =
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/json'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.spdx.json';
+
 export const globList = [
   {
-    pattern: '*.spdx.json',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

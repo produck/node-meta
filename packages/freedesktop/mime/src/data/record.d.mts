@@ -51,6 +51,7 @@ export interface RecordModule {
   aliasList: (string | null)[];
   subClassOfList: (string | null)[];
   globList: Glob[];
+  globPatternList: string[];
   magicList: Magic[];
   treeMagicList: TreeMagic[];
   rootXmlList: RootXml[];

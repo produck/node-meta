@@ -7,28 +7,6 @@ export const expandedAcronym = 'Extensible HyperText Markup Language';
 export const genericIconName = 'text-html';
 export const aliasList = [];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.xhtml',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xht',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.html',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.htm',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -72,3 +50,34 @@ export const rootXmlList = [
     localName: 'html',
   },
 ];
+
+/** About glob */
+const glob0 = '*.xhtml';
+const glob1 = '*.xht';
+const glob2 = '*.html';
+const glob3 = '*.htm';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

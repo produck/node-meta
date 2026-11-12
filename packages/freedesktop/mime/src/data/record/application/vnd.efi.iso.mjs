@@ -10,18 +10,25 @@ export const aliasList = [
   'application/x-iso9660-image',
 ];
 export const subClassOfList = ['application/vnd.efi.img'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.iso';
+const glob1 = '*.iso9660';
+
 export const globList = [
   {
-    pattern: '*.iso',
+    pattern: glob0,
     weight: 80,
     caseSensitive: false,
   },
   {
-    pattern: '*.iso9660',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

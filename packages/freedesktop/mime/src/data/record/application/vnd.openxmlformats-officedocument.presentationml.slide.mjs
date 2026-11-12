@@ -8,13 +8,19 @@ export const expandedAcronym = null;
 export const genericIconName = 'x-office-presentation';
 export const aliasList = [];
 export const subClassOfList = ['application/zip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sldx';
+
 export const globList = [
   {
-    pattern: '*.sldx',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

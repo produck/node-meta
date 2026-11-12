@@ -14,23 +14,6 @@ export const aliasList = [
   'video/x-msvideo',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.avi',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.avf',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.divx',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -70,3 +53,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.avi';
+const glob1 = '*.avf';
+const glob2 = '*.divx';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

@@ -7,18 +7,25 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.cmake';
+const glob1 = 'CMakeLists.txt';
+
 export const globList = [
   {
-    pattern: '*.cmake',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: 'CMakeLists.txt',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

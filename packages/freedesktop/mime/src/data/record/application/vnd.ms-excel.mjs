@@ -11,48 +11,6 @@ export const aliasList = [
   'zz-application/zz-winassoc-xls',
 ];
 export const subClassOfList = ['application/x-ole-storage'];
-export const globList = [
-  {
-    pattern: '*.xls',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xlc',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xll',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xlm',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xlw',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xla',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xlt',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.xld',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -93,3 +51,67 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.xls';
+const glob1 = '*.xlc';
+const glob2 = '*.xll';
+const glob3 = '*.xlm';
+const glob4 = '*.xlw';
+const glob5 = '*.xla';
+const glob6 = '*.xlt';
+const glob7 = '*.xld';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob6,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob7,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [
+  glob0,
+  glob1,
+  glob2,
+  glob3,
+  glob4,
+  glob5,
+  glob6,
+  glob7,
+];

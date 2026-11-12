@@ -7,18 +7,6 @@ export const expandedAcronym = 'SPARQL Protocol and RDF Query Language';
 export const genericIconName = 'text-x-script';
 export const aliasList = [];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.rq',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.qs',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 40,
@@ -35,3 +23,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.rq';
+const glob1 = '*.qs';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];

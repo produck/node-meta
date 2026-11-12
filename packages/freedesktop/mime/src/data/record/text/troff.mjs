@@ -7,23 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['application/x-troff', 'text/x-troff'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.tr',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.roff',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.t',
-    weight: 10,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -61,3 +44,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.tr';
+const glob1 = '*.roff';
+const glob2 = '*.t';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: 10,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

@@ -16,23 +16,6 @@ export const aliasList = [
   'audio/x-rn-3gpp-amr-wb-encrypted',
 ];
 export const subClassOfList = ['video/mp4'];
-export const globList = [
-  {
-    pattern: '*.3gp',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.3gpp',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.3ga',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -70,3 +53,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.3gp';
+const glob1 = '*.3gpp';
+const glob2 = '*.3ga';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

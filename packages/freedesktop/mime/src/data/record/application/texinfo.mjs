@@ -7,18 +7,25 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['text/x-texinfo'];
 export const subClassOfList = ['text/plain'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.texi';
+const glob1 = '*.texinfo';
+
 export const globList = [
   {
-    pattern: '*.texi',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.texinfo',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

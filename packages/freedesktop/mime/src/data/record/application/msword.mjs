@@ -11,13 +11,6 @@ export const aliasList = [
   'zz-application/zz-winassoc-doc',
 ];
 export const subClassOfList = ['application/x-ole-storage'];
-export const globList = [
-  {
-    pattern: '*.doc',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -108,3 +101,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.doc';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

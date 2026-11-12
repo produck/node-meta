@@ -7,13 +7,6 @@ export const expandedAcronym = 'Digital Theater Systems High Definition';
 export const genericIconName = null;
 export const aliasList = ['audio/x-dtshd'];
 export const subClassOfList = ['audio/vnd.dts'];
-export const globList = [
-  {
-    pattern: '*.dtshd',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -38,3 +31,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.dtshd';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

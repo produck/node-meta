@@ -7,18 +7,25 @@ export const expandedAcronym = 'Scalable Vector Graphics';
 export const genericIconName = null;
 export const aliasList = [];
 export const subClassOfList = ['application/gzip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.svgz';
+const glob1 = '*.svg.gz';
+
 export const globList = [
   {
-    pattern: '*.svgz',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.svg.gz',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

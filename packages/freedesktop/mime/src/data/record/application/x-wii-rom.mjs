@@ -11,23 +11,6 @@ export const aliasList = [
   'application/x-wia',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.rvz',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wia',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.iso',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -88,3 +71,28 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.rvz';
+const glob1 = '*.wia';
+const glob2 = '*.iso';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2];

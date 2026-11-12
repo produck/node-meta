@@ -10,38 +10,6 @@ export const aliasList = [
   'application/wordperfect',
 ];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.wp',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wp4',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wp5',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wp6',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wpd',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.wpp',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -82,3 +50,46 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.wp';
+const glob1 = '*.wp4';
+const glob2 = '*.wp5';
+const glob3 = '*.wp6';
+const glob4 = '*.wpd';
+const glob5 = '*.wpp';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob4,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob5,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3, glob4, glob5];

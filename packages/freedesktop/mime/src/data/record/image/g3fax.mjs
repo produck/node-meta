@@ -8,13 +8,19 @@ export const expandedAcronym =
 export const genericIconName = null;
 export const aliasList = ['image/fax-g3'];
 export const subClassOfList = [];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.g3';
+
 export const globList = [
   {
-    pattern: '*.g3',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

@@ -7,13 +7,19 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['text/x-c'];
 export const subClassOfList = ['text/x-c++src', 'text/x-objcsrc'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.c';
+
 export const globList = [
   {
-    pattern: '*.c',
+    pattern: glob0,
     weight: null,
     caseSensitive: true,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

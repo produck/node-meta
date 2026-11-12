@@ -7,13 +7,19 @@ export const expandedAcronym = '3D Manufacturing Format';
 export const genericIconName = 'image-x-generic';
 export const aliasList = ['application/vnd.ms-3mfdocument'];
 export const subClassOfList = ['application/zip'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.3mf';
+
 export const globList = [
   {
-    pattern: '*.3mf',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0];

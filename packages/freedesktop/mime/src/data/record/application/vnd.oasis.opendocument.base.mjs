@@ -10,13 +10,6 @@ export const aliasList = [
   'application/vnd.sun.xml.base',
 ];
 export const subClassOfList = ['application/zip'];
-export const globList = [
-  {
-    pattern: '*.odb',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 70,
@@ -49,3 +42,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.odb';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

@@ -7,28 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = null;
 export const aliasList = ['text/directory', 'text/x-vcard'];
 export const subClassOfList = ['text/plain'];
-export const globList = [
-  {
-    pattern: '*.vcard',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vcf',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.vct',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.gcrd',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: null,
@@ -52,3 +30,34 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.vcard';
+const glob1 = '*.vcf';
+const glob2 = '*.vct';
+const glob3 = '*.gcrd';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob2,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob3,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1, glob2, glob3];

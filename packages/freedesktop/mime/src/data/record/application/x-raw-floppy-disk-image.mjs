@@ -7,18 +7,25 @@ export const expandedAcronym = null;
 export const genericIconName = 'media-floppy';
 export const aliasList = ['application/x-fd-file'];
 export const subClassOfList = ['application/vnd.efi.img'];
+export const magicList = [];
+export const treeMagicList = [];
+export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.fd';
+const glob1 = '*.qd';
+
 export const globList = [
   {
-    pattern: '*.fd',
+    pattern: glob0,
     weight: null,
     caseSensitive: false,
   },
   {
-    pattern: '*.qd',
+    pattern: glob1,
     weight: null,
     caseSensitive: false,
   },
 ];
-export const magicList = [];
-export const treeMagicList = [];
-export const rootXmlList = [];
+
+export const globPatternList = [glob0, glob1];

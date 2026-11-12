@@ -7,13 +7,6 @@ export const expandedAcronym = null;
 export const genericIconName = 'package-x-generic';
 export const aliasList = ['application/stuffit', 'application/x-sit'];
 export const subClassOfList = [];
-export const globList = [
-  {
-    pattern: '*.sit',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 60,
@@ -37,3 +30,16 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.sit';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0];

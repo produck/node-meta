@@ -10,18 +10,6 @@ export const aliasList = [
   'application/vnd.oasis.docbook+xml',
 ];
 export const subClassOfList = ['application/xml'];
-export const globList = [
-  {
-    pattern: '*.dbk',
-    weight: null,
-    caseSensitive: false,
-  },
-  {
-    pattern: '*.docbook',
-    weight: null,
-    caseSensitive: false,
-  },
-];
 export const magicList = [
   {
     priority: 90,
@@ -53,3 +41,22 @@ export const magicList = [
 ];
 export const treeMagicList = [];
 export const rootXmlList = [];
+
+/** About glob */
+const glob0 = '*.dbk';
+const glob1 = '*.docbook';
+
+export const globList = [
+  {
+    pattern: glob0,
+    weight: null,
+    caseSensitive: false,
+  },
+  {
+    pattern: glob1,
+    weight: null,
+    caseSensitive: false,
+  },
+];
+
+export const globPatternList = [glob0, glob1];
